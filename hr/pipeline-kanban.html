@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Kanban - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html" class="active">Pipeline</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="audit-log.html">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Pipeline Management</h1>
+        <div class="btn-group">
+          <select class="form-select" style="width: auto;">
+            <option>All Companies</option>
+            <option>TechCorp Inc.</option>
+            <option>DataFlow Systems</option>
+            <option>WebStart Studios</option>
+          </select>
+          <select class="form-select" style="width: auto;">
+            <option>All Positions</option>
+            <option>Software Engineer Intern</option>
+            <option>Data Analyst</option>
+            <option>Frontend Developer</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="wireframe-note">
+        <strong>Full Control Mode:</strong> Drag and drop cards between columns to update application status. Click cards for detailed actions.
+      </div>
+
+      <!-- Pipeline Kanban -->
+      <div class="kanban-container" style="margin-top: 20px;">
+        <!-- Applied -->
+        <div class="kanban-column" data-stage="applied">
+          <div class="kanban-header">
+            Applied
+            <span class="count">5</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Alex J.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Applied Jan 10</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm btn-primary" style="width: 100%;">Review</a>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Sarah M.</div>
+              <div class="kanban-card-meta">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Applied Jan 9</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm btn-primary" style="width: 100%;">Review</a>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true" style="border-left: 3px solid var(--stage-rejected);">
+              <div class="kanban-card-title">Tom B.</div>
+              <div class="kanban-card-meta">Frontend Developer</div>
+              <div class="kanban-card-meta">WebStart Studios</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px; color: var(--stage-rejected);">⚠️ Stale: 8 days</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm btn-primary" style="width: 100%;">Review</a>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Mike C.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Applied Jan 8</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm btn-primary" style="width: 100%;">Review</a>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Emily R.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Applied Jan 7</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm btn-primary" style="width: 100%;">Review</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HR Reviewed -->
+        <div class="kanban-column" data-stage="hr-reviewed">
+          <div class="kanban-header">
+            HR Reviewed
+            <span class="count">3</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">David L.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Reviewed Jan 8</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm" style="width: 100%;">Forward →</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Jessica T.</div>
+              <div class="kanban-card-meta">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Reviewed Jan 7</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm" style="width: 100%;">Forward →</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Chris W.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Reviewed Jan 6</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm" style="width: 100%;">Forward →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forwarded -->
+        <div class="kanban-column" data-stage="forwarded">
+          <div class="kanban-header">
+            Forwarded
+            <span class="count">4</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Amanda K.</div>
+              <div class="kanban-card-meta">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Forwarded Jan 5</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm btn-primary" style="width: 100%;">Schedule Interview</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Ryan P.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Forwarded Jan 4</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm btn-primary" style="width: 100%;">Schedule Interview</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Lisa M.</div>
+              <div class="kanban-card-meta">Frontend Developer</div>
+              <div class="kanban-card-meta">WebStart Studios</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Forwarded Jan 3</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm btn-primary" style="width: 100%;">Schedule Interview</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true">
+              <div class="kanban-card-title">Kevin S.</div>
+              <div class="kanban-card-meta">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Forwarded Jan 2</div>
+              <div style="margin-top: 12px;">
+                <button class="btn btn-sm btn-primary" style="width: 100%;">Schedule Interview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interview -->
+        <div class="kanban-column" data-stage="interview">
+          <div class="kanban-header">
+            Interview
+            <span class="count">3</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" draggable="true" style="border-left: 3px solid var(--stage-interview);">
+              <div class="kanban-card-title">David L.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div style="margin-top: 8px; padding: 6px 8px; background: #e0f2f1; border-radius: 4px; font-size: 11px;">
+                📅 Jan 15, 2:00 PM
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 4px;">
+                <button class="btn btn-sm btn-success" style="flex: 1;">Select</button>
+                <button class="btn btn-sm btn-danger" style="flex: 1;">Reject</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true" style="border-left: 3px solid var(--stage-interview);">
+              <div class="kanban-card-title">Jessica T.</div>
+              <div class="kanban-card-meta">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div style="margin-top: 8px; padding: 6px 8px; background: #e0f2f1; border-radius: 4px; font-size: 11px;">
+                📅 Jan 16, 10:00 AM
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 4px;">
+                <button class="btn btn-sm btn-success" style="flex: 1;">Select</button>
+                <button class="btn btn-sm btn-danger" style="flex: 1;">Reject</button>
+              </div>
+            </div>
+            <div class="kanban-card" draggable="true" style="border-left: 3px solid var(--stage-interview);">
+              <div class="kanban-card-title">Chris W.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div style="margin-top: 8px; padding: 6px 8px; background: #e0f2f1; border-radius: 4px; font-size: 11px;">
+                📅 Jan 17, 3:00 PM
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 4px;">
+                <button class="btn btn-sm btn-success" style="flex: 1;">Select</button>
+                <button class="btn btn-sm btn-danger" style="flex: 1;">Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected -->
+        <div class="kanban-column" data-stage="selected">
+          <div class="kanban-header">
+            Selected
+            <span class="count">2</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" style="border-left: 3px solid var(--stage-selected);">
+              <div class="kanban-card-title">🎉 Emma W.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px; color: var(--stage-selected);">Selected Jan 8</div>
+            </div>
+            <div class="kanban-card" style="border-left: 3px solid var(--stage-selected);">
+              <div class="kanban-card-title">🎉 Mark T.</div>
+              <div class="kanban-card-meta">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px; color: var(--stage-selected);">Selected Jan 5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rejected -->
+        <div class="kanban-column" data-stage="rejected">
+          <div class="kanban-header">
+            Rejected
+            <span class="count">2</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" style="opacity: 0.7;">
+              <div class="kanban-card-title">John D.</div>
+              <div class="kanban-card-meta">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Reason: Skills mismatch</div>
+            </div>
+            <div class="kanban-card" style="opacity: 0.7;">
+              <div class="kanban-card-title">Amy L.</div>
+              <div class="kanban-card-meta">Frontend Developer</div>
+              <div class="kanban-card-meta">WebStart Studios</div>
+              <div class="kanban-card-meta text-small" style="margin-top: 4px;">Reason: Position filled</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

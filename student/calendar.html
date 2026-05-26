@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+          <li><a href="calendar.html" class="active">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Calendar</h1>
+        <div class="btn-group">
+          <button class="btn">Today</button>
+          <button class="btn">Week</button>
+          <button class="btn btn-primary">Month</button>
+        </div>
+      </div>
+
+      <!-- Calendar Header -->
+      <div class="calendar-header">
+        <button class="btn">← Previous</button>
+        <h2>January 2025</h2>
+        <button class="btn">Next →</button>
+      </div>
+
+      <!-- Calendar Grid -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <div class="calendar-grid">
+            <!-- Day Headers -->
+            <div class="calendar-day-header">Sun</div>
+            <div class="calendar-day-header">Mon</div>
+            <div class="calendar-day-header">Tue</div>
+            <div class="calendar-day-header">Wed</div>
+            <div class="calendar-day-header">Thu</div>
+            <div class="calendar-day-header">Fri</div>
+            <div class="calendar-day-header">Sat</div>
+
+            <!-- Week 1 -->
+            <div class="calendar-day" style="opacity: 0.5;">
+              <div class="calendar-day-number">29</div>
+            </div>
+            <div class="calendar-day" style="opacity: 0.5;">
+              <div class="calendar-day-number">30</div>
+            </div>
+            <div class="calendar-day" style="opacity: 0.5;">
+              <div class="calendar-day-number">31</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">1</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">2</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">3</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">4</div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="calendar-day">
+              <div class="calendar-day-number">5</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">6</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">7</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">8</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">9</div>
+            </div>
+            <div class="calendar-day today">
+              <div class="calendar-day-number">10</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">11</div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="calendar-day">
+              <div class="calendar-day-number">12</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">13</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">14</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">15</div>
+              <div class="calendar-event">2:00 PM TechCorp Interview</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">16</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">17</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">18</div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="calendar-day">
+              <div class="calendar-day-number">19</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">20</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">21</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">22</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">23</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">24</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">25</div>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="calendar-day">
+              <div class="calendar-day-number">26</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">27</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">28</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">29</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">30</div>
+            </div>
+            <div class="calendar-day">
+              <div class="calendar-day-number">31</div>
+            </div>
+            <div class="calendar-day" style="opacity: 0.5;">
+              <div class="calendar-day-number">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Events -->
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-header">
+          <h3>Upcoming Events</h3>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div style="display: flex; align-items: start; gap: 16px; padding: 16px; border-bottom: 1px solid var(--color-border);">
+            <div style="text-align: center; min-width: 60px;">
+              <div style="font-size: 24px; font-weight: 700; color: var(--stage-interview);">15</div>
+              <div class="text-small text-muted">JAN</div>
+            </div>
+            <div style="flex: 1;">
+              <h4 style="margin-bottom: 4px;">Interview: Software Engineer Intern</h4>
+              <p class="text-muted" style="margin-bottom: 8px;">TechCorp Inc.</p>
+              <div style="display: flex; gap: 16px; font-size: 13px; color: var(--color-muted);">
+                <span>🕐 2:00 PM - 2:45 PM PST</span>
+                <span>📹 Video Call (Zoom)</span>
+              </div>
+            </div>
+            <div class="btn-group">
+              <a href="application-detail.html" class="btn btn-sm">View Details</a>
+              <button class="btn btn-sm">📥 Download .ics</button>
+            </div>
+          </div>
+
+          <div class="empty-state" style="padding: 40px;">
+            <p class="text-muted">No other upcoming events</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application Deadlines -->
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-header">
+          <h3>Application Deadlines</h3>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div style="display: flex; align-items: center; gap: 16px; padding: 16px; border-bottom: 1px solid var(--color-border);">
+            <div style="text-align: center; min-width: 60px;">
+              <div style="font-size: 24px; font-weight: 700; color: var(--stage-forwarded);">15</div>
+              <div class="text-small text-muted">FEB</div>
+            </div>
+            <div style="flex: 1;">
+              <h4 style="margin-bottom: 4px;">Data Science Intern</h4>
+              <p class="text-small text-muted">BigData Analytics • Application deadline</p>
+            </div>
+            <a href="opening-detail.html" class="btn btn-sm">Apply Now</a>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 16px; padding: 16px;">
+            <div style="text-align: center; min-width: 60px;">
+              <div style="font-size: 24px; font-weight: 700; color: var(--stage-forwarded);">28</div>
+              <div class="text-small text-muted">FEB</div>
+            </div>
+            <div style="flex: 1;">
+              <h4 style="margin-bottom: 4px;">Backend Developer</h4>
+              <p class="text-small text-muted">CloudSystems • Application deadline</p>
+            </div>
+            <a href="opening-detail.html" class="btn btn-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

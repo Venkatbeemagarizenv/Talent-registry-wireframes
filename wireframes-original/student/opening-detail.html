@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Engineer Intern - TechCorp - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html" class="active">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div style="margin-bottom: 16px;">
+        <a href="openings-list.html" class="btn btn-sm">← Back to Openings</a>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 2fr 1fr;">
+        <!-- Job Details -->
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                <div>
+                  <h1 style="margin-bottom: 8px;">Software Engineer Intern</h1>
+                  <p class="text-muted" style="font-size: 16px;">TechCorp Inc.</p>
+                </div>
+                <span class="badge badge-selected" style="font-size: 14px; padding: 8px 16px;">✓ Eligible</span>
+              </div>
+
+              <div style="display: flex; gap: 24px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--color-border);">
+                <div>
+                  <span class="text-muted text-small">Location</span>
+                  <p style="margin: 0;"><strong>San Francisco, CA (Remote)</strong></p>
+                </div>
+                <div>
+                  <span class="text-muted text-small">Type</span>
+                  <p style="margin: 0;"><strong>Internship (3 months)</strong></p>
+                </div>
+                <div>
+                  <span class="text-muted text-small">Posted</span>
+                  <p style="margin: 0;"><strong>2 days ago</strong></p>
+                </div>
+                <div>
+                  <span class="text-muted text-small">Applicants</span>
+                  <p style="margin: 0;"><strong>15</strong></p>
+                </div>
+              </div>
+
+              <h3>About the Role</h3>
+              <p>
+                We're looking for a passionate Software Engineer Intern to join our engineering team for Summer 2025.
+                You'll work on real projects that impact millions of users, with mentorship from senior engineers.
+              </p>
+
+              <h3>Responsibilities</h3>
+              <ul style="padding-left: 20px; line-height: 1.8;">
+                <li>Design and implement new features for our web platform</li>
+                <li>Write clean, maintainable, and well-tested code</li>
+                <li>Collaborate with product managers and designers</li>
+                <li>Participate in code reviews and technical discussions</li>
+                <li>Debug and optimize application performance</li>
+              </ul>
+
+              <h3>Requirements</h3>
+              <ul style="padding-left: 20px; line-height: 1.8;">
+                <li>Currently pursuing a degree in Computer Science or related field</li>
+                <li>Experience with Python, JavaScript, or similar languages</li>
+                <li>Familiarity with web frameworks (React, Django, etc.)</li>
+                <li>Strong problem-solving skills</li>
+                <li>Excellent communication skills</li>
+              </ul>
+
+              <h3>Required Skills</h3>
+              <div class="skill-tags" style="margin-top: 12px;">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Git</span>
+              </div>
+
+              <h3 style="margin-top: 24px;">Nice to Have</h3>
+              <div class="skill-tags" style="margin-top: 12px;">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">GraphQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <!-- Apply Card -->
+          <div class="card">
+            <div class="card-body" style="text-align: center;">
+              <div class="alert alert-success" style="margin-bottom: 16px;">
+                <strong>✓ You're eligible!</strong><br>
+                <span class="text-small">Your profile matches the requirements</span>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('applyModal').style.display='flex'">
+                Apply Now
+              </button>
+              <p class="text-small text-muted" style="margin-top: 12px;">
+                Your profile will be shared with TechCorp
+              </p>
+            </div>
+          </div>
+
+          <!-- Company Info -->
+          <div class="card">
+            <div class="card-header">
+              <h3>About TechCorp Inc.</h3>
+            </div>
+            <div class="card-body">
+              <div style="text-align: center; margin-bottom: 16px;">
+                <div style="width: 80px; height: 80px; background: var(--color-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 32px;">
+                  🏢
+                </div>
+              </div>
+              <p class="text-small">
+                TechCorp is a leading technology company building innovative solutions for enterprise customers.
+                Founded in 2015, we've grown to 500+ employees across 3 continents.
+              </p>
+              <div style="margin-top: 16px;">
+                <p class="text-small text-muted" style="margin-bottom: 4px;">Industry</p>
+                <p style="margin: 0;"><strong>Enterprise Software</strong></p>
+              </div>
+              <div style="margin-top: 12px;">
+                <p class="text-small text-muted" style="margin-bottom: 4px;">Company Size</p>
+                <p style="margin: 0;"><strong>500-1000 employees</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Your Match -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Your Match</h3>
+            </div>
+            <div class="card-body">
+              <div style="text-align: center; margin-bottom: 16px;">
+                <div style="font-size: 36px; font-weight: 700; color: var(--status-success);">87%</div>
+                <p class="text-small text-muted">Profile Match Score</p>
+              </div>
+
+              <h4 style="font-size: 13px; margin-bottom: 8px;">Matching Skills</h4>
+              <div class="skill-tags" style="margin-bottom: 16px;">
+                <span class="skill-tag" style="background: #e8f5e9;">✓ Python</span>
+                <span class="skill-tag" style="background: #e8f5e9;">✓ React</span>
+                <span class="skill-tag" style="background: #e8f5e9;">✓ AWS</span>
+              </div>
+
+              <h4 style="font-size: 13px; margin-bottom: 8px;">Skills to Develop</h4>
+              <div class="skill-tags">
+                <span class="skill-tag" style="background: #fff3e0;">GraphQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Apply Confirmation Modal -->
+  <div id="applyModal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Confirm Application</h3>
+        <button class="modal-close" onclick="document.getElementById('applyModal').style.display='none'">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>You're about to apply for:</p>
+        <div style="background: var(--color-bg); padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>Software Engineer Intern</strong>
+          <p class="text-muted" style="margin: 0;">TechCorp Inc.</p>
+        </div>
+        <p class="text-small text-muted">
+          Your profile and project portfolio from ZenCube will be shared with the employer.
+          HR will review your application and may forward it to TechCorp.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" onclick="document.getElementById('applyModal').style.display='none'">Cancel</button>
+        <a href="my-applications.html" class="btn btn-primary">Submit Application</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

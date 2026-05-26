@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html" class="active">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Notifications</h1>
+        <button class="btn">Mark All as Read</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="btn-group">
+            <button class="btn btn-sm btn-primary">All</button>
+            <button class="btn btn-sm">Unread (3)</button>
+            <button class="btn btn-sm">Applications</button>
+            <button class="btn btn-sm">Interviews</button>
+          </div>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <!-- Unread Notification -->
+          <div class="notification-item unread">
+            <div class="notification-icon" style="background: #e3f2fd;">📅</div>
+            <div class="notification-content">
+              <strong>Interview Reminder</strong>
+              <p style="margin: 4px 0 0;">Your interview with TechCorp Inc. is tomorrow at 2:00 PM. Don't forget to test your camera and microphone!</p>
+              <a href="application-detail.html" class="text-small">View application →</a>
+            </div>
+            <div class="notification-time">1h ago</div>
+          </div>
+
+          <!-- Unread Notification -->
+          <div class="notification-item unread">
+            <div class="notification-icon" style="background: #e8f5e9;">✅</div>
+            <div class="notification-content">
+              <strong>Application Forwarded</strong>
+              <p style="margin: 4px 0 0;">Great news! Your application for Data Analyst at DataFlow Systems has been forwarded to the company.</p>
+              <a href="my-applications.html" class="text-small">View applications →</a>
+            </div>
+            <div class="notification-time">3h ago</div>
+          </div>
+
+          <!-- Unread Notification -->
+          <div class="notification-item unread">
+            <div class="notification-icon" style="background: #fff3e0;">💼</div>
+            <div class="notification-content">
+              <strong>New Job Matches</strong>
+              <p style="margin: 4px 0 0;">5 new job openings match your profile in Software Engineering and Machine Learning.</p>
+              <a href="openings-list.html" class="text-small">Browse openings →</a>
+            </div>
+            <div class="notification-time">1d ago</div>
+          </div>
+
+          <!-- Read Notifications -->
+          <div class="notification-item">
+            <div class="notification-icon">📧</div>
+            <div class="notification-content">
+              <strong>Interview Scheduled</strong>
+              <p style="margin: 4px 0 0;">Your interview with TechCorp Inc. has been confirmed for January 15, 2025 at 2:00 PM.</p>
+            </div>
+            <div class="notification-time">2d ago</div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-icon">✅</div>
+            <div class="notification-content">
+              <strong>Profile Synced</strong>
+              <p style="margin: 4px 0 0;">Your profile has been updated with the latest information from ZenCube.</p>
+            </div>
+            <div class="notification-time">3d ago</div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-icon">📝</div>
+            <div class="notification-content">
+              <strong>Application Received</strong>
+              <p style="margin: 4px 0 0;">Your application for Software Engineer Intern at TechCorp Inc. has been submitted successfully.</p>
+            </div>
+            <div class="notification-time">1w ago</div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-icon">🎉</div>
+            <div class="notification-content">
+              <strong>Welcome to Talent Registry!</strong>
+              <p style="margin: 4px 0 0;">Your account has been set up. Start by browsing open positions that match your skills.</p>
+            </div>
+            <div class="notification-time">2w ago</div>
+          </div>
+        </div>
+        <div class="card-footer" style="text-align: center;">
+          <button class="btn">Load More</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

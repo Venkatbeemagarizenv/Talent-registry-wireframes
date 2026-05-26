@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Management - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html" class="active">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="audit-log.html">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Enterprise Management</h1>
+        <span class="text-muted">35 total enterprises</span>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+        <button class="btn btn-primary">All (35)</button>
+        <button class="btn">Pending (3)</button>
+        <button class="btn">Approved (30)</button>
+        <button class="btn">Suspended (2)</button>
+      </div>
+
+      <!-- Pending Approvals Section -->
+      <div class="card" style="border-left: 4px solid var(--status-pending); margin-bottom: 24px;">
+        <div class="card-header">
+          <h3>⚠️ Pending Approval (3)</h3>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Industry</th>
+                  <th>Submitted</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #fffde7;">
+                  <td>
+                    <strong>CloudApp Inc.</strong>
+                    <div class="text-small text-muted">201-500 employees</div>
+                  </td>
+                  <td>
+                    <strong>Maria Garcia</strong>
+                    <div class="text-small text-muted">maria@cloudapp.com</div>
+                  </td>
+                  <td>Technology</td>
+                  <td>Jan 10, 2025</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">Review</a>
+                      <button class="btn btn-sm btn-success">Approve</button>
+                      <button class="btn btn-sm btn-danger">Reject</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="background: #fffde7;">
+                  <td>
+                    <strong>HealthTech Solutions</strong>
+                    <div class="text-small text-muted">51-200 employees</div>
+                  </td>
+                  <td>
+                    <strong>James Wilson</strong>
+                    <div class="text-small text-muted">jwilson@healthtech.com</div>
+                  </td>
+                  <td>Healthcare</td>
+                  <td>Jan 9, 2025</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">Review</a>
+                      <button class="btn btn-sm btn-success">Approve</button>
+                      <button class="btn btn-sm btn-danger">Reject</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="background: #fffde7;">
+                  <td>
+                    <strong>FinServe Corp</strong>
+                    <div class="text-small text-muted">501-1000 employees</div>
+                  </td>
+                  <td>
+                    <strong>Sarah Chen</strong>
+                    <div class="text-small text-muted">schen@finserve.com</div>
+                  </td>
+                  <td>Finance</td>
+                  <td>Jan 8, 2025</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">Review</a>
+                      <button class="btn btn-sm btn-success">Approve</button>
+                      <button class="btn btn-sm btn-danger">Reject</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Enterprises -->
+      <div class="card">
+        <div class="card-header">
+          <h3>All Enterprises</h3>
+          <div style="display: flex; gap: 8px;">
+            <input type="text" class="form-input" placeholder="Search enterprises..." style="width: 250px;">
+            <button class="btn">Search</button>
+          </div>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="sortable">Company</th>
+                  <th class="sortable">Contact</th>
+                  <th>Industry</th>
+                  <th class="sortable">Jobs</th>
+                  <th>Status</th>
+                  <th class="sortable">Joined</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>TechCorp Inc.</strong>
+                    <div class="text-small text-muted">500-1000 employees</div>
+                  </td>
+                  <td>
+                    <strong>John Smith</strong>
+                    <div class="text-small text-muted">john@techcorp.com</div>
+                  </td>
+                  <td>Technology</td>
+                  <td>3</td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                  <td>Dec 1, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm">Suspend</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>DataFlow Systems</strong>
+                    <div class="text-small text-muted">201-500 employees</div>
+                  </td>
+                  <td>
+                    <strong>Emily Johnson</strong>
+                    <div class="text-small text-muted">emily@dataflow.com</div>
+                  </td>
+                  <td>Technology</td>
+                  <td>2</td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                  <td>Nov 15, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm">Suspend</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>WebStart Studios</strong>
+                    <div class="text-small text-muted">51-200 employees</div>
+                  </td>
+                  <td>
+                    <strong>Michael Lee</strong>
+                    <div class="text-small text-muted">michael@webstart.com</div>
+                  </td>
+                  <td>Technology</td>
+                  <td>1</td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                  <td>Oct 20, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm">Suspend</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="opacity: 0.7;">
+                  <td>
+                    <strong>OldCorp Ltd.</strong>
+                    <div class="text-small text-muted">1000+ employees</div>
+                  </td>
+                  <td>
+                    <strong>Robert Brown</strong>
+                    <div class="text-small text-muted">rbrown@oldcorp.com</div>
+                  </td>
+                  <td>Manufacturing</td>
+                  <td>0</td>
+                  <td><span class="badge badge-suspended">Suspended</span></td>
+                  <td>Sep 1, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="enterprise-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm btn-success">Reactivate</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="text-small text-muted">Showing 1-10 of 35 enterprises</span>
+            <div class="btn-group">
+              <button class="btn btn-sm" disabled>Previous</button>
+              <button class="btn btn-sm btn-primary">1</button>
+              <button class="btn btn-sm">2</button>
+              <button class="btn btn-sm">3</button>
+              <button class="btn btn-sm">4</button>
+              <button class="btn btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

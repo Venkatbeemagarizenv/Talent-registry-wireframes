@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Detail - HR Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html" class="active">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+
+        <div class="sidebar-section">System</div>
+        <ul class="sidebar-nav">
+          <li><a href="audit-log.html">Audit Log</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div style="margin-bottom: 16px;">
+        <a href="enterprises.html" class="btn btn-sm">← Back to Enterprises</a>
+      </div>
+
+      <div class="page-header">
+        <div>
+          <h1>TechCorp Inc.</h1>
+          <p class="text-muted">San Francisco, CA · Technology</p>
+        </div>
+        <span class="badge badge-selected" style="font-size: 14px; padding: 8px 16px;">Active</span>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1fr 2fr;">
+        <!-- Company Info -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Company Info</h3>
+            </div>
+            <div class="card-body">
+              <div style="text-align: center; margin-bottom: 16px;">
+                <div style="width: 80px; height: 80px; background: var(--color-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 32px;">
+                  🏢
+                </div>
+              </div>
+
+              <div style="display: grid; gap: 12px;">
+                <div>
+                  <p class="text-small text-muted" style="margin-bottom: 2px;">Industry</p>
+                  <p style="margin: 0;"><strong>Technology</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted" style="margin-bottom: 2px;">Company Size</p>
+                  <p style="margin: 0;"><strong>500-1000 employees</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted" style="margin-bottom: 2px;">Website</p>
+                  <p style="margin: 0;"><a href="#">www.techcorp.com</a></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted" style="margin-bottom: 2px;">Joined</p>
+                  <p style="margin: 0;"><strong>December 1, 2024</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Primary Contact</h3>
+            </div>
+            <div class="card-body">
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
+                <div class="profile-avatar" style="width: 48px; height: 48px;">👤</div>
+                <div>
+                  <strong>Alice Chen</strong>
+                  <p class="text-small text-muted" style="margin: 0;">HR Manager</p>
+                </div>
+              </div>
+
+              <div class="contact-visible">
+                <div style="display: grid; gap: 8px;">
+                  <div>
+                    <span class="text-small text-muted">Email:</span>
+                    <strong style="margin-left: 8px;">alice@techcorp.com</strong>
+                  </div>
+                  <div>
+                    <span class="text-small text-muted">Phone:</span>
+                    <strong style="margin-left: 8px;">+1 (555) 123-4567</strong>
+                  </div>
+                </div>
+              </div>
+
+              <a href="chat.html" class="btn btn-block" style="margin-top: 12px;">
+                💬 Send Message
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Actions</h3>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-block" style="margin-bottom: 8px;">Edit Company</button>
+              <button class="btn btn-block btn-danger">Suspend Account</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div>
+          <!-- Stats -->
+          <div class="stat-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="stat-card">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Active Jobs</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">24</div>
+              <div class="stat-label">Total Applicants</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">8</div>
+              <div class="stat-label">Interviews</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">2</div>
+              <div class="stat-label">Placements</div>
+            </div>
+          </div>
+
+          <!-- Active Jobs -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Job Postings</h3>
+              <a href="job-approvals.html" class="btn btn-sm">View All</a>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Position</th>
+                      <th>Type</th>
+                      <th>Applicants</th>
+                      <th>Status</th>
+                      <th>Posted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Software Engineer Intern</strong></td>
+                      <td>Internship</td>
+                      <td>12</td>
+                      <td><span class="badge badge-selected">Active</span></td>
+                      <td>Jan 5, 2025</td>
+                    </tr>
+                    <tr>
+                      <td><strong>ML Engineer</strong></td>
+                      <td>Full-time</td>
+                      <td>8</td>
+                      <td><span class="badge badge-selected">Active</span></td>
+                      <td>Jan 3, 2025</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Data Analyst</strong></td>
+                      <td>Full-time</td>
+                      <td>4</td>
+                      <td><span class="badge badge-selected">Active</span></td>
+                      <td>Jan 8, 2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Placements -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Recent Placements</h3>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Position</th>
+                      <th>Selected</th>
+                      <th>Start Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <strong>Jennifer P.</strong>
+                        <p class="text-small text-muted" style="margin: 0;">Tech Institute '24</p>
+                      </td>
+                      <td>Frontend Developer</td>
+                      <td>Dec 15, 2024</td>
+                      <td>Feb 1, 2025</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Mark T.</strong>
+                        <p class="text-small text-muted" style="margin: 0;">State University '24</p>
+                      </td>
+                      <td>Backend Engineer</td>
+                      <td>Nov 20, 2024</td>
+                      <td>Jan 15, 2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Log -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Activity Log</h3>
+            </div>
+            <div class="card-body">
+              <div class="timeline">
+                <div class="timeline-item active">
+                  <div class="timeline-date">Jan 10, 2025</div>
+                  <div class="timeline-content">
+                    <strong>Interview scheduled</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Alex J. for Software Engineer</p>
+                  </div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="timeline-date">Jan 8, 2025</div>
+                  <div class="timeline-content">
+                    <strong>Job posting approved</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Data Analyst position</p>
+                  </div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="timeline-date">Jan 5, 2025</div>
+                  <div class="timeline-content">
+                    <strong>Job posting submitted</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Software Engineer Intern</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

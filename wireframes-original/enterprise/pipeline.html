@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="post-job.html">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="talent-search.html">Search Talent</a></li>
+          <li><a href="pipeline.html" class="active">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Candidate Pipeline</h1>
+        <select class="form-select" style="width: auto;">
+          <option>All Jobs</option>
+          <option selected>Software Engineer Intern</option>
+          <option>ML Engineer</option>
+          <option>Data Analyst</option>
+        </select>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>📋 Read-Only View:</strong> This pipeline shows candidates who have applied to your positions. HR manages the pipeline progression. To request actions (schedule interview, make offer), contact HR through the messaging system.
+      </div>
+
+      <!-- Pipeline Kanban -->
+      <div class="kanban-board" style="margin-top: 20px;">
+        <!-- Forwarded Column -->
+        <div class="kanban-column">
+          <div class="kanban-header forwarded">
+            <span class="kanban-title">Forwarded to You</span>
+            <span class="kanban-count">3</span>
+          </div>
+          <div class="kanban-card">
+            <strong>Alex J.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">State University '25</p>
+            <div class="skill-tags" style="margin: 8px 0;">
+              <span class="skill-tag" style="font-size: 10px;">Python</span>
+              <span class="skill-tag" style="font-size: 10px;">React</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="badge badge-selected" style="font-size: 10px;">92% Match</span>
+              <a href="talent-detail.html" class="btn btn-sm">View</a>
+            </div>
+          </div>
+          <div class="kanban-card">
+            <strong>Sarah K.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Tech Institute '24</p>
+            <div class="skill-tags" style="margin: 8px 0;">
+              <span class="skill-tag" style="font-size: 10px;">Python</span>
+              <span class="skill-tag" style="font-size: 10px;">ML</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="badge badge-selected" style="font-size: 10px;">88% Match</span>
+              <a href="talent-detail.html" class="btn btn-sm">View</a>
+            </div>
+          </div>
+          <div class="kanban-card">
+            <strong>Mike R.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Engineering College '25</p>
+            <div class="skill-tags" style="margin: 8px 0;">
+              <span class="skill-tag" style="font-size: 10px;">JS</span>
+              <span class="skill-tag" style="font-size: 10px;">Node</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="badge badge-forwarded" style="font-size: 10px;">75% Match</span>
+              <a href="talent-detail.html" class="btn btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interview Scheduled Column -->
+        <div class="kanban-column">
+          <div class="kanban-header interview">
+            <span class="kanban-title">Interview Scheduled</span>
+            <span class="kanban-count">2</span>
+          </div>
+          <div class="kanban-card">
+            <strong>Emma W.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">State University '25</p>
+            <div class="alert alert-info" style="padding: 6px; margin: 8px 0; font-size: 11px;">
+              <strong>Jan 15, 2025</strong><br>
+              2:00 PM · Video Call
+            </div>
+            <a href="talent-detail.html" class="btn btn-sm btn-block">View Profile</a>
+          </div>
+          <div class="kanban-card">
+            <strong>David L.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Tech Institute '25</p>
+            <div class="alert alert-info" style="padding: 6px; margin: 8px 0; font-size: 11px;">
+              <strong>Jan 18, 2025</strong><br>
+              10:00 AM · On-site
+            </div>
+            <a href="talent-detail.html" class="btn btn-sm btn-block">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Interview Completed Column -->
+        <div class="kanban-column">
+          <div class="kanban-header reviewed">
+            <span class="kanban-title">Interview Completed</span>
+            <span class="kanban-count">2</span>
+          </div>
+          <div class="kanban-card">
+            <strong>Lisa M.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Engineering College '24</p>
+            <p class="text-small" style="margin: 8px 0;">Interviewed Jan 10</p>
+            <div style="background: #fffde7; padding: 8px; border-radius: 4px; font-size: 11px;">
+              ⏳ Awaiting your feedback
+            </div>
+            <div class="btn-group" style="margin-top: 8px;">
+              <a href="talent-detail.html" class="btn btn-sm">View</a>
+              <a href="chat.html" class="btn btn-sm btn-primary">Send Feedback</a>
+            </div>
+          </div>
+          <div class="kanban-card">
+            <strong>Tom H.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">State University '25</p>
+            <p class="text-small" style="margin: 8px 0;">Interviewed Jan 8</p>
+            <div style="background: #e8f5e9; padding: 8px; border-radius: 4px; font-size: 11px;">
+              ✓ Feedback submitted
+            </div>
+            <a href="talent-detail.html" class="btn btn-sm" style="margin-top: 8px;">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Pending Decision Column -->
+        <div class="kanban-column">
+          <div class="kanban-header" style="border-color: #9c27b0;">
+            <span class="kanban-title">Pending Decision</span>
+            <span class="kanban-count">1</span>
+          </div>
+          <div class="kanban-card">
+            <strong>Tom H.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">State University '25</p>
+            <div style="background: #f3e5f5; padding: 8px; border-radius: 4px; font-size: 11px; margin: 8px 0;">
+              HR awaiting your final decision
+            </div>
+            <a href="chat.html" class="btn btn-sm btn-primary btn-block">Contact HR</a>
+          </div>
+        </div>
+
+        <!-- Selected Column -->
+        <div class="kanban-column">
+          <div class="kanban-header selected">
+            <span class="kanban-title">Selected</span>
+            <span class="kanban-count">1</span>
+          </div>
+          <div class="kanban-card" style="border-left: 3px solid var(--status-success);">
+            <strong>Jennifer P.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Tech Institute '24</p>
+            <div style="background: #e8f5e9; padding: 8px; border-radius: 4px; font-size: 11px; margin: 8px 0;">
+              🎉 Offer accepted!
+            </div>
+            <p class="text-small text-muted">Starting: Feb 1, 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Required -->
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-header">
+          <h3>⚠️ Action Required</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-2">
+            <div class="alert alert-warning" style="margin: 0;">
+              <strong>Interview Feedback Needed</strong>
+              <p class="text-small" style="margin: 8px 0 0;">Lisa M.'s interview was completed on Jan 10. Please submit your feedback to HR.</p>
+              <a href="chat.html" class="btn btn-sm" style="margin-top: 8px;">Submit Feedback</a>
+            </div>
+            <div class="alert alert-info" style="margin: 0;">
+              <strong>Final Decision Pending</strong>
+              <p class="text-small" style="margin: 8px 0 0;">HR is awaiting your decision on Tom H. Please confirm if you'd like to extend an offer.</p>
+              <a href="chat.html" class="btn btn-sm" style="margin-top: 8px;">Contact HR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

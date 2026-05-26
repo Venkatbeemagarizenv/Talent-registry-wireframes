@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Flags - Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(244,67,54,0.3);">System Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="config.html">Configuration</a></li>
+          <li><a href="feature-flags.html" class="active">Feature Flags</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Feature Flags</h1>
+        <button class="btn btn-primary">+ Add Feature Flag</button>
+      </div>
+
+      <div class="wireframe-note">
+        Feature flags control the rollout of new features. You can enable/disable features, set rollout percentages, and restrict to specific user roles.
+      </div>
+
+      <!-- Feature Flags List -->
+      <div style="display: grid; gap: 16px; margin-top: 20px;">
+        <!-- Feature 1: AI Resume Matching -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <h3 style="margin-bottom: 0;">AI Resume Matching</h3>
+                  <span class="badge badge-selected">Enabled</span>
+                </div>
+                <p class="text-muted" style="margin-bottom: 12px;">
+                  Uses machine learning to match student profiles with job requirements and calculate compatibility scores.
+                </p>
+                <div style="display: flex; gap: 24px; font-size: 13px;">
+                  <div>
+                    <span class="text-muted">Rollout:</span>
+                    <strong>100%</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Roles:</span>
+                    <strong>All Users</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Last Updated:</span>
+                    <strong>Dec 15, 2024</strong>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+                <button class="btn btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Bulk Application Review -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <h3 style="margin-bottom: 0;">Bulk Application Review</h3>
+                  <span class="badge badge-selected">Enabled</span>
+                </div>
+                <p class="text-muted" style="margin-bottom: 12px;">
+                  Allows HR to review and take action on multiple applications at once from the pipeline view.
+                </p>
+                <div style="display: flex; gap: 24px; font-size: 13px;">
+                  <div>
+                    <span class="text-muted">Rollout:</span>
+                    <strong>100%</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Roles:</span>
+                    <strong>HR Only</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Last Updated:</span>
+                    <strong>Jan 5, 2025</strong>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+                <button class="btn btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Video Interview Integration (Beta) -->
+        <div class="card" style="border-left: 4px solid var(--status-pending);">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <h3 style="margin-bottom: 0;">Video Interview Integration</h3>
+                  <span class="badge badge-pending">Beta</span>
+                </div>
+                <p class="text-muted" style="margin-bottom: 12px;">
+                  Allows scheduling and conducting video interviews directly within the platform using integrated video conferencing.
+                </p>
+                <div style="display: flex; gap: 24px; font-size: 13px;">
+                  <div>
+                    <span class="text-muted">Rollout:</span>
+                    <strong>25%</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Roles:</span>
+                    <strong>All Users</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Last Updated:</span>
+                    <strong>Jan 8, 2025</strong>
+                  </div>
+                </div>
+
+                <div style="margin-top: 16px;">
+                  <label class="form-label text-small">Rollout Percentage</label>
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <input type="range" min="0" max="100" value="25" style="flex: 1;">
+                    <span style="min-width: 50px; text-align: right;"><strong>25%</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+                <button class="btn btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: Skills Assessment (Disabled) -->
+        <div class="card" style="opacity: 0.7;">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <h3 style="margin-bottom: 0;">Skills Assessment</h3>
+                  <span class="badge badge-rejected">Disabled</span>
+                </div>
+                <p class="text-muted" style="margin-bottom: 12px;">
+                  In-platform coding assessments and skills tests for students to verify their technical abilities.
+                </p>
+                <div style="display: flex; gap: 24px; font-size: 13px;">
+                  <div>
+                    <span class="text-muted">Rollout:</span>
+                    <strong>0%</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Roles:</span>
+                    <strong>—</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Last Updated:</span>
+                    <strong>Nov 20, 2024</strong>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label class="toggle">
+                  <input type="checkbox">
+                  <span class="toggle-slider"></span>
+                </label>
+                <button class="btn btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 5: Dark Mode -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <h3 style="margin-bottom: 0;">Dark Mode</h3>
+                  <span class="badge badge-selected">Enabled</span>
+                </div>
+                <p class="text-muted" style="margin-bottom: 12px;">
+                  Allows users to switch to a dark color scheme in their profile settings.
+                </p>
+                <div style="display: flex; gap: 24px; font-size: 13px;">
+                  <div>
+                    <span class="text-muted">Rollout:</span>
+                    <strong>100%</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Roles:</span>
+                    <strong>All Users</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Last Updated:</span>
+                    <strong>Dec 1, 2024</strong>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+                <button class="btn btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 6: Email Digest -->
+        <div class="card" style="opacity: 0.7;">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <h3 style="margin-bottom: 0;">Weekly Email Digest</h3>
+                  <span class="badge badge-rejected">Disabled</span>
+                </div>
+                <p class="text-muted" style="margin-bottom: 12px;">
+                  Sends a weekly summary email to students with new job matches and application updates.
+                </p>
+                <div style="display: flex; gap: 24px; font-size: 13px;">
+                  <div>
+                    <span class="text-muted">Rollout:</span>
+                    <strong>0%</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Roles:</span>
+                    <strong>Students</strong>
+                  </div>
+                  <div>
+                    <span class="text-muted">Last Updated:</span>
+                    <strong>Oct 15, 2024</strong>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <label class="toggle">
+                  <input type="checkbox">
+                  <span class="toggle-slider"></span>
+                </label>
+                <button class="btn btn-sm">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

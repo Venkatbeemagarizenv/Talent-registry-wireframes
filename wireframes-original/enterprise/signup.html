@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Signup - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card" style="max-width: 520px;">
+      <div class="login-logo">
+        <h2>Talent Registry</h2>
+        <p class="text-muted">Register Your Company</p>
+      </div>
+
+      <div class="wireframe-note">
+        Enterprises register with company details. After submission, the account awaits HR approval before gaining access.
+      </div>
+
+      <form style="margin-top: 24px;">
+        <h3 style="margin-bottom: 16px;">Company Information</h3>
+
+        <div class="form-group">
+          <label class="form-label">Company Name *</label>
+          <input type="text" class="form-input" placeholder="Enter company name">
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label">Industry *</label>
+            <select class="form-select">
+              <option value="">Select industry...</option>
+              <option>Technology</option>
+              <option>Finance</option>
+              <option>Healthcare</option>
+              <option>Manufacturing</option>
+              <option>Consulting</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Company Size *</label>
+            <select class="form-select">
+              <option value="">Select size...</option>
+              <option>1-50 employees</option>
+              <option>51-200 employees</option>
+              <option>201-500 employees</option>
+              <option>501-1000 employees</option>
+              <option>1000+ employees</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Company Website</label>
+          <input type="url" class="form-input" placeholder="https://www.company.com">
+        </div>
+
+        <h3 style="margin: 24px 0 16px;">Hiring Manager Details</h3>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input type="text" class="form-input" placeholder="First name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input type="text" class="form-input" placeholder="Last name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Work Email *</label>
+          <input type="email" class="form-input" placeholder="you@company.com">
+          <div class="form-hint">Please use your company email address</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Job Title *</label>
+          <input type="text" class="form-input" placeholder="e.g., HR Manager, Talent Acquisition Lead">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+        </div>
+
+        <h3 style="margin: 24px 0 16px;">Account Setup</h3>
+
+        <div class="form-group">
+          <label class="form-label">Password *</label>
+          <input type="password" class="form-input" placeholder="Create a password">
+          <div class="form-hint">At least 8 characters with a number and special character</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Confirm Password *</label>
+          <input type="password" class="form-input" placeholder="Confirm your password">
+        </div>
+
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox">
+            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+          </label>
+        </div>
+
+        <a href="pending-approval.html" class="btn btn-primary btn-block btn-lg" style="margin-top: 16px;">
+          Submit Registration
+        </a>
+
+        <p class="text-center text-small" style="margin-top: 16px;">
+          Already have an account? <a href="../shared/login.html">Sign in</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

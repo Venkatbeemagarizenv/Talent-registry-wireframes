@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Log - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="audit-log.html" class="active">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Audit Log</h1>
+        <button class="btn">Export CSV</button>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>🔒 Immutable Audit Trail</strong><br>
+        All actions on the platform are logged and cannot be modified or deleted. This log is for compliance and accountability purposes.
+      </div>
+
+      <!-- Filter Panel -->
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label>Actor</label>
+            <select class="form-select">
+              <option>All Actors</option>
+              <option>HR Team</option>
+              <option>Students</option>
+              <option>Enterprises</option>
+              <option>System</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Action Type</label>
+            <select class="form-select">
+              <option>All Actions</option>
+              <option>Application</option>
+              <option>Status Change</option>
+              <option>Interview</option>
+              <option>Approval</option>
+              <option>Login</option>
+              <option>Profile Update</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Date From</label>
+            <input type="date" class="form-input">
+          </div>
+          <div class="filter-group">
+            <label>Date To</label>
+            <input type="date" class="form-input">
+          </div>
+          <div class="filter-group" style="display: flex; align-items: flex-end;">
+            <button class="btn btn-primary">Apply Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audit Log Table -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width: 160px;">Timestamp</th>
+                  <th style="width: 140px;">Actor</th>
+                  <th style="width: 120px;">Action Type</th>
+                  <th>Details</th>
+                  <th style="width: 100px;">IP Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-small">Jan 10, 2025<br>11:00:15 AM</td>
+                  <td>
+                    <strong>Alex J.</strong>
+                    <div class="text-small text-muted">Student</div>
+                  </td>
+                  <td><span class="badge badge-applied">Message</span></td>
+                  <td>Sent message to HR regarding TechCorp interview confirmation</td>
+                  <td class="text-small text-muted">192.168.1.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 10, 2025<br>10:46:32 AM</td>
+                  <td>
+                    <strong>Sarah (HR)</strong>
+                    <div class="text-small text-muted">HR Admin</div>
+                  </td>
+                  <td><span class="badge badge-interview">Interview</span></td>
+                  <td>Scheduled interview for Alex J. with TechCorp Inc. on Jan 15, 2025 at 2:00 PM</td>
+                  <td class="text-small text-muted">10.0.0.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 10, 2025<br>10:30:00 AM</td>
+                  <td>
+                    <strong>Sarah (HR)</strong>
+                    <div class="text-small text-muted">HR Admin</div>
+                  </td>
+                  <td><span class="badge badge-forwarded">Status Change</span></td>
+                  <td>Changed Alex J.'s application status from HR_REVIEWED to INTERVIEW_SCHEDULED</td>
+                  <td class="text-small text-muted">10.0.0.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 10, 2025<br>9:30:45 AM</td>
+                  <td>
+                    <strong>Alex J.</strong>
+                    <div class="text-small text-muted">Student</div>
+                  </td>
+                  <td><span class="badge badge-applied">Application</span></td>
+                  <td>Submitted application for Software Engineer Intern at TechCorp Inc.</td>
+                  <td class="text-small text-muted">192.168.1.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 10, 2025<br>9:15:00 AM</td>
+                  <td>
+                    <strong>CloudApp Inc.</strong>
+                    <div class="text-small text-muted">Enterprise</div>
+                  </td>
+                  <td><span class="badge badge-pending">Registration</span></td>
+                  <td>Enterprise registration submitted for approval</td>
+                  <td class="text-small text-muted">172.16.0.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 9, 2025<br>4:30:22 PM</td>
+                  <td>
+                    <strong>Mike (HR)</strong>
+                    <div class="text-small text-muted">HR Admin</div>
+                  </td>
+                  <td><span class="badge badge-selected">Approval</span></td>
+                  <td>Approved job posting "Software Engineer Intern" for TechCorp Inc.</td>
+                  <td class="text-small text-muted">10.0.0.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 9, 2025<br>3:45:11 PM</td>
+                  <td>
+                    <strong>TechCorp Inc.</strong>
+                    <div class="text-small text-muted">Enterprise</div>
+                  </td>
+                  <td><span class="badge badge-pending">Job Post</span></td>
+                  <td>Submitted job posting "Software Engineer Intern" for approval</td>
+                  <td class="text-small text-muted">172.16.0.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 9, 2025<br>2:00:00 PM</td>
+                  <td>
+                    <strong>System</strong>
+                    <div class="text-small text-muted">Automated</div>
+                  </td>
+                  <td><span class="badge" style="background: var(--color-muted); color: white;">Sync</span></td>
+                  <td>ZenCube profile sync completed for 248 students</td>
+                  <td class="text-small text-muted">Internal</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 9, 2025<br>10:22:33 AM</td>
+                  <td>
+                    <strong>Sarah (HR)</strong>
+                    <div class="text-small text-muted">HR Admin</div>
+                  </td>
+                  <td><span class="badge badge-rejected">Status Change</span></td>
+                  <td>Rejected application from John D. for Software Engineer Intern (Reason: Skills mismatch)</td>
+                  <td class="text-small text-muted">10.0.0.x</td>
+                </tr>
+                <tr>
+                  <td class="text-small">Jan 8, 2025<br>5:15:00 PM</td>
+                  <td>
+                    <strong>Sarah (HR)</strong>
+                    <div class="text-small text-muted">HR Admin</div>
+                  </td>
+                  <td><span class="badge badge-selected">Selection</span></td>
+                  <td>Marked Emma W. as SELECTED for Software Engineer Intern at TechCorp Inc.</td>
+                  <td class="text-small text-muted">10.0.0.x</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="text-small text-muted">Showing 1-10 of 1,247 entries</span>
+            <div class="btn-group">
+              <button class="btn btn-sm" disabled>Previous</button>
+              <button class="btn btn-sm btn-primary">1</button>
+              <button class="btn btn-sm">2</button>
+              <button class="btn btn-sm">3</button>
+              <button class="btn btn-sm">...</button>
+              <button class="btn btn-sm">125</button>
+              <button class="btn btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

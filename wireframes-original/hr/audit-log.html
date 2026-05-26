@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Log - HR Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+
+        <div class="sidebar-section">System</div>
+        <ul class="sidebar-nav">
+          <li><a href="audit-log.html" class="active">Audit Log</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Audit Log</h1>
+        <button class="btn">Export Log</button>
+      </div>
+
+      <div class="wireframe-note">
+        The audit log records all significant actions in the system. Entries are immutable and cannot be edited or deleted.
+      </div>
+
+      <!-- Filters -->
+      <div class="card" style="margin: 20px 0;">
+        <div class="card-body">
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <select class="form-select">
+                <option>All Actions</option>
+                <option>Application Status Change</option>
+                <option>Job Posting</option>
+                <option>Enterprise Management</option>
+                <option>Interview Scheduled</option>
+                <option>User Login</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <select class="form-select">
+                <option>All Actors</option>
+                <option>Sarah (HR)</option>
+                <option>System</option>
+                <option>Students</option>
+                <option>Enterprises</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <input type="date" class="form-input" placeholder="From">
+            </div>
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <input type="date" class="form-input" placeholder="To">
+            </div>
+            <button class="btn btn-primary">Filter</button>
+            <button class="btn">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audit Log Table -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Actor</th>
+                  <th>Action</th>
+                  <th>Details</th>
+                  <th>IP Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Jan 10, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">11:45:23 AM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(156,39,176,0.2); color: #7b1fa2;">HR</span>
+                    Sarah M.
+                  </td>
+                  <td>Application Status Change</td>
+                  <td>
+                    <strong>Alex J. → TechCorp</strong>
+                    <p class="text-small text-muted" style="margin: 0;">HR_REVIEWED → FORWARDED</p>
+                  </td>
+                  <td class="text-small text-muted">192.168.1.100</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 10, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">11:30:15 AM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(33,150,243,0.2); color: #1976d2;">Student</span>
+                    Alex J.
+                  </td>
+                  <td>Application Submitted</td>
+                  <td>
+                    <strong>Applied to TechCorp</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Position: Software Engineer Intern</p>
+                  </td>
+                  <td class="text-small text-muted">10.0.0.55</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 10, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">10:15:42 AM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(156,39,176,0.2); color: #7b1fa2;">HR</span>
+                    Sarah M.
+                  </td>
+                  <td>Job Posting Approved</td>
+                  <td>
+                    <strong>TechCorp - DevOps Engineer</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Posting now live</p>
+                  </td>
+                  <td class="text-small text-muted">192.168.1.100</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 10, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">09:30:00 AM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(76,175,80,0.2); color: #388e3c;">System</span>
+                    Auto Sync
+                  </td>
+                  <td>Profile Sync</td>
+                  <td>
+                    <strong>ZenCube sync completed</strong>
+                    <p class="text-small text-muted" style="margin: 0;">12 profiles updated</p>
+                  </td>
+                  <td class="text-small text-muted">—</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 10, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">09:00:12 AM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(255,152,0,0.2); color: #f57c00;">Enterprise</span>
+                    TechCorp
+                  </td>
+                  <td>Job Posting Submitted</td>
+                  <td>
+                    <strong>DevOps Engineer</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Pending HR approval</p>
+                  </td>
+                  <td class="text-small text-muted">203.0.113.50</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 9, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">04:45:30 PM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(156,39,176,0.2); color: #7b1fa2;">HR</span>
+                    Sarah M.
+                  </td>
+                  <td>Interview Scheduled</td>
+                  <td>
+                    <strong>Sarah K. - AI Innovations</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Jan 15, 2025 at 2:00 PM</p>
+                  </td>
+                  <td class="text-small text-muted">192.168.1.100</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 9, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">02:30:18 PM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(156,39,176,0.2); color: #7b1fa2;">HR</span>
+                    Sarah M.
+                  </td>
+                  <td>Enterprise Approved</td>
+                  <td>
+                    <strong>CloudTech Inc.</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Registration approved</p>
+                  </td>
+                  <td class="text-small text-muted">192.168.1.100</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jan 9, 2025</strong>
+                    <p class="text-small text-muted" style="margin: 0;">10:00:00 AM</p>
+                  </td>
+                  <td>
+                    <span class="badge" style="background: rgba(255,152,0,0.2); color: #f57c00;">Enterprise</span>
+                    CloudTech
+                  </td>
+                  <td>Enterprise Registered</td>
+                  <td>
+                    <strong>New registration submitted</strong>
+                    <p class="text-small text-muted" style="margin: 0;">Emily Brown · emily@cloudtech.io</p>
+                  </td>
+                  <td class="text-small text-muted">198.51.100.25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">...</button>
+        <button class="pagination-btn">50</button>
+        <button class="pagination-btn">Next →</button>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

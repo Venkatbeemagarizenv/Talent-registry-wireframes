@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Job - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="post-job.html" class="active">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="talent-search.html">Search Talent</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Post New Job</h1>
+      </div>
+
+      <div class="wireframe-note">
+        Job postings require HR approval before becoming visible to students. You'll be notified once your job is approved.
+      </div>
+
+      <div class="card" style="margin-top: 20px;">
+        <div class="card-body">
+          <form>
+            <h3 style="margin-bottom: 20px;">Job Details</h3>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label">Job Title *</label>
+                <input type="text" class="form-input" placeholder="e.g., Software Engineer Intern">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Job Type *</label>
+                <select class="form-select">
+                  <option value="">Select type...</option>
+                  <option>Full-time</option>
+                  <option>Internship</option>
+                  <option>Part-time</option>
+                  <option>Contract</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label">Domain *</label>
+                <select class="form-select">
+                  <option value="">Select domain...</option>
+                  <option>Backend Development</option>
+                  <option>Frontend Development</option>
+                  <option>Full Stack</option>
+                  <option>Machine Learning</option>
+                  <option>Data Science</option>
+                  <option>DevOps</option>
+                  <option>Mobile Development</option>
+                  <option>UI/UX Design</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Location *</label>
+                <input type="text" class="form-input" placeholder="e.g., San Francisco, CA">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Work Mode *</label>
+              <div style="display: flex; gap: 24px; margin-top: 8px;">
+                <label class="form-checkbox">
+                  <input type="radio" name="workMode" checked>
+                  <span>Remote</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="radio" name="workMode">
+                  <span>Hybrid</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="radio" name="workMode">
+                  <span>On-site</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Job Description *</label>
+              <textarea class="form-textarea" rows="6" placeholder="Describe the role, responsibilities, and what makes this opportunity exciting..."></textarea>
+            </div>
+
+            <h3 style="margin: 32px 0 20px;">Requirements</h3>
+
+            <div class="form-group">
+              <label class="form-label">Required Skills *</label>
+              <input type="text" class="form-input" placeholder="Type a skill and press Enter...">
+              <div class="skill-tags" style="margin-top: 12px;">
+                <span class="skill-tag">Python <button style="background: none; border: none; cursor: pointer;">×</button></span>
+                <span class="skill-tag">React <button style="background: none; border: none; cursor: pointer;">×</button></span>
+                <span class="skill-tag">AWS <button style="background: none; border: none; cursor: pointer;">×</button></span>
+              </div>
+              <div class="form-hint">Add skills that candidates must have</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Nice-to-Have Skills</label>
+              <input type="text" class="form-input" placeholder="Type a skill and press Enter...">
+              <div class="form-hint">Optional skills that would be beneficial</div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label">Target Graduation Year(s)</label>
+                <div style="display: flex; gap: 12px; margin-top: 8px;">
+                  <label class="form-checkbox">
+                    <input type="checkbox" checked>
+                    <span>2025</span>
+                  </label>
+                  <label class="form-checkbox">
+                    <input type="checkbox" checked>
+                    <span>2024</span>
+                  </label>
+                  <label class="form-checkbox">
+                    <input type="checkbox">
+                    <span>2026</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Duration (for internships)</label>
+                <select class="form-select">
+                  <option value="">Select duration...</option>
+                  <option>1 month</option>
+                  <option>2 months</option>
+                  <option selected>3 months</option>
+                  <option>6 months</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Additional Requirements</label>
+              <textarea class="form-textarea" rows="3" placeholder="Any other requirements or qualifications..."></textarea>
+            </div>
+
+            <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border);">
+              <div class="alert alert-warning">
+                <strong>⚠️ Note:</strong> This job posting will be reviewed by HR before being published. This typically takes 24-48 hours.
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 16px;">
+                <button type="button" class="btn">Save as Draft</button>
+                <button type="submit" class="btn btn-primary">Submit for Approval</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

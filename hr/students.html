@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html" class="active">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="audit-log.html">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Student Database</h1>
+        <span class="text-muted">248 registered students</span>
+      </div>
+
+      <!-- Filter Panel -->
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label>Search</label>
+            <input type="text" class="form-input" placeholder="Name, email, or skills...">
+          </div>
+          <div class="filter-group">
+            <label>Institution</label>
+            <select class="form-select">
+              <option>All Institutions</option>
+              <option>State University</option>
+              <option>Tech Institute</option>
+              <option>Engineering College</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Graduation Year</label>
+            <select class="form-select">
+              <option>All Years</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Domain</label>
+            <select class="form-select">
+              <option>All Domains</option>
+              <option>Software Engineering</option>
+              <option>Data Science</option>
+              <option>Product Management</option>
+              <option>Design</option>
+            </select>
+          </div>
+          <div class="filter-group" style="display: flex; align-items: flex-end;">
+            <button class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Students Table -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="sortable">Name</th>
+                  <th>Contact</th>
+                  <th class="sortable">Institution</th>
+                  <th class="sortable">Graduation</th>
+                  <th>Skills</th>
+                  <th class="sortable">Applications</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Alex Johnson</strong>
+                    <div class="text-small text-muted">Computer Science</div>
+                  </td>
+                  <td>
+                    <div class="text-small">📧 alex.johnson@university.edu</div>
+                    <div class="text-small">📱 +1 (555) 123-4567</div>
+                  </td>
+                  <td>State University</td>
+                  <td>May 2025</td>
+                  <td>
+                    <div class="tag-list">
+                      <span class="tag" style="font-size: 10px;">Python</span>
+                      <span class="tag" style="font-size: 10px;">React</span>
+                      <span class="tag" style="font-size: 10px;">+3</span>
+                    </div>
+                  </td>
+                  <td>3 active</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="application-detail.html" class="btn btn-sm">View</a>
+                      <a href="chat.html" class="btn btn-sm">Message</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Sarah Martinez</strong>
+                    <div class="text-small text-muted">Data Science</div>
+                  </td>
+                  <td>
+                    <div class="text-small">📧 sarah.m@techinstitute.edu</div>
+                    <div class="text-small">📱 +1 (555) 234-5678</div>
+                  </td>
+                  <td>Tech Institute</td>
+                  <td>May 2025</td>
+                  <td>
+                    <div class="tag-list">
+                      <span class="tag" style="font-size: 10px;">Python</span>
+                      <span class="tag" style="font-size: 10px;">SQL</span>
+                      <span class="tag" style="font-size: 10px;">+2</span>
+                    </div>
+                  </td>
+                  <td>2 active</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="application-detail.html" class="btn btn-sm">View</a>
+                      <a href="chat.html" class="btn btn-sm">Message</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>David Lee</strong>
+                    <div class="text-small text-muted">Software Engineering</div>
+                  </td>
+                  <td>
+                    <div class="text-small">📧 david.lee@engineering.edu</div>
+                    <div class="text-small">📱 +1 (555) 345-6789</div>
+                  </td>
+                  <td>Engineering College</td>
+                  <td>May 2025</td>
+                  <td>
+                    <div class="tag-list">
+                      <span class="tag" style="font-size: 10px;">JavaScript</span>
+                      <span class="tag" style="font-size: 10px;">Node.js</span>
+                      <span class="tag" style="font-size: 10px;">+4</span>
+                    </div>
+                  </td>
+                  <td>1 active</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="application-detail.html" class="btn btn-sm">View</a>
+                      <a href="chat.html" class="btn btn-sm">Message</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Jessica Thompson</strong>
+                    <div class="text-small text-muted">Computer Science</div>
+                  </td>
+                  <td>
+                    <div class="text-small">📧 jthompson@university.edu</div>
+                    <div class="text-small">📱 +1 (555) 456-7890</div>
+                  </td>
+                  <td>State University</td>
+                  <td>May 2026</td>
+                  <td>
+                    <div class="tag-list">
+                      <span class="tag" style="font-size: 10px;">Java</span>
+                      <span class="tag" style="font-size: 10px;">Spring</span>
+                      <span class="tag" style="font-size: 10px;">+2</span>
+                    </div>
+                  </td>
+                  <td>2 active</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="application-detail.html" class="btn btn-sm">View</a>
+                      <a href="chat.html" class="btn btn-sm">Message</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Chris Wilson</strong>
+                    <div class="text-small text-muted">Machine Learning</div>
+                  </td>
+                  <td>
+                    <div class="text-small">📧 cwilson@techinstitute.edu</div>
+                    <div class="text-small">📱 +1 (555) 567-8901</div>
+                  </td>
+                  <td>Tech Institute</td>
+                  <td>May 2025</td>
+                  <td>
+                    <div class="tag-list">
+                      <span class="tag" style="font-size: 10px;">Python</span>
+                      <span class="tag" style="font-size: 10px;">TensorFlow</span>
+                      <span class="tag" style="font-size: 10px;">+3</span>
+                    </div>
+                  </td>
+                  <td>1 active</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="application-detail.html" class="btn btn-sm">View</a>
+                      <a href="chat.html" class="btn btn-sm">Message</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Emily Rodriguez</strong>
+                    <div class="text-small text-muted">Frontend Development</div>
+                  </td>
+                  <td>
+                    <div class="text-small">📧 emily.r@engineering.edu</div>
+                    <div class="text-small">📱 +1 (555) 678-9012</div>
+                  </td>
+                  <td>Engineering College</td>
+                  <td>May 2025</td>
+                  <td>
+                    <div class="tag-list">
+                      <span class="tag" style="font-size: 10px;">React</span>
+                      <span class="tag" style="font-size: 10px;">CSS</span>
+                      <span class="tag" style="font-size: 10px;">+2</span>
+                    </div>
+                  </td>
+                  <td>3 active</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="application-detail.html" class="btn btn-sm">View</a>
+                      <a href="chat.html" class="btn btn-sm">Message</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="text-small text-muted">Showing 1-10 of 248 students</span>
+            <div class="btn-group">
+              <button class="btn btn-sm" disabled>Previous</button>
+              <button class="btn btn-sm btn-primary">1</button>
+              <button class="btn btn-sm">2</button>
+              <button class="btn btn-sm">3</button>
+              <button class="btn btn-sm">...</button>
+              <button class="btn btn-sm">25</button>
+              <button class="btn btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="stat-grid" style="margin-top: 24px;">
+        <div class="stat-card">
+          <div class="stat-value">248</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">156</div>
+          <div class="stat-label">With Active Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Placed This Month</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">85%</div>
+          <div class="stat-label">Profile Completion</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

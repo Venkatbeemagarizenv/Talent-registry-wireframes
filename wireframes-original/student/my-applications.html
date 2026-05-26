@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Applications - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html" class="active">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>My Applications</h1>
+        <span class="text-muted">Track your application progress</span>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-applied);">2</div>
+          <div class="stat-label">Applied</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-forwarded);">1</div>
+          <div class="stat-label">Forwarded</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-interview);">2</div>
+          <div class="stat-label">Interview</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-selected);">0</div>
+          <div class="stat-label">Selected</div>
+        </div>
+      </div>
+
+      <!-- Pipeline View -->
+      <div class="wireframe-note">
+        Your applications are displayed in a Kanban-style pipeline. Click on any card to see details.
+      </div>
+
+      <div class="kanban-board" style="margin-top: 20px;">
+        <!-- Applied Column -->
+        <div class="kanban-column">
+          <div class="kanban-header applied">
+            <span class="kanban-title">Applied</span>
+            <span class="kanban-count">2</span>
+          </div>
+          <div class="kanban-card" onclick="window.location='application-detail.html'">
+            <strong>Frontend Developer</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">WebStart Studios</p>
+            <span class="text-small text-muted">Applied Jan 8, 2025</span>
+          </div>
+          <div class="kanban-card" onclick="window.location='application-detail.html'">
+            <strong>Backend Engineer</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">CloudTech Inc.</p>
+            <span class="text-small text-muted">Applied Jan 7, 2025</span>
+          </div>
+        </div>
+
+        <!-- HR Reviewed Column -->
+        <div class="kanban-column">
+          <div class="kanban-header reviewed">
+            <span class="kanban-title">HR Reviewed</span>
+            <span class="kanban-count">0</span>
+          </div>
+          <div class="empty-state" style="padding: 20px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+            <p class="text-small text-muted">No applications at this stage</p>
+          </div>
+        </div>
+
+        <!-- Forwarded Column -->
+        <div class="kanban-column">
+          <div class="kanban-header forwarded">
+            <span class="kanban-title">Forwarded to Company</span>
+            <span class="kanban-count">1</span>
+          </div>
+          <div class="kanban-card" onclick="window.location='application-detail.html'">
+            <strong>Data Analyst</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">DataFlow Systems</p>
+            <span class="text-small text-muted">Forwarded Jan 5, 2025</span>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-danger" onclick="event.stopPropagation()">Withdraw</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interview Column -->
+        <div class="kanban-column">
+          <div class="kanban-header interview">
+            <span class="kanban-title">Interview Scheduled</span>
+            <span class="kanban-count">2</span>
+          </div>
+          <div class="kanban-card" onclick="window.location='application-detail.html'">
+            <strong>Software Engineer Intern</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">TechCorp Inc.</p>
+            <div class="alert alert-info" style="padding: 8px; margin: 8px 0;">
+              <strong>Jan 15, 2025</strong><br>
+              <span class="text-small">2:00 PM · Video Call</span>
+            </div>
+          </div>
+          <div class="kanban-card" onclick="window.location='application-detail.html'">
+            <strong>ML Engineer</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">AI Innovations</p>
+            <div class="alert alert-info" style="padding: 8px; margin: 8px 0;">
+              <strong>Jan 18, 2025</strong><br>
+              <span class="text-small">10:00 AM · On-site</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Completed Column -->
+        <div class="kanban-column">
+          <div class="kanban-header selected">
+            <span class="kanban-title">Completed</span>
+            <span class="kanban-count">0</span>
+          </div>
+          <div class="empty-state" style="padding: 20px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">🎉</div>
+            <p class="text-small text-muted">Selections will appear here</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application History Table -->
+      <div class="card" style="margin-top: 32px;">
+        <div class="card-header">
+          <h3>All Applications</h3>
+          <div class="btn-group">
+            <button class="btn btn-sm btn-primary">Active</button>
+            <button class="btn btn-sm">Completed</button>
+            <button class="btn btn-sm">Withdrawn</button>
+          </div>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Position</th>
+                  <th>Company</th>
+                  <th>Applied</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Software Engineer Intern</strong></td>
+                  <td>TechCorp Inc.</td>
+                  <td>Jan 3, 2025</td>
+                  <td><span class="badge badge-interview">Interview Scheduled</span></td>
+                  <td>
+                    <a href="application-detail.html" class="btn btn-sm">View</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>ML Engineer</strong></td>
+                  <td>AI Innovations</td>
+                  <td>Jan 2, 2025</td>
+                  <td><span class="badge badge-interview">Interview Scheduled</span></td>
+                  <td>
+                    <a href="application-detail.html" class="btn btn-sm">View</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Data Analyst</strong></td>
+                  <td>DataFlow Systems</td>
+                  <td>Dec 28, 2024</td>
+                  <td><span class="badge badge-forwarded">Forwarded</span></td>
+                  <td>
+                    <a href="application-detail.html" class="btn btn-sm">View</a>
+                    <button class="btn btn-sm btn-danger">Withdraw</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Frontend Developer</strong></td>
+                  <td>WebStart Studios</td>
+                  <td>Jan 8, 2025</td>
+                  <td><span class="badge badge-applied">Applied</span></td>
+                  <td>
+                    <a href="application-detail.html" class="btn btn-sm">View</a>
+                    <button class="btn btn-sm btn-danger">Withdraw</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

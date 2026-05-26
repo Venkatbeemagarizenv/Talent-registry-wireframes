@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html">Notifications <span class="badge">3</span></a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Welcome back, Alex!</h1>
+        <a href="notifications.html" class="btn">
+          🔔 3 new notifications
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Active Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Interviews Scheduled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Jobs Matching Profile</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">85%</div>
+          <div class="stat-label">Profile Strength</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Profile Summary -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Profile Summary</h3>
+            <a href="profile.html" class="btn btn-sm">View Full Profile</a>
+          </div>
+          <div class="card-body">
+            <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+              <div class="profile-avatar">👤</div>
+              <div>
+                <h4>Alex Johnson</h4>
+                <p class="text-muted" style="margin: 0;">Computer Science · Class of 2025</p>
+                <p class="text-muted text-small" style="margin: 4px 0 0;">State University</p>
+              </div>
+            </div>
+
+            <div class="alert alert-info">
+              <strong>Profile synced from ZenCube</strong><br>
+              <span class="text-small">Last updated: 2 hours ago</span>
+            </div>
+
+            <div style="margin-top: 16px;">
+              <strong>Top Skills</strong>
+              <div class="skill-tags" style="margin-top: 8px;">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="notification-item">
+              <div class="notification-icon">📧</div>
+              <div class="notification-content">
+                <strong>Interview scheduled with TechCorp</strong>
+                <p class="text-small text-muted" style="margin: 0;">Tomorrow at 2:00 PM</p>
+              </div>
+              <div class="notification-time">1h ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">✅</div>
+              <div class="notification-content">
+                <strong>Application forwarded to DataFlow Inc</strong>
+                <p class="text-small text-muted" style="margin: 0;">Your application is being reviewed</p>
+              </div>
+              <div class="notification-time">3h ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">📝</div>
+              <div class="notification-content">
+                <strong>New job matches your profile</strong>
+                <p class="text-small text-muted" style="margin: 0;">5 new openings in Software Engineering</p>
+              </div>
+              <div class="notification-time">1d ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Interviews -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Upcoming Interviews</h3>
+          <a href="calendar.html" class="btn btn-sm">View Calendar</a>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Date & Time</th>
+                  <th>Type</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>TechCorp Inc.</strong></td>
+                  <td>Software Engineer Intern</td>
+                  <td>Jan 15, 2025 · 2:00 PM</td>
+                  <td><span class="badge badge-interview">Video Call</span></td>
+                  <td>
+                    <button class="btn btn-sm">Join Meeting</button>
+                    <button class="btn btn-sm">Download ICS</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>AI Innovations</strong></td>
+                  <td>ML Engineer</td>
+                  <td>Jan 18, 2025 · 10:00 AM</td>
+                  <td><span class="badge badge-interview">On-site</span></td>
+                  <td>
+                    <button class="btn btn-sm">View Details</button>
+                    <button class="btn btn-sm">Download ICS</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Quick Actions</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-4">
+            <a href="openings-list.html" class="btn btn-block" style="padding: 20px;">
+              🔍 Browse Jobs
+            </a>
+            <a href="my-applications.html" class="btn btn-block" style="padding: 20px;">
+              📋 My Applications
+            </a>
+            <a href="chat.html" class="btn btn-block" style="padding: 20px;">
+              💬 Messages
+            </a>
+            <a href="profile.html" class="btn btn-block" style="padding: 20px;">
+              👤 View Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

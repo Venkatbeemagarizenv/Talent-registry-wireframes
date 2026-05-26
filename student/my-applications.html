@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Applications - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html" class="active">My Applications</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>My Applications</h1>
+        <a href="openings-list.html" class="btn btn-primary">Browse More Jobs</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid" style="grid-template-columns: repeat(6, 1fr);">
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-applied);">2</div>
+          <div class="stat-label">Applied</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-hr-reviewed);">1</div>
+          <div class="stat-label">HR Reviewed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-forwarded);">1</div>
+          <div class="stat-label">Forwarded</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-interview);">1</div>
+          <div class="stat-label">Interview</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-selected);">0</div>
+          <div class="stat-label">Selected</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--stage-rejected);">1</div>
+          <div class="stat-label">Rejected</div>
+        </div>
+      </div>
+
+      <!-- Pipeline View Toggle -->
+      <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+        <button class="btn btn-primary">Kanban View</button>
+        <button class="btn">Table View</button>
+      </div>
+
+      <!-- Kanban Pipeline -->
+      <div class="kanban-container">
+        <!-- Applied -->
+        <div class="kanban-column" data-stage="applied">
+          <div class="kanban-header">
+            Applied
+            <span class="count">2</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card">
+              <div class="kanban-card-title">Frontend Developer</div>
+              <div class="kanban-card-meta">WebStart Studios</div>
+              <div class="kanban-card-meta">Applied Dec 28, 2024</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm">View Details</a>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <div class="kanban-card-title">Full Stack Developer</div>
+              <div class="kanban-card-meta">CloudApp Inc.</div>
+              <div class="kanban-card-meta">Applied Jan 8, 2025</div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HR Reviewed -->
+        <div class="kanban-column" data-stage="hr-reviewed">
+          <div class="kanban-header">
+            HR Reviewed
+            <span class="count">1</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card">
+              <div class="kanban-card-title">Data Analyst</div>
+              <div class="kanban-card-meta">DataFlow Systems</div>
+              <div class="kanban-card-meta">Applied Jan 3, 2025</div>
+              <div style="margin-top: 8px; font-size: 11px; color: var(--color-muted);">
+                HR reviewed on Jan 7, 2025
+              </div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forwarded -->
+        <div class="kanban-column" data-stage="forwarded">
+          <div class="kanban-header">
+            Forwarded
+            <span class="count">1</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card">
+              <div class="kanban-card-title">ML Engineer Intern</div>
+              <div class="kanban-card-meta">AI Innovations</div>
+              <div class="kanban-card-meta">Applied Dec 20, 2024</div>
+              <div style="margin-top: 8px; font-size: 11px; color: var(--color-muted);">
+                Forwarded to company on Jan 5, 2025
+              </div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interview -->
+        <div class="kanban-column" data-stage="interview">
+          <div class="kanban-header">
+            Interview
+            <span class="count">1</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" style="border-left: 3px solid var(--stage-interview);">
+              <div class="kanban-card-title">Software Engineer Intern</div>
+              <div class="kanban-card-meta">TechCorp Inc.</div>
+              <div class="kanban-card-meta">Applied Jan 5, 2025</div>
+              <div style="margin-top: 8px; padding: 8px; background: #e0f2f1; border-radius: 4px; font-size: 12px;">
+                📅 Interview: Jan 15, 2025 at 2:00 PM
+              </div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected -->
+        <div class="kanban-column" data-stage="selected">
+          <div class="kanban-header">
+            Selected
+            <span class="count">0</span>
+          </div>
+          <div class="kanban-body">
+            <div class="empty-state" style="padding: 40px 20px;">
+              <div class="empty-state-icon">🎉</div>
+              <p class="text-small text-muted">Offers will appear here</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rejected -->
+        <div class="kanban-column" data-stage="rejected">
+          <div class="kanban-header">
+            Closed
+            <span class="count">1</span>
+          </div>
+          <div class="kanban-body">
+            <div class="kanban-card" style="opacity: 0.7;">
+              <div class="kanban-card-title">Backend Developer</div>
+              <div class="kanban-card-meta">Enterprise Corp</div>
+              <div class="kanban-card-meta">Applied Dec 15, 2024</div>
+              <div style="margin-top: 8px;">
+                <span class="badge badge-rejected">Position Filled</span>
+              </div>
+              <div style="margin-top: 12px;">
+                <a href="application-detail.html" class="btn btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-body">
+          <h4 style="margin-bottom: 12px;">Understanding Your Application Status</h4>
+          <div class="grid-3">
+            <div>
+              <span class="badge badge-applied" style="margin-bottom: 8px;">Applied</span>
+              <p class="text-small text-muted">Your application has been submitted and is waiting for HR review.</p>
+            </div>
+            <div>
+              <span class="badge badge-hr-reviewed" style="margin-bottom: 8px;">HR Reviewed</span>
+              <p class="text-small text-muted">HR has reviewed your application and is evaluating your fit.</p>
+            </div>
+            <div>
+              <span class="badge badge-forwarded" style="margin-bottom: 8px;">Forwarded</span>
+              <p class="text-small text-muted">Your application has been forwarded to the hiring company.</p>
+            </div>
+            <div>
+              <span class="badge badge-interview" style="margin-bottom: 8px;">Interview</span>
+              <p class="text-small text-muted">An interview has been scheduled. Check your calendar!</p>
+            </div>
+            <div>
+              <span class="badge badge-selected" style="margin-bottom: 8px;">Selected</span>
+              <p class="text-small text-muted">Congratulations! You've been selected for this position.</p>
+            </div>
+            <div>
+              <span class="badge badge-rejected" style="margin-bottom: 8px;">Closed</span>
+              <p class="text-small text-muted">This application has been closed (rejected, withdrawn, or position filled).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

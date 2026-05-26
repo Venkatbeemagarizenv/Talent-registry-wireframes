@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - HR Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+
+        <div class="sidebar-section">System</div>
+        <ul class="sidebar-nav">
+          <li><a href="audit-log.html">Audit Log</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>HR Dashboard</h1>
+        <span class="text-muted">Welcome back, Sarah</span>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">248</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">35</div>
+          <div class="stat-label">Enterprises</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">156</div>
+          <div class="stat-label">Active Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Placements (YTD)</div>
+        </div>
+      </div>
+
+      <!-- Alerts -->
+      <div class="grid-2" style="margin-bottom: 24px;">
+        <div class="alert alert-warning" style="margin: 0;">
+          <strong>⚠️ 3 Pending Approvals</strong>
+          <p style="margin: 8px 0 0;">Job postings awaiting your review.</p>
+          <a href="job-approvals.html" class="btn btn-sm" style="margin-top: 8px;">Review Now</a>
+        </div>
+        <div class="alert alert-danger" style="margin: 0;">
+          <strong>🔴 5 Stale Applications</strong>
+          <p style="margin: 8px 0 0;">Applications without action for 7+ days.</p>
+          <a href="pipeline-kanban.html" class="btn btn-sm" style="margin-top: 8px;">View Pipeline</a>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="notification-item">
+              <div class="notification-icon">🏢</div>
+              <div class="notification-content">
+                <strong>New enterprise registered</strong>
+                <p class="text-small text-muted" style="margin: 0;">DataFlow Systems awaiting approval</p>
+              </div>
+              <div class="notification-time">30m ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">📝</div>
+              <div class="notification-content">
+                <strong>New application</strong>
+                <p class="text-small text-muted" style="margin: 0;">Alex J. applied to TechCorp</p>
+              </div>
+              <div class="notification-time">1h ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">✅</div>
+              <div class="notification-content">
+                <strong>Interview completed</strong>
+                <p class="text-small text-muted" style="margin: 0;">Emma W. with AI Innovations</p>
+              </div>
+              <div class="notification-time">2h ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">📅</div>
+              <div class="notification-content">
+                <strong>Interview scheduled</strong>
+                <p class="text-small text-muted" style="margin: 0;">Sarah K. with ML Corp - Jan 18</p>
+              </div>
+              <div class="notification-time">3h ago</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="card-body">
+            <div style="display: grid; gap: 12px;">
+              <a href="enterprises.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>🏢 Manage Enterprises</span>
+                <span>→</span>
+              </a>
+              <a href="job-approvals.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>📋 Job Approvals <span class="badge badge-pending">3</span></span>
+                <span>→</span>
+              </a>
+              <a href="pipeline-kanban.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>📊 Pipeline Management</span>
+                <span>→</span>
+              </a>
+              <a href="calendar.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>📅 Schedule Interviews</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline Summary -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Pipeline Summary</h3>
+          <a href="pipeline-kanban.html" class="btn btn-sm">View All</a>
+        </div>
+        <div class="card-body">
+          <div class="grid-4" style="text-align: center;">
+            <div>
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-applied);">45</div>
+              <div class="text-small text-muted">Applied</div>
+            </div>
+            <div>
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-forwarded);">28</div>
+              <div class="text-small text-muted">Forwarded</div>
+            </div>
+            <div>
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-interview);">15</div>
+              <div class="text-small text-muted">Interview</div>
+            </div>
+            <div>
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-selected);">12</div>
+              <div class="text-small text-muted">Selected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Interviews -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Today's Interviews</h3>
+          <a href="calendar.html" class="btn btn-sm">View Calendar</a>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Student</th>
+                  <th>Company</th>
+                  <th>Position</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>10:00 AM</strong></td>
+                  <td>Mike R.</td>
+                  <td>DataFlow Systems</td>
+                  <td>Data Analyst</td>
+                  <td><span class="badge badge-interview">Video</span></td>
+                </tr>
+                <tr>
+                  <td><strong>2:00 PM</strong></td>
+                  <td>Alex J.</td>
+                  <td>TechCorp Inc.</td>
+                  <td>Software Engineer</td>
+                  <td><span class="badge badge-interview">Video</span></td>
+                </tr>
+                <tr>
+                  <td><strong>4:30 PM</strong></td>
+                  <td>Sarah K.</td>
+                  <td>AI Innovations</td>
+                  <td>ML Engineer</td>
+                  <td><span class="badge badge-interview">On-site</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Talent - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="talent-search.html" class="active">Search Talent</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+          <li><a href="chat.html">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Search Talent</h1>
+        <span class="text-muted">Discover qualified candidates from our talent pool</span>
+      </div>
+
+      <!-- Contact Info Warning -->
+      <div class="contact-info-warning" style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+        <span style="font-size: 20px;">🔒</span>
+        <div>
+          <strong>Contact information is protected</strong><br>
+          Student email and phone are only visible to HR. Use "Express Interest" to request HR coordination.
+        </div>
+      </div>
+
+      <!-- Filter Panel -->
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label>Domain</label>
+            <select class="form-select">
+              <option>All Domains</option>
+              <option>Software Engineering</option>
+              <option>Data Science</option>
+              <option>Product Management</option>
+              <option>Design</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Skills</label>
+            <input type="text" class="form-input" placeholder="e.g., Python, React, SQL">
+          </div>
+          <div class="filter-group">
+            <label>Graduation Year</label>
+            <select class="form-select">
+              <option>Any Year</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Institution</label>
+            <select class="form-select">
+              <option>All Institutions</option>
+              <option>State University</option>
+              <option>Tech Institute</option>
+              <option>Engineering College</option>
+            </select>
+          </div>
+          <div class="filter-group" style="display: flex; align-items: flex-end;">
+            <button class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-muted" style="margin-bottom: 16px;">Showing 15 candidates matching your criteria</p>
+
+      <!-- Talent Grid -->
+      <div class="grid-2">
+        <!-- Candidate Card 1 -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; gap: 16px;">
+              <div class="profile-avatar" style="width: 64px; height: 64px; font-size: 24px; flex-shrink: 0;">👤</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 4px;">Alex J.</h3>
+                <p class="text-muted text-small" style="margin-bottom: 8px;">Computer Science • Class of 2025</p>
+                <p class="text-small text-muted" style="margin-bottom: 8px;">State University</p>
+                <div class="tag-list" style="margin-bottom: 12px;">
+                  <span class="tag">Python</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Machine Learning</span>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 12px; color: var(--color-muted); margin-bottom: 12px;">
+                  <span>📊 3 Projects</span>
+                  <span>⭐ Avg Score: 86/100</span>
+                </div>
+                <div class="btn-group">
+                  <a href="talent-detail.html" class="btn btn-sm btn-primary">View Profile</a>
+                  <button class="btn btn-sm">Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Card 2 -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; gap: 16px;">
+              <div class="profile-avatar" style="width: 64px; height: 64px; font-size: 24px; flex-shrink: 0;">👤</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 4px;">Sarah M.</h3>
+                <p class="text-muted text-small" style="margin-bottom: 8px;">Data Science • Class of 2025</p>
+                <p class="text-small text-muted" style="margin-bottom: 8px;">Tech Institute</p>
+                <div class="tag-list" style="margin-bottom: 12px;">
+                  <span class="tag">Python</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Tableau</span>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 12px; color: var(--color-muted); margin-bottom: 12px;">
+                  <span>📊 4 Projects</span>
+                  <span>⭐ Avg Score: 91/100</span>
+                </div>
+                <div class="btn-group">
+                  <a href="talent-detail.html" class="btn btn-sm btn-primary">View Profile</a>
+                  <button class="btn btn-sm">Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Card 3 -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; gap: 16px;">
+              <div class="profile-avatar" style="width: 64px; height: 64px; font-size: 24px; flex-shrink: 0;">👤</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 4px;">Mike C.</h3>
+                <p class="text-muted text-small" style="margin-bottom: 8px;">Software Engineering • Class of 2026</p>
+                <p class="text-small text-muted" style="margin-bottom: 8px;">Engineering College</p>
+                <div class="tag-list" style="margin-bottom: 12px;">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">AWS</span>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 12px; color: var(--color-muted); margin-bottom: 12px;">
+                  <span>📊 2 Projects</span>
+                  <span>⭐ Avg Score: 78/100</span>
+                </div>
+                <div class="btn-group">
+                  <a href="talent-detail.html" class="btn btn-sm btn-primary">View Profile</a>
+                  <button class="btn btn-sm">Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Card 4 -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; gap: 16px;">
+              <div class="profile-avatar" style="width: 64px; height: 64px; font-size: 24px; flex-shrink: 0;">👤</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 4px;">Emily R.</h3>
+                <p class="text-muted text-small" style="margin-bottom: 8px;">Computer Science • Class of 2025</p>
+                <p class="text-small text-muted" style="margin-bottom: 8px;">State University</p>
+                <div class="tag-list" style="margin-bottom: 12px;">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">CSS</span>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 12px; color: var(--color-muted); margin-bottom: 12px;">
+                  <span>📊 5 Projects</span>
+                  <span>⭐ Avg Score: 88/100</span>
+                </div>
+                <div class="btn-group">
+                  <a href="talent-detail.html" class="btn btn-sm btn-primary">View Profile</a>
+                  <button class="btn btn-sm">Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Card 5 -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; gap: 16px;">
+              <div class="profile-avatar" style="width: 64px; height: 64px; font-size: 24px; flex-shrink: 0;">👤</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 4px;">David L.</h3>
+                <p class="text-muted text-small" style="margin-bottom: 8px;">Machine Learning • Class of 2025</p>
+                <p class="text-small text-muted" style="margin-bottom: 8px;">Tech Institute</p>
+                <div class="tag-list" style="margin-bottom: 12px;">
+                  <span class="tag">Python</span>
+                  <span class="tag">TensorFlow</span>
+                  <span class="tag">NLP</span>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 12px; color: var(--color-muted); margin-bottom: 12px;">
+                  <span>📊 3 Projects</span>
+                  <span>⭐ Avg Score: 94/100</span>
+                </div>
+                <div class="btn-group">
+                  <a href="talent-detail.html" class="btn btn-sm btn-primary">View Profile</a>
+                  <button class="btn btn-sm">Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Card 6 -->
+        <div class="card">
+          <div class="card-body">
+            <div style="display: flex; gap: 16px;">
+              <div class="profile-avatar" style="width: 64px; height: 64px; font-size: 24px; flex-shrink: 0;">👤</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 4px;">Jessica T.</h3>
+                <p class="text-muted text-small" style="margin-bottom: 8px;">Full Stack Development • Class of 2026</p>
+                <p class="text-small text-muted" style="margin-bottom: 8px;">Engineering College</p>
+                <div class="tag-list" style="margin-bottom: 12px;">
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">PostgreSQL</span>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 12px; color: var(--color-muted); margin-bottom: 12px;">
+                  <span>📊 2 Projects</span>
+                  <span>⭐ Avg Score: 82/100</span>
+                </div>
+                <div class="btn-group">
+                  <a href="talent-detail.html" class="btn btn-sm btn-primary">View Profile</a>
+                  <button class="btn btn-sm">Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div style="display: flex; justify-content: center; gap: 8px; margin-top: 32px;">
+        <button class="btn" disabled>Previous</button>
+        <button class="btn btn-primary">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn">Next</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talent Registry Wireframes - Navigation Hub</title>
+  <link rel="stylesheet" href="assets/wireframe.css">
+  <style>
+    .wireframe-hub {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hub-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hub-header h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .hub-header p {
+      color: var(--color-muted);
+      font-size: 16px;
+    }
+
+    .role-section {
+      margin-bottom: 48px;
+    }
+
+    .role-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .role-badge {
+      background: var(--color-heading);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .role-badge.student { background: #2196F3; }
+    .role-badge.enterprise { background: #FF9800; }
+    .role-badge.hr { background: #9C27B0; }
+    .role-badge.admin { background: #F44336; }
+    .role-badge.shared { background: #607D8B; }
+
+    .screen-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .screen-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.2s;
+    }
+
+    .screen-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-muted);
+    }
+
+    .screen-card h4 {
+      margin-bottom: 8px;
+    }
+
+    .screen-card p {
+      font-size: 13px;
+      color: var(--color-muted);
+      margin-bottom: 12px;
+    }
+
+    .screen-card a {
+      color: var(--color-heading);
+      font-weight: 500;
+    }
+
+    .screen-card a:hover {
+      text-decoration: underline;
+    }
+
+    .legend {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 32px;
+    }
+
+    .legend h3 {
+      margin-bottom: 12px;
+    }
+
+    .legend-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .color-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .stats-bar {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-heading);
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-hub">
+    <header class="hub-header">
+      <h1>Talent Registry Wireframes</h1>
+      <p>Low-fidelity UI/UX reference for designers. Click any screen to view.</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">Screens</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4</div>
+        <div class="stat-label">User Roles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Core Flows</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h3>Pipeline Stage Colors</h3>
+      <div class="legend-items">
+        <div class="legend-item">
+          <span class="color-dot" style="background: #2196F3;"></span> Applied
+        </div>
+        <div class="legend-item">
+          <span class="color-dot" style="background: #9C27B0;"></span> HR Reviewed
+        </div>
+        <div class="legend-item">
+          <span class="color-dot" style="background: #FF9800;"></span> Forwarded
+        </div>
+        <div class="legend-item">
+          <span class="color-dot" style="background: #009688;"></span> Interview
+        </div>
+        <div class="legend-item">
+          <span class="color-dot" style="background: #4CAF50;"></span> Selected
+        </div>
+        <div class="legend-item">
+          <span class="color-dot" style="background: #F44336;"></span> Rejected
+        </div>
+        <div class="legend-item">
+          <span class="color-dot" style="background: #757575;"></span> Withdrawn
+        </div>
+      </div>
+    </div>
+
+    <!-- Shared Screens -->
+    <section class="role-section">
+      <div class="role-header">
+        <span class="role-badge shared">Shared</span>
+        <h2>Authentication & Common Pages</h2>
+      </div>
+      <div class="screen-grid">
+        <div class="screen-card">
+          <h4>Login</h4>
+          <p>Dual-path login: Students via ZenCube SSO, Enterprises via email/password.</p>
+          <a href="shared/login.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>OAuth Callback</h4>
+          <p>Loading state while processing ZenCube SSO redirect.</p>
+          <a href="shared/oauth-callback.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>404 Not Found</h4>
+          <p>Error page for invalid routes.</p>
+          <a href="shared/404.html">View Wireframe &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Screens -->
+    <section class="role-section">
+      <div class="role-header">
+        <span class="role-badge student">Student</span>
+        <h2>Student Portal (12 Screens)</h2>
+      </div>
+      <div class="screen-grid">
+        <div class="screen-card">
+          <h4>Dashboard</h4>
+          <p>Welcome message, profile summary, active applications, quick links.</p>
+          <a href="student/dashboard.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Profile (Read-Only)</h4>
+          <p>ZenCube-synced profile with projects, skills, and rubric scores.</p>
+          <a href="student/profile.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Browse Openings</h4>
+          <p>Filterable job listings with eligibility indicators.</p>
+          <a href="student/openings-list.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Opening Detail</h4>
+          <p>Full job description with eligibility check and apply button.</p>
+          <a href="student/opening-detail.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>My Applications</h4>
+          <p>Pipeline view of all applications with status tracking.</p>
+          <a href="student/my-applications.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Application Detail</h4>
+          <p>Status timeline, interview details, withdrawal option.</p>
+          <a href="student/application-detail.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Chat</h4>
+          <p>Messaging with HR representatives.</p>
+          <a href="student/chat.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Calendar</h4>
+          <p>Scheduled interviews and important dates.</p>
+          <a href="student/calendar.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Notifications</h4>
+          <p>Application updates, interview invites, status changes.</p>
+          <a href="student/notifications.html">View Wireframe &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enterprise Screens -->
+    <section class="role-section">
+      <div class="role-header">
+        <span class="role-badge enterprise">Enterprise</span>
+        <h2>Enterprise Portal (10 Screens)</h2>
+      </div>
+      <div class="screen-grid">
+        <div class="screen-card">
+          <h4>Signup</h4>
+          <p>Company registration with domain email verification.</p>
+          <a href="enterprise/signup.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Pending Approval</h4>
+          <p>Waiting state after signup, before HR approval.</p>
+          <a href="enterprise/pending-approval.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Dashboard</h4>
+          <p>Open positions, candidates in pipeline, recent activity.</p>
+          <a href="enterprise/dashboard.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Post Job</h4>
+          <p>Job posting form with skills, requirements, target years.</p>
+          <a href="enterprise/post-job.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>My Jobs</h4>
+          <p>List of posted jobs with status and application counts.</p>
+          <a href="enterprise/my-jobs.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Talent Search</h4>
+          <p>Browse student profiles (anonymized, no contact info).</p>
+          <a href="enterprise/talent-search.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Talent Detail</h4>
+          <p>Individual student profile view (no contact info).</p>
+          <a href="enterprise/talent-detail.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Pipeline (Read-Only)</h4>
+          <p>View-only kanban of candidates in hiring process.</p>
+          <a href="enterprise/pipeline.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Chat</h4>
+          <p>Messaging with HR representatives.</p>
+          <a href="enterprise/chat.html">View Wireframe &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HR Screens -->
+    <section class="role-section">
+      <div class="role-header">
+        <span class="role-badge hr">HR</span>
+        <h2>HR Admin Portal (12 Screens)</h2>
+      </div>
+      <div class="screen-grid">
+        <div class="screen-card">
+          <h4>Dashboard</h4>
+          <p>KPIs, stale alerts, pending approvals, activity feed.</p>
+          <a href="hr/dashboard.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Enterprises</h4>
+          <p>Enterprise management with approve/reject actions.</p>
+          <a href="hr/enterprises.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Enterprise Detail</h4>
+          <p>Full enterprise profile with job history and contacts.</p>
+          <a href="hr/enterprise-detail.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Job Approvals</h4>
+          <p>Queue of pending job postings for review.</p>
+          <a href="hr/job-approvals.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Pipeline Kanban</h4>
+          <p>Full-control drag-drop pipeline management.</p>
+          <a href="hr/pipeline-kanban.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Application Detail</h4>
+          <p>Full view with contact info, actions, internal notes.</p>
+          <a href="hr/application-detail.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Calendar</h4>
+          <p>Interview scheduling with ICS generation.</p>
+          <a href="hr/calendar.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Chat</h4>
+          <p>Messaging hub with students and enterprises.</p>
+          <a href="hr/chat.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Students</h4>
+          <p>Student database with filters and search.</p>
+          <a href="hr/students.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Audit Log</h4>
+          <p>Immutable action log with filters.</p>
+          <a href="hr/audit-log.html">View Wireframe &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Screens -->
+    <section class="role-section">
+      <div class="role-header">
+        <span class="role-badge admin">Admin</span>
+        <h2>System Admin (4 Screens)</h2>
+      </div>
+      <div class="screen-grid">
+        <div class="screen-card">
+          <h4>Dashboard</h4>
+          <p>System overview with health metrics.</p>
+          <a href="admin/dashboard.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Config</h4>
+          <p>Mini access limits and system settings.</p>
+          <a href="admin/config.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Feature Flags</h4>
+          <p>Toggle features with rollout percentages.</p>
+          <a href="admin/feature-flags.html">View Wireframe &rarr;</a>
+        </div>
+        <div class="screen-card">
+          <h4>Success Stories</h4>
+          <p>Manage placement success stories for showcase.</p>
+          <a href="admin/success-stories.html">View Wireframe &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: var(--color-muted); font-size: 13px;">
+      <p>Talent Registry Wireframes v1.0 | For UI/UX Designer Reference Only</p>
+      <p>Grayscale low-fidelity mockups - Focus on layout and user flows</p>
+    </footer>
+  </div>
+</body>
+</html>

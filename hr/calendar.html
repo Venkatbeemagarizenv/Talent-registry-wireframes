@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+          <li><a href="calendar.html" class="active">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="audit-log.html">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Interview Calendar</h1>
+        <button class="btn btn-primary" onclick="document.getElementById('scheduleModal').style.display='flex'">+ Schedule Interview</button>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 2fr 1fr;">
+        <!-- Calendar -->
+        <div>
+          <!-- Calendar Header -->
+          <div class="calendar-header">
+            <button class="btn">← Previous</button>
+            <h2>January 2025</h2>
+            <button class="btn">Next →</button>
+          </div>
+
+          <!-- Calendar Grid -->
+          <div class="card">
+            <div class="card-body" style="padding: 0;">
+              <div class="calendar-grid">
+                <!-- Day Headers -->
+                <div class="calendar-day-header">Sun</div>
+                <div class="calendar-day-header">Mon</div>
+                <div class="calendar-day-header">Tue</div>
+                <div class="calendar-day-header">Wed</div>
+                <div class="calendar-day-header">Thu</div>
+                <div class="calendar-day-header">Fri</div>
+                <div class="calendar-day-header">Sat</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day" style="opacity: 0.5;"><div class="calendar-day-number">29</div></div>
+                <div class="calendar-day" style="opacity: 0.5;"><div class="calendar-day-number">30</div></div>
+                <div class="calendar-day" style="opacity: 0.5;"><div class="calendar-day-number">31</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">1</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">2</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">3</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">4</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="calendar-day-number">5</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">6</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">7</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">8</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">9</div></div>
+                <div class="calendar-day today"><div class="calendar-day-number">10</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">11</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="calendar-day-number">12</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">13</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">14</div></div>
+                <div class="calendar-day">
+                  <div class="calendar-day-number">15</div>
+                  <div class="calendar-event">2:00 PM David L.</div>
+                </div>
+                <div class="calendar-day">
+                  <div class="calendar-day-number">16</div>
+                  <div class="calendar-event">10:00 AM Jessica T.</div>
+                </div>
+                <div class="calendar-day">
+                  <div class="calendar-day-number">17</div>
+                  <div class="calendar-event">3:00 PM Chris W.</div>
+                </div>
+                <div class="calendar-day"><div class="calendar-day-number">18</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="calendar-day-number">19</div></div>
+                <div class="calendar-day">
+                  <div class="calendar-day-number">20</div>
+                  <div class="calendar-event">11:00 AM Sarah M.</div>
+                </div>
+                <div class="calendar-day"><div class="calendar-day-number">21</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">22</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">23</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">24</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">25</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="calendar-day-number">26</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">27</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">28</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">29</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">30</div></div>
+                <div class="calendar-day"><div class="calendar-day-number">31</div></div>
+                <div class="calendar-day" style="opacity: 0.5;"><div class="calendar-day-number">1</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar: Upcoming Interviews -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Upcoming Interviews</h3>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <!-- Interview 1 -->
+              <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <strong>David L. → TechCorp</strong>
+                  <span class="badge badge-interview">Jan 15</span>
+                </div>
+                <p class="text-small text-muted">Software Engineer Intern</p>
+                <p class="text-small">🕐 2:00 PM - 2:45 PM PST</p>
+                <div class="btn-group" style="margin-top: 12px;">
+                  <button class="btn btn-sm">Reschedule</button>
+                  <button class="btn btn-sm btn-danger">Cancel</button>
+                </div>
+              </div>
+
+              <!-- Interview 2 -->
+              <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <strong>Jessica T. → DataFlow</strong>
+                  <span class="badge badge-interview">Jan 16</span>
+                </div>
+                <p class="text-small text-muted">Data Analyst</p>
+                <p class="text-small">🕐 10:00 AM - 10:45 AM PST</p>
+                <div class="btn-group" style="margin-top: 12px;">
+                  <button class="btn btn-sm">Reschedule</button>
+                  <button class="btn btn-sm btn-danger">Cancel</button>
+                </div>
+              </div>
+
+              <!-- Interview 3 -->
+              <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <strong>Chris W. → TechCorp</strong>
+                  <span class="badge badge-interview">Jan 17</span>
+                </div>
+                <p class="text-small text-muted">Software Engineer Intern</p>
+                <p class="text-small">🕐 3:00 PM - 3:45 PM PST</p>
+                <div class="btn-group" style="margin-top: 12px;">
+                  <button class="btn btn-sm">Reschedule</button>
+                  <button class="btn btn-sm btn-danger">Cancel</button>
+                </div>
+              </div>
+
+              <!-- Interview 4 -->
+              <div style="padding: 16px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <strong>Sarah M. → DataFlow</strong>
+                  <span class="badge badge-interview">Jan 20</span>
+                </div>
+                <p class="text-small text-muted">Data Analyst</p>
+                <p class="text-small">🕐 11:00 AM - 11:45 AM PST</p>
+                <div class="btn-group" style="margin-top: 12px;">
+                  <button class="btn btn-sm">Reschedule</button>
+                  <button class="btn btn-sm btn-danger">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pending to Schedule -->
+          <div class="card" style="margin-top: 16px;">
+            <div class="card-header">
+              <h3>Pending to Schedule</h3>
+            </div>
+            <div class="card-body">
+              <div style="padding: 12px; background: var(--color-bg); border-radius: 8px; margin-bottom: 8px;">
+                <strong>Amanda K.</strong>
+                <p class="text-small text-muted">DataFlow • Data Analyst</p>
+                <button class="btn btn-sm btn-primary" style="margin-top: 8px;" onclick="document.getElementById('scheduleModal').style.display='flex'">Schedule</button>
+              </div>
+              <div style="padding: 12px; background: var(--color-bg); border-radius: 8px;">
+                <strong>Ryan P.</strong>
+                <p class="text-small text-muted">TechCorp • Software Engineer</p>
+                <button class="btn btn-sm btn-primary" style="margin-top: 8px;" onclick="document.getElementById('scheduleModal').style.display='flex'">Schedule</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Schedule Interview Modal -->
+  <div id="scheduleModal" class="modal-overlay" style="display: none;">
+    <div class="modal" style="max-width: 550px;">
+      <div class="modal-header">
+        <h3>Schedule Interview</h3>
+        <button class="modal-close" onclick="document.getElementById('scheduleModal').style.display='none'">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Candidate *</label>
+          <select class="form-select">
+            <option value="">Select candidate...</option>
+            <option>Amanda K. - Data Analyst (DataFlow)</option>
+            <option>Ryan P. - Software Engineer (TechCorp)</option>
+            <option>Lisa M. - Frontend Developer (WebStart)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Date *</label>
+            <input type="date" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Time *</label>
+            <input type="time" class="form-input">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Duration *</label>
+          <select class="form-select">
+            <option>30 minutes</option>
+            <option selected>45 minutes</option>
+            <option>60 minutes</option>
+            <option>90 minutes</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Interview Format *</label>
+          <select class="form-select">
+            <option>Video Call (Zoom)</option>
+            <option>Video Call (Google Meet)</option>
+            <option>Phone Call</option>
+            <option>In-Person</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Interviewer (from Company)</label>
+          <input type="text" class="form-input" placeholder="e.g., Sarah Chen, Engineering Manager">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Notes for Candidate</label>
+          <textarea class="form-textarea" rows="2" placeholder="Any special instructions..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" checked>
+            <span>Send calendar invite to student</span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" checked>
+            <span>Notify enterprise</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" onclick="document.getElementById('scheduleModal').style.display='none'">Cancel</button>
+        <button class="btn btn-primary">Schedule Interview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

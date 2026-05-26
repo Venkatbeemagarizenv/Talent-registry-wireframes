@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-logo">
+        <h2>Talent Registry</h2>
+        <p class="text-muted">Connect talent with opportunity</p>
+      </div>
+
+      <div class="wireframe-note">
+        Students log in via ZenCube SSO. Enterprises use email/password.
+      </div>
+
+      <!-- Student SSO Login -->
+      <div style="margin-top: 24px;">
+        <h4 style="margin-bottom: 12px;">For Students</h4>
+        <a href="oauth-callback.html" class="btn btn-primary btn-block btn-lg">
+          Login with ZenCube
+        </a>
+        <p class="text-small text-muted text-center" style="margin-top: 8px;">
+          Use your ZenCube account to access your profile
+        </p>
+      </div>
+
+      <div class="login-divider">
+        <span>OR</span>
+      </div>
+
+      <!-- Enterprise Login -->
+      <div>
+        <h4 style="margin-bottom: 12px;">For Enterprises</h4>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="you@company.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-input" placeholder="Enter password">
+          </div>
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox">
+              <span>Remember me</span>
+            </label>
+          </div>
+          <a href="../enterprise/dashboard.html" class="btn btn-block">Login</a>
+        </form>
+        <p class="text-small text-center" style="margin-top: 16px;">
+          <a href="#">Forgot password?</a> · <a href="../enterprise/signup.html">Register your company</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

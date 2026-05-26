@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Jobs - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="my-jobs.html" class="active">My Jobs</a></li>
+          <li><a href="talent-search.html">Search Talent</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+          <li><a href="chat.html">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>My Job Postings</h1>
+        <a href="post-job.html" class="btn btn-primary">+ Post New Job</a>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+        <button class="btn btn-primary">All (5)</button>
+        <button class="btn">Active (2)</button>
+        <button class="btn">Pending (1)</button>
+        <button class="btn">Closed (2)</button>
+      </div>
+
+      <!-- Jobs List -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Position</th>
+                  <th>Type</th>
+                  <th>Applications</th>
+                  <th>Status</th>
+                  <th>Posted</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Software Engineer Intern</strong>
+                    <div class="text-small text-muted">San Francisco, CA • Remote OK</div>
+                  </td>
+                  <td>Internship</td>
+                  <td>
+                    <strong>12</strong>
+                    <span class="text-small text-muted">(3 new)</span>
+                  </td>
+                  <td><span class="badge badge-approved">Active</span></td>
+                  <td>Jan 1, 2025</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="pipeline.html" class="btn btn-sm">Pipeline</a>
+                      <button class="btn btn-sm">Edit</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Data Analyst</strong>
+                    <div class="text-small text-muted">Remote</div>
+                  </td>
+                  <td>Full-time</td>
+                  <td>
+                    <strong>8</strong>
+                    <span class="text-small text-muted">(0 new)</span>
+                  </td>
+                  <td><span class="badge badge-approved">Active</span></td>
+                  <td>Dec 28, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="pipeline.html" class="btn btn-sm">Pipeline</a>
+                      <button class="btn btn-sm">Edit</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="background: #fffde7;">
+                  <td>
+                    <strong>Frontend Developer</strong>
+                    <div class="text-small text-muted">Austin, TX</div>
+                  </td>
+                  <td>Full-time</td>
+                  <td>
+                    <strong>0</strong>
+                    <span class="text-small text-muted">(pending approval)</span>
+                  </td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td>Jan 5, 2025</td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm" disabled>Pipeline</button>
+                      <button class="btn btn-sm">Edit</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="opacity: 0.7;">
+                  <td>
+                    <strong>Backend Developer</strong>
+                    <div class="text-small text-muted">New York, NY</div>
+                  </td>
+                  <td>Full-time</td>
+                  <td>
+                    <strong>15</strong>
+                    <span class="text-small text-muted">(1 hired)</span>
+                  </td>
+                  <td><span class="badge badge-selected">Filled</span></td>
+                  <td>Nov 15, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="pipeline.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm">Repost</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="opacity: 0.7;">
+                  <td>
+                    <strong>DevOps Engineer</strong>
+                    <div class="text-small text-muted">Remote</div>
+                  </td>
+                  <td>Full-time</td>
+                  <td>
+                    <strong>6</strong>
+                    <span class="text-small text-muted">(closed)</span>
+                  </td>
+                  <td><span class="badge badge-rejected">Closed</span></td>
+                  <td>Oct 1, 2024</td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="pipeline.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm">Repost</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Stats Summary -->
+      <div class="grid-3" style="margin-top: 24px;">
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <div class="stat-value">35</div>
+            <div class="stat-label">Total Applications</div>
+            <p class="text-small text-muted" style="margin-top: 8px;">Across all job postings</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <div class="stat-value">5</div>
+            <div class="stat-label">Interviews Scheduled</div>
+            <p class="text-small text-muted" style="margin-top: 8px;">Upcoming this month</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <div class="stat-value">1</div>
+            <div class="stat-label">Hires Made</div>
+            <p class="text-small text-muted" style="margin-top: 8px;">Via Talent Registry</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

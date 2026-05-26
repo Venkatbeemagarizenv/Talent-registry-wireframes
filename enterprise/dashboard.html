@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="talent-search.html">Search Talent</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+          <li><a href="chat.html">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>Welcome, TechCorp Inc.</h1>
+          <p class="text-muted">Here's an overview of your hiring activity</p>
+        </div>
+        <a href="post-job.html" class="btn btn-primary">+ Post New Job</a>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Open Positions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">28</div>
+          <div class="stat-label">Total Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Interview Scheduled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Pending HR Review</div>
+        </div>
+      </div>
+
+      <!-- Contact Info Warning -->
+      <div class="contact-info-warning" style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px;">🔒</span>
+        <div>
+          <strong>Student contact information is protected</strong><br>
+          Contact details (email, phone) are only visible to HR. To reach out to candidates, please coordinate through HR.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Active Jobs -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Active Job Postings</h3>
+            <a href="my-jobs.html" class="btn btn-sm">View All</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Position</th>
+                    <th>Applications</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Software Engineer Intern</strong>
+                      <div class="text-small text-muted">Posted Jan 1, 2025</div>
+                    </td>
+                    <td>12</td>
+                    <td><span class="badge badge-approved">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Data Analyst</strong>
+                      <div class="text-small text-muted">Posted Dec 28, 2024</div>
+                    </td>
+                    <td>8</td>
+                    <td><span class="badge badge-approved">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Frontend Developer</strong>
+                      <div class="text-small text-muted">Posted Jan 5, 2025</div>
+                    </td>
+                    <td>8</td>
+                    <td><span class="badge badge-pending">Pending Approval</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <ul class="notification-list">
+              <li class="notification-item">
+                <div class="notification-icon">📋</div>
+                <div class="notification-content">
+                  <div class="notification-title">New Application</div>
+                  <p class="text-small text-muted">A candidate applied for Software Engineer Intern</p>
+                  <div class="notification-time">2 hours ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-icon">✅</div>
+                <div class="notification-content">
+                  <div class="notification-title">Interview Scheduled</div>
+                  <p class="text-small text-muted">HR scheduled an interview for your Data Analyst position</p>
+                  <div class="notification-time">1 day ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-icon">📩</div>
+                <div class="notification-content">
+                  <div class="notification-title">New Message</div>
+                  <p class="text-small text-muted">HR sent you a message about candidate shortlisting</p>
+                  <div class="notification-time">2 days ago</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline Overview -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Candidate Pipeline Overview</h3>
+          <a href="pipeline.html" class="btn btn-sm">View Full Pipeline</a>
+        </div>
+        <div class="card-body">
+          <div class="wireframe-note">
+            Pipeline is managed by HR. This is a read-only view of candidates at each stage.
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-top: 16px;">
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 28px; font-weight: 700; color: var(--stage-applied);">8</div>
+              <div class="text-small text-muted">Applied</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 28px; font-weight: 700; color: var(--stage-hr-reviewed);">6</div>
+              <div class="text-small text-muted">HR Reviewed</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 28px; font-weight: 700; color: var(--stage-forwarded);">9</div>
+              <div class="text-small text-muted">Forwarded to You</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 28px; font-weight: 700; color: var(--stage-interview);">5</div>
+              <div class="text-small text-muted">Interview</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 28px; font-weight: 700; color: var(--stage-selected);">0</div>
+              <div class="text-small text-muted">Selected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Quick Actions</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-4">
+            <a href="post-job.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
+              Post a Job
+            </a>
+            <a href="talent-search.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+              Search Talent
+            </a>
+            <a href="pipeline.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
+              View Pipeline
+            </a>
+            <a href="chat.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">💬</div>
+              Contact HR
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

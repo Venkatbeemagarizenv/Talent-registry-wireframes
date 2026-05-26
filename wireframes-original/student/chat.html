@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html" class="active">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" style="padding: 0; display: flex; height: 100vh;">
+      <!-- Conversation List -->
+      <div style="width: 320px; border-right: 1px solid var(--color-border); display: flex; flex-direction: column;">
+        <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+          <h2 style="margin-bottom: 12px;">Messages</h2>
+          <input type="text" class="form-input" placeholder="Search conversations...">
+        </div>
+
+        <div style="flex: 1; overflow-y: auto;">
+          <!-- Active Conversation -->
+          <div style="padding: 16px; background: #e3f2fd; border-left: 3px solid var(--status-info); cursor: pointer;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div class="profile-avatar" style="width: 48px; height: 48px; font-size: 20px;">👩</div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>HR Team</strong>
+                  <span class="text-small text-muted">2h ago</span>
+                </div>
+                <p class="text-small text-muted" style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  Your interview with TechCorp is confirmed...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Conversations -->
+          <div style="padding: 16px; border-bottom: 1px solid var(--color-border); cursor: pointer;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div class="profile-avatar" style="width: 48px; height: 48px; font-size: 20px;">📋</div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>Application Updates</strong>
+                  <span class="text-small text-muted">1d ago</span>
+                </div>
+                <p class="text-small text-muted" style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  Your application to DataFlow has been forwarded
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 16px; border-bottom: 1px solid var(--color-border); cursor: pointer;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div class="profile-avatar" style="width: 48px; height: 48px; font-size: 20px;">👩</div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>Sarah (HR)</strong>
+                  <span class="text-small text-muted">3d ago</span>
+                </div>
+                <p class="text-small text-muted" style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  Thanks for your patience! We'll update you soon.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div style="flex: 1; display: flex; flex-direction: column;">
+        <!-- Chat Header -->
+        <div style="padding: 16px; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; gap: 12px;">
+          <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👩</div>
+          <div>
+            <strong>HR Team</strong>
+            <p class="text-small text-muted" style="margin: 0;">Talent Registry HR Department</p>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages">
+          <div class="chat-message received">
+            <p style="margin: 0;">Hi Alex! We have great news about your application to TechCorp Inc.</p>
+            <span class="text-small text-muted">10:30 AM</span>
+          </div>
+
+          <div class="chat-message received">
+            <p style="margin: 0;">They've reviewed your profile and would like to schedule an interview with you. Are you available next week?</p>
+            <span class="text-small text-muted">10:31 AM</span>
+          </div>
+
+          <div class="chat-message sent">
+            <p style="margin: 0;">That's amazing! Yes, I'm available. What times work best?</p>
+            <span class="text-small text-muted">10:45 AM</span>
+          </div>
+
+          <div class="chat-message received">
+            <p style="margin: 0;">Great! How about Wednesday, January 15th at 2:00 PM? It will be a video interview with their engineering team.</p>
+            <span class="text-small text-muted">11:00 AM</span>
+          </div>
+
+          <div class="chat-message sent">
+            <p style="margin: 0;">Wednesday at 2 PM works perfectly! I'll be ready.</p>
+            <span class="text-small text-muted">11:15 AM</span>
+          </div>
+
+          <div class="chat-message received">
+            <p style="margin: 0;">Your interview with TechCorp is confirmed for January 15th at 2:00 PM. You'll receive a calendar invite shortly with the video call link. Good luck! 🎉</p>
+            <span class="text-small text-muted">11:30 AM</span>
+          </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-area">
+          <input type="text" class="form-input" placeholder="Type a message...">
+          <button class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

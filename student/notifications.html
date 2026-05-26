@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="notifications.html" class="active">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>Notifications</h1>
+          <p class="text-muted">5 unread notifications</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Mark All as Read</button>
+          <button class="btn">Settings</button>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+        <button class="btn btn-primary">All</button>
+        <button class="btn">Applications</button>
+        <button class="btn">Interviews</button>
+        <button class="btn">Messages</button>
+      </div>
+
+      <!-- Notifications List -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <ul class="notification-list">
+            <!-- Today -->
+            <li style="padding: 12px 16px; background: var(--color-bg); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+              Today
+            </li>
+
+            <li class="notification-item unread">
+              <div class="notification-icon" style="background: #e3f2fd;">📅</div>
+              <div class="notification-content">
+                <div class="notification-title">Interview Scheduled</div>
+                <p class="text-small">Your interview with TechCorp Inc. is scheduled for January 15, 2025 at 2:00 PM PST. Check your email for the calendar invite.</p>
+                <div class="notification-time">2 hours ago</div>
+              </div>
+              <a href="application-detail.html" class="btn btn-sm">View</a>
+            </li>
+
+            <li class="notification-item unread">
+              <div class="notification-icon" style="background: #e8f5e9;">📩</div>
+              <div class="notification-content">
+                <div class="notification-title">New Message from HR</div>
+                <p class="text-small">You have a new message regarding your TechCorp application.</p>
+                <div class="notification-time">3 hours ago</div>
+              </div>
+              <a href="chat.html" class="btn btn-sm">View</a>
+            </li>
+
+            <!-- Yesterday -->
+            <li style="padding: 12px 16px; background: var(--color-bg); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+              Yesterday
+            </li>
+
+            <li class="notification-item unread">
+              <div class="notification-icon" style="background: #f3e5f5;">📋</div>
+              <div class="notification-content">
+                <div class="notification-title">Application Status Updated</div>
+                <p class="text-small">Your application for Software Engineer Intern at TechCorp has moved to Interview stage.</p>
+                <div class="notification-time">1 day ago</div>
+              </div>
+              <a href="application-detail.html" class="btn btn-sm">View</a>
+            </li>
+
+            <li class="notification-item unread">
+              <div class="notification-icon" style="background: #fff3e0;">🔄</div>
+              <div class="notification-content">
+                <div class="notification-title">Application Forwarded</div>
+                <p class="text-small">Your application for ML Engineer Intern has been forwarded to AI Innovations.</p>
+                <div class="notification-time">1 day ago</div>
+              </div>
+              <a href="application-detail.html" class="btn btn-sm">View</a>
+            </li>
+
+            <!-- Earlier This Week -->
+            <li style="padding: 12px 16px; background: var(--color-bg); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+              Earlier This Week
+            </li>
+
+            <li class="notification-item unread">
+              <div class="notification-icon" style="background: #e0f2f1;">✨</div>
+              <div class="notification-content">
+                <div class="notification-title">New Jobs Match Your Profile</div>
+                <p class="text-small">3 new job openings match your skills. Check them out!</p>
+                <div class="notification-time">3 days ago</div>
+              </div>
+              <a href="openings-list.html" class="btn btn-sm">View Jobs</a>
+            </li>
+
+            <li class="notification-item">
+              <div class="notification-icon" style="background: #f3e5f5;">📋</div>
+              <div class="notification-content">
+                <div class="notification-title">Application Reviewed</div>
+                <p class="text-small">HR has reviewed your application for Data Analyst at DataFlow Systems.</p>
+                <div class="notification-time">4 days ago</div>
+              </div>
+              <a href="application-detail.html" class="btn btn-sm">View</a>
+            </li>
+
+            <!-- Last Week -->
+            <li style="padding: 12px 16px; background: var(--color-bg); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+              Last Week
+            </li>
+
+            <li class="notification-item">
+              <div class="notification-icon" style="background: #e8f5e9;">✅</div>
+              <div class="notification-content">
+                <div class="notification-title">Application Submitted</div>
+                <p class="text-small">Your application for Software Engineer Intern at TechCorp Inc. has been submitted successfully.</p>
+                <div class="notification-time">5 days ago</div>
+              </div>
+              <a href="application-detail.html" class="btn btn-sm">View</a>
+            </li>
+
+            <li class="notification-item">
+              <div class="notification-icon" style="background: #e3f2fd;">🔄</div>
+              <div class="notification-content">
+                <div class="notification-title">Profile Synced</div>
+                <p class="text-small">Your profile has been updated with the latest data from ZenCube.</p>
+                <div class="notification-time">6 days ago</div>
+              </div>
+              <a href="profile.html" class="btn btn-sm">View Profile</a>
+            </li>
+
+            <li class="notification-item">
+              <div class="notification-icon" style="background: #ffebee;">❌</div>
+              <div class="notification-content">
+                <div class="notification-title">Application Closed</div>
+                <p class="text-small">The Backend Developer position at Enterprise Corp has been filled.</p>
+                <div class="notification-time">7 days ago</div>
+              </div>
+              <a href="application-detail.html" class="btn btn-sm">View</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Load More -->
+      <div style="text-align: center; margin-top: 24px;">
+        <button class="btn">Load More Notifications</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

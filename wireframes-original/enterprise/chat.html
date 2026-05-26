@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="post-job.html">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="talent-search.html">Search Talent</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html" class="active">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" style="padding: 0; display: flex; height: 100vh;">
+      <!-- Conversation List -->
+      <div style="width: 320px; border-right: 1px solid var(--color-border); display: flex; flex-direction: column;">
+        <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+          <h2 style="margin-bottom: 12px;">Messages</h2>
+          <input type="text" class="form-input" placeholder="Search conversations...">
+        </div>
+
+        <div style="flex: 1; overflow-y: auto;">
+          <!-- HR Conversation (Active) -->
+          <div style="padding: 16px; background: #e3f2fd; border-left: 3px solid var(--status-info); cursor: pointer;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div class="profile-avatar" style="width: 48px; height: 48px; font-size: 20px;">👩</div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>HR Team</strong>
+                  <span class="text-small text-muted">1h ago</span>
+                </div>
+                <p class="text-small text-muted" style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  Interview with Alex J. is confirmed for...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Conversations -->
+          <div style="padding: 16px; border-bottom: 1px solid var(--color-border); cursor: pointer;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div class="profile-avatar" style="width: 48px; height: 48px; font-size: 20px;">📋</div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>Job Approvals</strong>
+                  <span class="text-small text-muted">2d ago</span>
+                </div>
+                <p class="text-small text-muted" style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  Your Data Analyst position has been approved
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 16px; border-bottom: 1px solid var(--color-border); cursor: pointer;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div class="profile-avatar" style="width: 48px; height: 48px; font-size: 20px;">👩</div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>Sarah (HR)</strong>
+                  <span class="text-small text-muted">1w ago</span>
+                </div>
+                <p class="text-small text-muted" style="margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  Welcome to Talent Registry! Let me know if...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div style="flex: 1; display: flex; flex-direction: column;">
+        <!-- Chat Header -->
+        <div style="padding: 16px; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; gap: 12px;">
+          <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👩</div>
+          <div>
+            <strong>HR Team</strong>
+            <p class="text-small text-muted" style="margin: 0;">Talent Registry HR Department</p>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages">
+          <div class="chat-message received">
+            <p style="margin: 0;">Hi! I wanted to update you on the candidates in your pipeline for the Software Engineer Intern position.</p>
+            <span class="text-small text-muted">Yesterday, 3:00 PM</span>
+          </div>
+
+          <div class="chat-message received">
+            <p style="margin: 0;">We've forwarded 3 strong candidates for your review: Alex J., Sarah K., and Mike R. All have excellent ZenCube project scores.</p>
+            <span class="text-small text-muted">Yesterday, 3:01 PM</span>
+          </div>
+
+          <div class="chat-message sent">
+            <p style="margin: 0;">Thanks for the update! I've reviewed the profiles. I'd like to schedule interviews with Alex J. and Sarah K.</p>
+            <span class="text-small text-muted">Yesterday, 4:30 PM</span>
+          </div>
+
+          <div class="chat-message received">
+            <p style="margin: 0;">Great choices! I'll reach out to them and coordinate the schedules. What times work best for your team next week?</p>
+            <span class="text-small text-muted">Yesterday, 4:45 PM</span>
+          </div>
+
+          <div class="chat-message sent">
+            <p style="margin: 0;">Wednesday or Thursday afternoon would be ideal. We can do video calls.</p>
+            <span class="text-small text-muted">Yesterday, 5:00 PM</span>
+          </div>
+
+          <div class="chat-message received">
+            <p style="margin: 0;">Interview with Alex J. is confirmed for Wednesday, January 15th at 2:00 PM (video call). I'll send you the meeting link separately. Sarah K. is confirmed for Thursday, January 16th at 3:00 PM.</p>
+            <span class="text-small text-muted">1h ago</span>
+          </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-area">
+          <input type="text" class="form-input" placeholder="Type a message...">
+          <button class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

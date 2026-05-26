@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management - HR Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html" class="active">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+
+        <div class="sidebar-section">System</div>
+        <ul class="sidebar-nav">
+          <li><a href="audit-log.html">Audit Log</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Student Management</h1>
+        <div style="display: flex; gap: 12px;">
+          <input type="text" class="form-input" placeholder="Search students..." style="width: 250px;">
+          <button class="btn">Export CSV</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">248</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--status-success);">189</div>
+          <div class="stat-label">Full Access</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--status-warning);">45</div>
+          <div class="stat-label">Mini Access</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" style="color: var(--status-info);">14</div>
+          <div class="stat-label">New This Week</div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-body">
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <select class="form-select">
+                <option>All Institutions</option>
+                <option>State University</option>
+                <option>Tech Institute</option>
+                <option>Engineering College</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <select class="form-select">
+                <option>All Years</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2026</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <select class="form-select">
+                <option>All Access Levels</option>
+                <option>Full Access</option>
+                <option>Mini Access</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin: 0; min-width: 150px;">
+              <select class="form-select">
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Has Applications</option>
+                <option>Placed</option>
+              </select>
+            </div>
+            <button class="btn">Clear Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Students Table -->
+      <div class="card">
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Institution</th>
+                  <th>Access</th>
+                  <th>Applications</th>
+                  <th>Status</th>
+                  <th>Last Active</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                      <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👤</div>
+                      <div>
+                        <strong>Alex Johnson</strong>
+                        <p class="text-small text-muted" style="margin: 0;">alex.johnson@uni.edu</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>State University '25</td>
+                  <td><span class="badge badge-selected">Full</span></td>
+                  <td>5 (2 active)</td>
+                  <td><span class="badge badge-interview">Interview</span></td>
+                  <td>2 hours ago</td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm">View</button>
+                      <button class="btn btn-sm">Message</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                      <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👤</div>
+                      <div>
+                        <strong>Sarah Kim</strong>
+                        <p class="text-small text-muted" style="margin: 0;">sarah.kim@tech.edu</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Tech Institute '24</td>
+                  <td><span class="badge badge-selected">Full</span></td>
+                  <td>3 (1 active)</td>
+                  <td><span class="badge badge-forwarded">Forwarded</span></td>
+                  <td>5 hours ago</td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm">View</button>
+                      <button class="btn btn-sm">Message</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr style="background: #fffde7;">
+                  <td>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                      <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👤</div>
+                      <div>
+                        <strong>Mike Rodriguez</strong>
+                        <p class="text-small text-muted" style="margin: 0;">mike.r@eng.edu</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Engineering College '25</td>
+                  <td><span class="badge badge-pending">Mini (8 days left)</span></td>
+                  <td>2 (2 active)</td>
+                  <td><span class="badge badge-applied">Applied</span></td>
+                  <td>1 day ago</td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm">View</button>
+                      <button class="btn btn-sm btn-success">Upgrade</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                      <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👤</div>
+                      <div>
+                        <strong>Jennifer Park</strong>
+                        <p class="text-small text-muted" style="margin: 0;">j.park@tech.edu</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Tech Institute '24</td>
+                  <td><span class="badge badge-selected">Full</span></td>
+                  <td>6 (0 active)</td>
+                  <td><span class="badge badge-selected">Placed</span></td>
+                  <td>1 week ago</td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm">View</button>
+                      <button class="btn btn-sm">Message</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                      <div class="profile-avatar" style="width: 40px; height: 40px; font-size: 16px;">👤</div>
+                      <div>
+                        <strong>David Lee</strong>
+                        <p class="text-small text-muted" style="margin: 0;">d.lee@uni.edu</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>State University '25</td>
+                  <td><span class="badge badge-selected">Full</span></td>
+                  <td>4 (3 active)</td>
+                  <td><span class="badge badge-interview">Interview</span></td>
+                  <td>3 hours ago</td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm">View</button>
+                      <button class="btn btn-sm">Message</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">...</button>
+        <button class="pagination-btn">25</button>
+        <button class="pagination-btn">Next →</button>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

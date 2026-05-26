@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Kanban - HR Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html" class="active">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+
+        <div class="sidebar-section">System</div>
+        <ul class="sidebar-nav">
+          <li><a href="audit-log.html">Audit Log</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" style="max-width: 100%;">
+      <div class="page-header">
+        <h1>Pipeline Management</h1>
+        <div style="display: flex; gap: 12px;">
+          <select class="form-select" style="width: auto;">
+            <option>All Companies</option>
+            <option>TechCorp Inc.</option>
+            <option>AI Innovations</option>
+            <option>DataFlow Systems</option>
+          </select>
+          <select class="form-select" style="width: auto;">
+            <option>All Jobs</option>
+            <option>Software Engineer Intern</option>
+            <option>ML Engineer</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="wireframe-note">
+        <strong>Full Control:</strong> Drag cards between columns to update application status. HR manages the entire pipeline flow.
+      </div>
+
+      <!-- Kanban Board -->
+      <div class="kanban-board" style="margin-top: 20px;">
+        <!-- Applied Column -->
+        <div class="kanban-column">
+          <div class="kanban-header applied">
+            <span class="kanban-title">Applied</span>
+            <span class="kanban-count">5</span>
+          </div>
+          <div class="kanban-card" style="cursor: grab;" onclick="window.location='application-detail.html'">
+            <strong>Lisa M.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Backend Developer · FinTech Corp</p>
+            <span class="text-small text-muted">Applied 2h ago</span>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-primary" onclick="event.stopPropagation()">Review</button>
+            </div>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Tom H.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Data Analyst · DataFlow</p>
+            <span class="text-small text-muted">Applied 5h ago</span>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-primary">Review</button>
+            </div>
+          </div>
+          <div class="kanban-card" style="background: #ffebee; cursor: grab;">
+            <div class="text-small" style="color: var(--status-danger); margin-bottom: 4px;">⚠️ Stale (8 days)</div>
+            <strong>Mark W.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">ML Engineer · AI Innovations</p>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-primary">Review Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- HR Reviewed Column -->
+        <div class="kanban-column">
+          <div class="kanban-header reviewed">
+            <span class="kanban-title">HR Reviewed</span>
+            <span class="kanban-count">3</span>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Sarah K.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">ML Engineer · TechCorp</p>
+            <span class="badge badge-selected" style="font-size: 10px;">88% Match</span>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-success">Forward</button>
+              <button class="btn btn-sm btn-danger">Reject</button>
+            </div>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Mike R.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Frontend Dev · WebStart</p>
+            <span class="badge badge-forwarded" style="font-size: 10px;">72% Match</span>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-success">Forward</button>
+              <button class="btn btn-sm btn-danger">Reject</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forwarded Column -->
+        <div class="kanban-column">
+          <div class="kanban-header forwarded">
+            <span class="kanban-title">Forwarded</span>
+            <span class="kanban-count">4</span>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Alex J.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">SWE Intern · TechCorp</p>
+            <p class="text-small" style="margin: 4px 0;">Forwarded Jan 5</p>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-primary">Schedule Interview</button>
+            </div>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Emma W.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Data Analyst · DataFlow</p>
+            <p class="text-small" style="margin: 4px 0;">Forwarded Jan 4</p>
+            <div style="margin-top: 8px;">
+              <button class="btn btn-sm btn-primary">Schedule Interview</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interview Column -->
+        <div class="kanban-column">
+          <div class="kanban-header interview">
+            <span class="kanban-title">Interview</span>
+            <span class="kanban-count">3</span>
+          </div>
+          <div class="kanban-card" style="border-left: 3px solid var(--stage-interview); cursor: grab;">
+            <strong>David L.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">ML Engineer · AI Innovations</p>
+            <div class="alert alert-info" style="padding: 4px 8px; margin: 8px 0; font-size: 10px;">
+              <strong>Today 2:00 PM</strong>
+            </div>
+            <button class="btn btn-sm btn-block">View Details</button>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Jennifer P.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Frontend · TechCorp</p>
+            <p class="text-small" style="margin: 4px 0;">Jan 18, 10:00 AM</p>
+          </div>
+        </div>
+
+        <!-- Selected Column -->
+        <div class="kanban-column">
+          <div class="kanban-header selected">
+            <span class="kanban-title">Selected</span>
+            <span class="kanban-count">2</span>
+          </div>
+          <div class="kanban-card" style="border-left: 3px solid var(--status-success); cursor: grab;">
+            <strong>Chris M.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Backend · FinTech Corp</p>
+            <span class="badge badge-selected" style="font-size: 10px;">Offer Sent</span>
+          </div>
+          <div class="kanban-card" style="border-left: 3px solid var(--status-success); cursor: grab;">
+            <strong>Amy T.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">Data Science · DataFlow</p>
+            <span class="badge badge-selected" style="font-size: 10px;">Accepted</span>
+          </div>
+        </div>
+
+        <!-- Rejected Column -->
+        <div class="kanban-column" style="opacity: 0.7;">
+          <div class="kanban-header rejected">
+            <span class="kanban-title">Rejected</span>
+            <span class="kanban-count">8</span>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>John D.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">ML Engineer · TechCorp</p>
+            <span class="text-small text-muted">Skills mismatch</span>
+          </div>
+          <div class="kanban-card" style="cursor: grab;">
+            <strong>Kate S.</strong>
+            <p class="text-small text-muted" style="margin: 4px 0;">SWE · AI Innovations</p>
+            <span class="text-small text-muted">Position filled</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-body">
+          <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: var(--stage-applied); border-radius: 4px;"></div>
+              <span class="text-small">Applied</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: var(--stage-reviewed); border-radius: 4px;"></div>
+              <span class="text-small">HR Reviewed</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: var(--stage-forwarded); border-radius: 4px;"></div>
+              <span class="text-small">Forwarded</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: var(--stage-interview); border-radius: 4px;"></div>
+              <span class="text-small">Interview</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: var(--stage-selected); border-radius: 4px;"></div>
+              <span class="text-small">Selected</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: var(--stage-rejected); border-radius: 4px;"></div>
+              <span class="text-small">Rejected</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; background: #ffebee; border: 1px solid var(--status-danger); border-radius: 4px;"></div>
+              <span class="text-small">Stale (7+ days)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(244,67,54,0.3);">System Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="config.html">Configuration</a></li>
+          <li><a href="feature-flags.html">Feature Flags</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>System Admin Dashboard</h1>
+        <span class="text-muted">Platform health and metrics</span>
+      </div>
+
+      <!-- System Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">248</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">35</div>
+          <div class="stat-label">Enterprises</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">156</div>
+          <div class="stat-label">Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Placements</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- System Health -->
+        <div class="card">
+          <div class="card-header">
+            <h3>System Health</h3>
+          </div>
+          <div class="card-body">
+            <div style="display: grid; gap: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+                <div>
+                  <strong>API Server</strong>
+                  <p class="text-small text-muted">Response time: 45ms</p>
+                </div>
+                <span class="badge badge-selected">Healthy</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+                <div>
+                  <strong>Database</strong>
+                  <p class="text-small text-muted">Connections: 12/100</p>
+                </div>
+                <span class="badge badge-selected">Healthy</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+                <div>
+                  <strong>ZenCube Integration</strong>
+                  <p class="text-small text-muted">Last sync: 2 hours ago</p>
+                </div>
+                <span class="badge badge-selected">Connected</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+                <div>
+                  <strong>Email Service</strong>
+                  <p class="text-small text-muted">Sent today: 45</p>
+                </div>
+                <span class="badge badge-selected">Operational</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="card-body">
+            <div style="display: grid; gap: 12px;">
+              <a href="config.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>⚙️ System Configuration</span>
+                <span>→</span>
+              </a>
+              <a href="feature-flags.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>🚩 Feature Flags</span>
+                <span>→</span>
+              </a>
+              <a href="success-stories.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>🎉 Success Stories</span>
+                <span>→</span>
+              </a>
+              <a href="../hr/audit-log.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>📋 View Audit Log</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform Metrics -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Platform Metrics (Last 30 Days)</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-4">
+            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-applied);">342</div>
+              <div class="text-small text-muted">New Applications</div>
+            </div>
+            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-interview);">89</div>
+              <div class="text-small text-muted">Interviews Scheduled</div>
+            </div>
+            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 32px; font-weight: 700; color: var(--stage-selected);">12</div>
+              <div class="text-small text-muted">Placements</div>
+            </div>
+            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
+              <div style="font-size: 32px; font-weight: 700; color: var(--color-heading);">8</div>
+              <div class="text-small text-muted">New Enterprises</div>
+            </div>
+          </div>
+
+          <div class="wireframe-note" style="margin-top: 20px;">
+            Charts and graphs would be displayed here showing trends over time (applications, placements, user growth).
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Feature Flags Summary -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Active Feature Flags</h3>
+          <a href="feature-flags.html" class="btn btn-sm">Manage All</a>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Status</th>
+                  <th>Rollout</th>
+                  <th>Roles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>AI Resume Matching</strong></td>
+                  <td><span class="badge badge-selected">Enabled</span></td>
+                  <td>100%</td>
+                  <td>All</td>
+                </tr>
+                <tr>
+                  <td><strong>Bulk Application Review</strong></td>
+                  <td><span class="badge badge-selected">Enabled</span></td>
+                  <td>100%</td>
+                  <td>HR Only</td>
+                </tr>
+                <tr>
+                  <td><strong>Video Interview Integration</strong></td>
+                  <td><span class="badge badge-pending">Beta</span></td>
+                  <td>25%</td>
+                  <td>All</td>
+                </tr>
+                <tr>
+                  <td><strong>Skills Assessment</strong></td>
+                  <td><span class="badge badge-rejected">Disabled</span></td>
+                  <td>0%</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Approvals - HR Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html" class="active">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+
+        <div class="sidebar-section">System</div>
+        <ul class="sidebar-nav">
+          <li><a href="audit-log.html">Audit Log</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Job Approvals</h1>
+        <span class="badge badge-pending" style="font-size: 14px; padding: 8px 16px;">3 Pending</span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active">Pending (3)</button>
+        <button class="tab">Approved (45)</button>
+        <button class="tab">Rejected (5)</button>
+      </div>
+
+      <!-- Pending Jobs -->
+      <div class="wireframe-note">
+        Review job postings before they become visible to students. Check for appropriate requirements, fair descriptions, and compliance with platform guidelines.
+      </div>
+
+      <div style="display: grid; gap: 16px; margin-top: 20px;">
+        <!-- Pending Job 1 -->
+        <div class="card" style="border-left: 4px solid var(--status-warning);">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+              <div>
+                <h3 style="margin-bottom: 4px;">DevOps Engineer</h3>
+                <p class="text-muted" style="margin: 0;">TechCorp Inc. · Remote</p>
+              </div>
+              <div style="text-align: right;">
+                <span class="badge badge-pending">Pending Review</span>
+                <p class="text-small text-muted" style="margin: 4px 0 0;">Submitted 2 hours ago</p>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 16px;">
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Type</p>
+                <p style="margin: 0;"><strong>Full-time</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Domain</p>
+                <p style="margin: 0;"><strong>DevOps</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Target Grad Year</p>
+                <p style="margin: 0;"><strong>2024, 2025</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Work Mode</p>
+                <p style="margin: 0;"><strong>Remote</strong></p>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <p class="text-small text-muted" style="margin-bottom: 4px;">Required Skills</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Linux</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <p class="text-small text-muted" style="margin-bottom: 4px;">Description (excerpt)</p>
+              <p class="text-small">
+                We're looking for a DevOps Engineer to join our infrastructure team. You'll be responsible for maintaining and improving our CI/CD pipelines, managing cloud infrastructure, and ensuring high availability...
+              </p>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px;">
+              <button class="btn">View Full Details</button>
+              <button class="btn btn-danger">Reject</button>
+              <button class="btn btn-success">Approve</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Job 2 -->
+        <div class="card" style="border-left: 4px solid var(--status-warning);">
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+              <div>
+                <h3 style="margin-bottom: 4px;">Frontend Developer Intern</h3>
+                <p class="text-muted" style="margin: 0;">WebStart Studios · San Francisco (Hybrid)</p>
+              </div>
+              <div style="text-align: right;">
+                <span class="badge badge-pending">Pending Review</span>
+                <p class="text-small text-muted" style="margin: 4px 0 0;">Submitted 5 hours ago</p>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 16px;">
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Type</p>
+                <p style="margin: 0;"><strong>Internship</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Domain</p>
+                <p style="margin: 0;"><strong>Frontend</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Duration</p>
+                <p style="margin: 0;"><strong>3 months</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Work Mode</p>
+                <p style="margin: 0;"><strong>Hybrid</strong></p>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <p class="text-small text-muted" style="margin-bottom: 4px;">Required Skills</p>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">HTML</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px;">
+              <button class="btn">View Full Details</button>
+              <button class="btn btn-danger">Reject</button>
+              <button class="btn btn-success">Approve</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Job 3 (flagged) -->
+        <div class="card" style="border-left: 4px solid var(--status-danger);">
+          <div class="card-body">
+            <div class="alert alert-danger" style="margin-bottom: 16px;">
+              <strong>⚠️ Review Required:</strong> This posting contains potentially unrealistic requirements (10+ years experience for entry-level role).
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+              <div>
+                <h3 style="margin-bottom: 4px;">Junior Data Scientist</h3>
+                <p class="text-muted" style="margin: 0;">NewCo Inc. · Boston</p>
+              </div>
+              <div style="text-align: right;">
+                <span class="badge badge-pending">Needs Review</span>
+                <p class="text-small text-muted" style="margin: 4px 0 0;">Submitted 1 day ago</p>
+              </div>
+            </div>
+
+            <div class="grid-4" style="margin-bottom: 16px;">
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Type</p>
+                <p style="margin: 0;"><strong>Full-time</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Domain</p>
+                <p style="margin: 0;"><strong>Data Science</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Experience</p>
+                <p style="margin: 0; color: var(--status-danger);"><strong>10+ years ⚠️</strong></p>
+              </div>
+              <div>
+                <p class="text-small text-muted" style="margin-bottom: 2px;">Work Mode</p>
+                <p style="margin: 0;"><strong>On-site</strong></p>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 12px;">
+              <button class="btn">View Full Details</button>
+              <button class="btn">Request Changes</button>
+              <button class="btn btn-danger">Reject</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

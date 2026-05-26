@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html" class="active">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>My Profile</h1>
+        <span class="text-muted">Synced from ZenCube</span>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>📋 Read-only Profile</strong> — Your profile is automatically synced from ZenCube. To update your information, please make changes in ZenCube and it will reflect here within 6 hours.
+        <br><span class="text-small">Last sync: January 10, 2025 at 2:00 PM</span>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1fr 2fr;">
+        <!-- Profile Card -->
+        <div>
+          <div class="card">
+            <div class="card-body" style="text-align: center;">
+              <div class="profile-avatar" style="width: 120px; height: 120px; font-size: 48px; margin: 0 auto 16px;">
+                👤
+              </div>
+              <h2>Alex Johnson</h2>
+              <p class="text-muted">Computer Science</p>
+              <p class="text-small text-muted">Class of 2025</p>
+
+              <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-border);">
+                <div class="progress-bar" style="margin-bottom: 8px;">
+                  <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+                <p class="text-small text-muted">Profile Strength: 85%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Contact Info</h3>
+            </div>
+            <div class="card-body">
+              <div class="contact-protected">
+                🔒 Contact information is only visible to HR administrators after you apply to a position.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Details -->
+        <div>
+          <!-- Basic Info -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Basic Information</h3>
+            </div>
+            <div class="card-body">
+              <div class="grid-2">
+                <div>
+                  <p class="text-small text-muted">Full Name</p>
+                  <p><strong>Alex Johnson</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted">Institution</p>
+                  <p><strong>State University</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted">Program</p>
+                  <p><strong>B.S. Computer Science</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted">Expected Graduation</p>
+                  <p><strong>May 2025</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Skills</h3>
+            </div>
+            <div class="card-body">
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ZenCube Projects -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Completed Projects (from ZenCube)</h3>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Project</th>
+                      <th>Domain</th>
+                      <th>Rubric Score</th>
+                      <th>Completed</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>E-Commerce API</strong></td>
+                      <td>Backend Development</td>
+                      <td>
+                        <span class="badge badge-selected">92/100</span>
+                      </td>
+                      <td>Dec 2024</td>
+                    </tr>
+                    <tr>
+                      <td><strong>ML Sentiment Analyzer</strong></td>
+                      <td>Machine Learning</td>
+                      <td>
+                        <span class="badge badge-selected">88/100</span>
+                      </td>
+                      <td>Nov 2024</td>
+                    </tr>
+                    <tr>
+                      <td><strong>React Dashboard</strong></td>
+                      <td>Frontend Development</td>
+                      <td>
+                        <span class="badge badge-selected">95/100</span>
+                      </td>
+                      <td>Oct 2024</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Chat Application</strong></td>
+                      <td>Full Stack</td>
+                      <td>
+                        <span class="badge badge-forwarded">78/100</span>
+                      </td>
+                      <td>Sep 2024</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work Preferences -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Work Preferences</h3>
+            </div>
+            <div class="card-body">
+              <div class="grid-2">
+                <div>
+                  <p class="text-small text-muted">Looking For</p>
+                  <p><strong>Full-time, Internship</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted">Preferred Domains</p>
+                  <p><strong>Backend, Machine Learning</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted">Location Preference</p>
+                  <p><strong>Remote, Hybrid</strong></p>
+                </div>
+                <div>
+                  <p class="text-small text-muted">Available From</p>
+                  <p><strong>June 2025</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html" class="active">Messages</a></li>
+          <li><a href="audit-log.html">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" style="padding: 0;">
+      <div class="chat-container">
+        <!-- Chat Sidebar -->
+        <div class="chat-sidebar">
+          <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+            <h3 style="margin-bottom: 12px;">Messages</h3>
+            <input type="text" class="form-input" placeholder="Search conversations...">
+            <div style="display: flex; gap: 4px; margin-top: 8px;">
+              <button class="btn btn-sm btn-primary">All</button>
+              <button class="btn btn-sm">Students</button>
+              <button class="btn btn-sm">Enterprises</button>
+            </div>
+          </div>
+
+          <!-- Student Conversations -->
+          <div style="padding: 8px 12px; background: var(--color-bg); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-muted);">
+            Students
+          </div>
+
+          <div class="chat-conversation active">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div class="chat-conversation-title">Alex J.</div>
+              <span class="text-small text-muted">1h ago</span>
+            </div>
+            <p class="text-small text-muted">TechCorp Interview</p>
+            <div class="chat-conversation-preview">Thank you! I'm looking forward to it!</div>
+          </div>
+
+          <div class="chat-conversation">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div class="chat-conversation-title">Sarah M.</div>
+              <span class="text-small text-muted">3h ago</span>
+            </div>
+            <p class="text-small text-muted">DataFlow Application</p>
+            <div class="chat-conversation-preview">When can I expect to hear back...</div>
+          </div>
+
+          <div class="chat-conversation">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div class="chat-conversation-title">David L.</div>
+              <span class="text-small text-muted">1d ago</span>
+            </div>
+            <p class="text-small text-muted">Interview Confirmation</p>
+            <div class="chat-conversation-preview">Yes, January 15th works perfectly!</div>
+          </div>
+
+          <!-- Enterprise Conversations -->
+          <div style="padding: 8px 12px; background: var(--color-bg); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-muted);">
+            Enterprises
+          </div>
+
+          <div class="chat-conversation">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div class="chat-conversation-title">TechCorp Inc.</div>
+              <span class="text-small text-muted">2h ago</span>
+            </div>
+            <p class="text-small text-muted">Candidate Updates</p>
+            <div class="chat-conversation-preview">Could you also schedule an interview...</div>
+          </div>
+
+          <div class="chat-conversation">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div class="chat-conversation-title">DataFlow Systems</div>
+              <span class="text-small text-muted">1d ago</span>
+            </div>
+            <p class="text-small text-muted">Job Posting</p>
+            <div class="chat-conversation-preview">Thanks for the quick approval!</div>
+          </div>
+
+          <div class="chat-conversation">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div class="chat-conversation-title">WebStart Studios</div>
+              <span class="text-small text-muted">2d ago</span>
+            </div>
+            <p class="text-small text-muted">New Job Posting</p>
+            <div class="chat-conversation-preview">We've submitted a new posting...</div>
+          </div>
+        </div>
+
+        <!-- Chat Main -->
+        <div class="chat-main">
+          <div class="chat-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong>Alex J.</strong>
+                <span class="text-muted"> • </span>
+                <span class="text-muted">TechCorp Interview</span>
+                <span class="badge badge-applied" style="margin-left: 8px; font-size: 10px;">Student</span>
+              </div>
+              <div class="btn-group">
+                <a href="application-detail.html" class="btn btn-sm">View Application</a>
+                <a href="students.html" class="btn btn-sm">View Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-messages">
+            <!-- Date Separator -->
+            <div style="text-align: center; margin: 16px 0;">
+              <span class="text-small text-muted" style="background: var(--color-bg); padding: 4px 12px; border-radius: 12px;">January 10, 2025</span>
+            </div>
+
+            <!-- Sent Message (HR) -->
+            <div class="chat-message sent">
+              <div class="chat-bubble">
+                <p>Hi Alex! I'm reaching out regarding your application for the Software Engineer Intern position at TechCorp Inc.</p>
+              </div>
+              <div class="chat-time">9:30 AM</div>
+            </div>
+
+            <div class="chat-message sent">
+              <div class="chat-bubble">
+                <p>We've reviewed your profile and would like to schedule an interview with the engineering team. Would you be available on January 15th at 2:00 PM PST?</p>
+              </div>
+              <div class="chat-time">9:31 AM</div>
+            </div>
+
+            <!-- Received Message (Student) -->
+            <div class="chat-message">
+              <div class="chat-bubble">
+                <p>Hi! Thank you so much for getting back to me. Yes, January 15th at 2:00 PM PST works perfectly for me!</p>
+              </div>
+              <div class="chat-time">10:15 AM</div>
+            </div>
+
+            <!-- Sent Message (HR) -->
+            <div class="chat-message sent">
+              <div class="chat-bubble">
+                <p>Great! Your interview is confirmed for January 15, 2025 at 2:00 PM PST. It will be a 45-minute video call with Sarah Chen, Engineering Manager.</p>
+              </div>
+              <div class="chat-time">10:45 AM</div>
+            </div>
+
+            <div class="chat-message sent">
+              <div class="chat-bubble">
+                <p>I've sent you a calendar invite with the Zoom link. Please let me know if you have any questions before the interview. Good luck! 🍀</p>
+              </div>
+              <div class="chat-time">10:46 AM</div>
+            </div>
+
+            <!-- Received Message (Student) -->
+            <div class="chat-message">
+              <div class="chat-bubble">
+                <p>Thank you! I received the calendar invite. I'm looking forward to it!</p>
+              </div>
+              <div class="chat-time">11:00 AM</div>
+            </div>
+          </div>
+
+          <div class="chat-input">
+            <input type="text" class="form-input" placeholder="Type your message...">
+            <button class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

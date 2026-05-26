@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration - Admin - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(244,67,54,0.3);">System Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="config.html" class="active">Configuration</a></li>
+          <li><a href="feature-flags.html">Feature Flags</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>System Configuration</h1>
+      </div>
+
+      <!-- Mini Access Configuration -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Mini Access Settings</h3>
+          <span class="text-small text-muted">Control trial/limited access for new users</span>
+        </div>
+        <div class="card-body">
+          <div class="wireframe-note">
+            "Mini" access is a limited trial period for students who are new to the platform. These settings control the restrictions during the trial period.
+          </div>
+
+          <div class="grid-2" style="margin-top: 20px;">
+            <div class="form-group">
+              <label class="form-label">Mini Access Duration (Days)</label>
+              <input type="number" class="form-input" value="14" min="1" max="90">
+              <div class="form-hint">How long the trial period lasts for new students</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Max Applications During Mini</label>
+              <input type="number" class="form-input" value="3" min="1" max="20">
+              <div class="form-hint">Maximum job applications allowed during trial</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" checked>
+              <span>Enable Mini access for new students</span>
+            </label>
+            <div class="form-hint" style="margin-left: 26px;">When disabled, all students get full access immediately</div>
+          </div>
+
+          <button class="btn btn-primary">Save Mini Settings</button>
+        </div>
+      </div>
+
+      <!-- Application Settings -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Application Settings</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label">Stale Application Threshold (Days)</label>
+              <input type="number" class="form-input" value="7" min="1" max="30">
+              <div class="form-hint">Applications without action for this many days are flagged as stale</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Max Active Applications per Student</label>
+              <input type="number" class="form-input" value="10" min="1" max="50">
+              <div class="form-hint">Maximum concurrent active applications allowed</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" checked>
+              <span>Allow application withdrawal before interview</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox">
+              <span>Allow application withdrawal after interview</span>
+            </label>
+            <div class="form-hint" style="margin-left: 26px;">Currently disabled - students must contact HR to withdraw after interview</div>
+          </div>
+
+          <button class="btn btn-primary">Save Application Settings</button>
+        </div>
+      </div>
+
+      <!-- Enterprise Settings -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Enterprise Settings</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label">Max Active Job Postings per Enterprise</label>
+              <input type="number" class="form-input" value="10" min="1" max="100">
+              <div class="form-hint">Maximum concurrent active job postings</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Job Posting Approval Timeout (Hours)</label>
+              <input type="number" class="form-input" value="48" min="1" max="168">
+              <div class="form-hint">Auto-escalate if not reviewed within this time</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" checked>
+              <span>Require HR approval for all job postings</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" checked>
+              <span>Require HR approval for new enterprise registrations</span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary">Save Enterprise Settings</button>
+        </div>
+      </div>
+
+      <!-- Sync Settings -->
+      <div class="card">
+        <div class="card-header">
+          <h3>ZenCube Sync Settings</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label">Auto-Sync Interval (Hours)</label>
+              <select class="form-select">
+                <option>1 hour</option>
+                <option>2 hours</option>
+                <option selected>6 hours</option>
+                <option>12 hours</option>
+                <option>24 hours</option>
+              </select>
+              <div class="form-hint">How often to sync student profiles from ZenCube</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Sync</label>
+              <p style="padding: 8px 0;"><strong>January 10, 2025 at 2:00 PM</strong></p>
+              <button class="btn btn-sm">Trigger Manual Sync</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox">
+              <input type="checkbox" checked>
+              <span>Enable automatic profile sync</span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary">Save Sync Settings</button>
+        </div>
+      </div>
+
+      <!-- Email Settings -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Email Notifications</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label class="form-label">Send notifications for:</label>
+            <div style="display: grid; gap: 8px; margin-top: 8px;">
+              <label class="form-checkbox">
+                <input type="checkbox" checked>
+                <span>Application status changes</span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" checked>
+                <span>Interview scheduling</span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" checked>
+                <span>New job postings matching profile</span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" checked>
+                <span>Enterprise registration approval</span>
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox">
+                <span>Weekly digest emails</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-primary">Save Email Settings</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

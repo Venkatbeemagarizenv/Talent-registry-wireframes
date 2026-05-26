@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Enterprise - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(255,152,0,0.3);">Enterprise</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="post-job.html">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="talent-search.html">Search Talent</a></li>
+          <li><a href="pipeline.html">Pipeline</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Welcome, TechCorp Inc.</h1>
+        <a href="post-job.html" class="btn btn-primary">+ Post New Job</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Active Jobs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">24</div>
+          <div class="stat-label">Total Applicants</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">8</div>
+          <div class="stat-label">In Interview Stage</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Pending Selection</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="notification-item">
+              <div class="notification-icon">👤</div>
+              <div class="notification-content">
+                <strong>New applicant for Software Engineer</strong>
+                <p class="text-small text-muted" style="margin: 0;">Alex J. applied via HR forward</p>
+              </div>
+              <div class="notification-time">2h ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">📅</div>
+              <div class="notification-content">
+                <strong>Interview scheduled</strong>
+                <p class="text-small text-muted" style="margin: 0;">Sarah K. - ML Engineer · Jan 18</p>
+              </div>
+              <div class="notification-time">1d ago</div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon">✅</div>
+              <div class="notification-content">
+                <strong>Job posting approved</strong>
+                <p class="text-small text-muted" style="margin: 0;">Data Analyst position is now live</p>
+              </div>
+              <div class="notification-time">2d ago</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="card-body">
+            <div style="display: grid; gap: 12px;">
+              <a href="post-job.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>📝 Post a New Job</span>
+                <span>→</span>
+              </a>
+              <a href="talent-search.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>🔍 Search Talent Pool</span>
+                <span>→</span>
+              </a>
+              <a href="pipeline.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>📊 View Pipeline</span>
+                <span>→</span>
+              </a>
+              <a href="chat.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
+                <span>💬 Contact HR</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Jobs -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Active Job Postings</h3>
+          <a href="my-jobs.html" class="btn btn-sm">View All</a>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Position</th>
+                  <th>Type</th>
+                  <th>Posted</th>
+                  <th>Applicants</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Software Engineer Intern</strong></td>
+                  <td>Internship</td>
+                  <td>Jan 5, 2025</td>
+                  <td>12</td>
+                  <td><span class="badge badge-selected">Active</span></td>
+                  <td>
+                    <a href="pipeline.html" class="btn btn-sm">View Pipeline</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>ML Engineer</strong></td>
+                  <td>Full-time</td>
+                  <td>Jan 3, 2025</td>
+                  <td>8</td>
+                  <td><span class="badge badge-selected">Active</span></td>
+                  <td>
+                    <a href="pipeline.html" class="btn btn-sm">View Pipeline</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Data Analyst</strong></td>
+                  <td>Full-time</td>
+                  <td>Jan 8, 2025</td>
+                  <td>4</td>
+                  <td><span class="badge badge-selected">Active</span></td>
+                  <td>
+                    <a href="pipeline.html" class="btn btn-sm">View Pipeline</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Notice -->
+      <div class="alert alert-info">
+        <strong>📌 Important:</strong> All candidate contact information is managed by HR. To schedule interviews or make offers, please coordinate through the platform's messaging system or contact HR directly.
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

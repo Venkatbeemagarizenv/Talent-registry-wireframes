@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html" class="active">Calendar</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Calendar</h1>
+        <div class="btn-group">
+          <button class="btn btn-sm">Today</button>
+          <button class="btn btn-sm">←</button>
+          <button class="btn btn-sm">→</button>
+        </div>
+      </div>
+
+      <div class="grid-2" style="grid-template-columns: 1fr 300px;">
+        <!-- Calendar Grid -->
+        <div class="card">
+          <div class="card-header">
+            <h3>January 2025</h3>
+            <div class="btn-group">
+              <button class="btn btn-sm btn-primary">Month</button>
+              <button class="btn btn-sm">Week</button>
+              <button class="btn btn-sm">Day</button>
+            </div>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="calendar-grid">
+              <div class="calendar-header">Sun</div>
+              <div class="calendar-header">Mon</div>
+              <div class="calendar-header">Tue</div>
+              <div class="calendar-header">Wed</div>
+              <div class="calendar-header">Thu</div>
+              <div class="calendar-header">Fri</div>
+              <div class="calendar-header">Sat</div>
+
+              <div class="calendar-day other-month">29</div>
+              <div class="calendar-day other-month">30</div>
+              <div class="calendar-day other-month">31</div>
+              <div class="calendar-day">1</div>
+              <div class="calendar-day">2</div>
+              <div class="calendar-day">3</div>
+              <div class="calendar-day">4</div>
+
+              <div class="calendar-day">5</div>
+              <div class="calendar-day">6</div>
+              <div class="calendar-day">7</div>
+              <div class="calendar-day">8</div>
+              <div class="calendar-day">9</div>
+              <div class="calendar-day today">10</div>
+              <div class="calendar-day">11</div>
+
+              <div class="calendar-day">12</div>
+              <div class="calendar-day">13</div>
+              <div class="calendar-day">14</div>
+              <div class="calendar-day">
+                15
+                <div class="calendar-event">TechCorp Interview</div>
+              </div>
+              <div class="calendar-day">16</div>
+              <div class="calendar-day">17</div>
+              <div class="calendar-day">
+                18
+                <div class="calendar-event">AI Innovations</div>
+              </div>
+
+              <div class="calendar-day">19</div>
+              <div class="calendar-day">20</div>
+              <div class="calendar-day">21</div>
+              <div class="calendar-day">22</div>
+              <div class="calendar-day">23</div>
+              <div class="calendar-day">24</div>
+              <div class="calendar-day">25</div>
+
+              <div class="calendar-day">26</div>
+              <div class="calendar-day">27</div>
+              <div class="calendar-day">28</div>
+              <div class="calendar-day">29</div>
+              <div class="calendar-day">30</div>
+              <div class="calendar-day">31</div>
+              <div class="calendar-day other-month">1</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Upcoming</h3>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+                <div style="display: flex; gap: 12px;">
+                  <div style="text-align: center; min-width: 50px;">
+                    <div style="font-size: 24px; font-weight: 700; color: var(--stage-interview);">15</div>
+                    <div class="text-small text-muted">JAN</div>
+                  </div>
+                  <div>
+                    <strong>Interview - TechCorp Inc.</strong>
+                    <p class="text-small text-muted" style="margin: 4px 0 0;">2:00 PM - 3:00 PM</p>
+                    <p class="text-small text-muted" style="margin: 0;">Video Call</p>
+                    <div style="margin-top: 8px;">
+                      <button class="btn btn-sm btn-primary">Join Call</button>
+                      <button class="btn btn-sm">Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="padding: 16px;">
+                <div style="display: flex; gap: 12px;">
+                  <div style="text-align: center; min-width: 50px;">
+                    <div style="font-size: 24px; font-weight: 700; color: var(--stage-interview);">18</div>
+                    <div class="text-small text-muted">JAN</div>
+                  </div>
+                  <div>
+                    <strong>Interview - AI Innovations</strong>
+                    <p class="text-small text-muted" style="margin: 4px 0 0;">10:00 AM - 11:30 AM</p>
+                    <p class="text-small text-muted" style="margin: 0;">On-site Interview</p>
+                    <div style="margin-top: 8px;">
+                      <button class="btn btn-sm">View Details</button>
+                      <button class="btn btn-sm">Get Directions</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Download</h3>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-block" style="margin-bottom: 8px;">
+                📅 Export to Google Calendar
+              </button>
+              <button class="btn btn-block">
+                📥 Download All as ICS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

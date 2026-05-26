@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Openings - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html" class="active">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Communication</div>
+        <ul class="sidebar-nav">
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Browse Openings</h1>
+        <span class="text-muted">24 openings match your profile</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px;">
+        <!-- Filters -->
+        <div class="filter-sidebar">
+          <h3 style="margin-bottom: 16px;">Filters</h3>
+
+          <div class="filter-section">
+            <div class="filter-title">Job Type</div>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Full-time</span></label>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Internship</span></label>
+            <label class="form-checkbox"><input type="checkbox"> <span>Part-time</span></label>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-title">Domain</div>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Backend Development</span></label>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Frontend Development</span></label>
+            <label class="form-checkbox"><input type="checkbox"> <span>Full Stack</span></label>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Machine Learning</span></label>
+            <label class="form-checkbox"><input type="checkbox"> <span>Data Science</span></label>
+            <label class="form-checkbox"><input type="checkbox"> <span>DevOps</span></label>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-title">Location</div>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Remote</span></label>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Hybrid</span></label>
+            <label class="form-checkbox"><input type="checkbox"> <span>On-site</span></label>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-title">Eligibility</div>
+            <label class="form-checkbox"><input type="checkbox" checked> <span>Show only eligible</span></label>
+          </div>
+
+          <button class="btn btn-block" style="margin-top: 16px;">Clear Filters</button>
+        </div>
+
+        <!-- Job Listings -->
+        <div>
+          <!-- Search Bar -->
+          <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+            <input type="text" class="form-input" placeholder="Search by title, company, or skills..." style="flex: 1;">
+            <button class="btn btn-primary">Search</button>
+          </div>
+
+          <!-- Eligible Opening -->
+          <div class="opening-card">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div>
+                <h3 style="margin-bottom: 4px;">Software Engineer Intern</h3>
+                <p class="text-muted" style="margin: 0;">TechCorp Inc. · San Francisco, CA (Remote)</p>
+              </div>
+              <span class="badge badge-selected">✓ Eligible</span>
+            </div>
+            <div class="skill-tags" style="margin: 12px 0;">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">AWS</span>
+            </div>
+            <p class="text-small text-muted" style="margin-bottom: 12px;">
+              Join our engineering team to build scalable solutions. Work on real projects with mentorship from senior engineers.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="text-small text-muted">Posted 2 days ago · 15 applicants</span>
+              <div class="btn-group">
+                <a href="opening-detail.html" class="btn btn-sm">View Details</a>
+                <button class="btn btn-sm btn-primary">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Another Eligible Opening -->
+          <div class="opening-card">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div>
+                <h3 style="margin-bottom: 4px;">ML Engineer</h3>
+                <p class="text-muted" style="margin: 0;">AI Innovations · Boston, MA (Hybrid)</p>
+              </div>
+              <span class="badge badge-selected">✓ Eligible</span>
+            </div>
+            <div class="skill-tags" style="margin: 12px 0;">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">Machine Learning</span>
+            </div>
+            <p class="text-small text-muted" style="margin-bottom: 12px;">
+              Build and deploy machine learning models at scale. Work on cutting-edge NLP and computer vision projects.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="text-small text-muted">Posted 5 days ago · 8 applicants</span>
+              <div class="btn-group">
+                <a href="opening-detail.html" class="btn btn-sm">View Details</a>
+                <button class="btn btn-sm btn-primary">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Locked Opening -->
+          <div class="opening-card locked">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div>
+                <h3 style="margin-bottom: 4px;">Senior Data Scientist</h3>
+                <p class="text-muted" style="margin: 0;">DataFlow Systems · New York, NY</p>
+              </div>
+              <span class="badge badge-rejected">🔒 Not Eligible</span>
+            </div>
+            <div class="skill-tags" style="margin: 12px 0;">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Spark</span>
+              <span class="skill-tag">Statistics</span>
+            </div>
+            <div class="alert alert-warning" style="margin: 12px 0; padding: 8px 12px;">
+              <strong>Missing requirement:</strong> 3+ years experience required
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="text-small text-muted">Posted 1 day ago</span>
+              <a href="opening-detail.html" class="btn btn-sm">View Details</a>
+            </div>
+          </div>
+
+          <!-- More Openings -->
+          <div class="opening-card">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+              <div>
+                <h3 style="margin-bottom: 4px;">Frontend Developer</h3>
+                <p class="text-muted" style="margin: 0;">WebStart Studios · Remote</p>
+              </div>
+              <span class="badge badge-selected">✓ Eligible</span>
+            </div>
+            <div class="skill-tags" style="margin: 12px 0;">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">CSS</span>
+            </div>
+            <p class="text-small text-muted" style="margin-bottom: 12px;">
+              Create beautiful, responsive web applications. Work in a fast-paced startup environment.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="text-small text-muted">Posted 1 week ago · 22 applicants</span>
+              <div class="btn-group">
+                <a href="opening-detail.html" class="btn btn-sm">View Details</a>
+                <button class="btn btn-sm btn-primary">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">Next →</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

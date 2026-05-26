@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - HR - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="job-approvals.html">Job Approvals</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="pipeline-kanban.html">Pipeline</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="audit-log.html">Audit Log</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>HR Dashboard</h1>
+          <p class="text-muted">Platform overview and pending actions</p>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">248</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">32</div>
+          <div class="stat-label">Active Enterprises</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">156</div>
+          <div class="stat-label">Total Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Placements</div>
+        </div>
+      </div>
+
+      <!-- Alert Cards -->
+      <div class="grid-2">
+        <!-- Pending Approvals -->
+        <div class="card" style="border-left: 4px solid var(--status-pending);">
+          <div class="card-header">
+            <h3>⚠️ Pending Approvals</h3>
+            <a href="job-approvals.html" class="btn btn-sm">View All</a>
+          </div>
+          <div class="card-body">
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--color-border);">
+              <div>
+                <strong>3 Enterprise Registrations</strong>
+                <p class="text-small text-muted">Awaiting approval</p>
+              </div>
+              <a href="enterprises.html" class="btn btn-sm">Review</a>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 12px 0;">
+              <div>
+                <strong>5 Job Postings</strong>
+                <p class="text-small text-muted">Awaiting approval</p>
+              </div>
+              <a href="job-approvals.html" class="btn btn-sm">Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stale Applications -->
+        <div class="card" style="border-left: 4px solid var(--stage-rejected);">
+          <div class="card-header">
+            <h3>🔴 Stale Applications</h3>
+            <a href="pipeline-kanban.html" class="btn btn-sm">View All</a>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-warning">
+              <strong>8 applications</strong> have been in the same stage for over 7 days without action.
+            </div>
+            <p class="text-small text-muted" style="margin-top: 12px;">
+              Consider reviewing these applications or reaching out to the relevant enterprises for updates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline Overview -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Pipeline Overview</h3>
+          <a href="pipeline-kanban.html" class="btn btn-sm">Manage Pipeline</a>
+        </div>
+        <div class="card-body">
+          <div style="display: flex; gap: 16px;">
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px; border-bottom: 3px solid var(--stage-applied);">
+              <div style="font-size: 28px; font-weight: 700;">24</div>
+              <div class="text-small text-muted">Applied</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px; border-bottom: 3px solid var(--stage-hr-reviewed);">
+              <div style="font-size: 28px; font-weight: 700;">18</div>
+              <div class="text-small text-muted">HR Reviewed</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px; border-bottom: 3px solid var(--stage-forwarded);">
+              <div style="font-size: 28px; font-weight: 700;">32</div>
+              <div class="text-small text-muted">Forwarded</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px; border-bottom: 3px solid var(--stage-interview);">
+              <div style="font-size: 28px; font-weight: 700;">15</div>
+              <div class="text-small text-muted">Interview</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px; border-bottom: 3px solid var(--stage-selected);">
+              <div style="font-size: 28px; font-weight: 700;">12</div>
+              <div class="text-small text-muted">Selected</div>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 16px; background: var(--color-bg); border-radius: 8px; border-bottom: 3px solid var(--stage-rejected);">
+              <div style="font-size: 28px; font-weight: 700;">55</div>
+              <div class="text-small text-muted">Rejected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+            <a href="audit-log.html" class="btn btn-sm">View Audit Log</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <ul class="notification-list">
+              <li class="notification-item">
+                <div class="notification-icon">📋</div>
+                <div class="notification-content">
+                  <div class="notification-title">New Application</div>
+                  <p class="text-small text-muted">Alex J. applied for Software Engineer Intern at TechCorp</p>
+                  <div class="notification-time">30 minutes ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-icon">🏢</div>
+                <div class="notification-content">
+                  <div class="notification-title">New Enterprise Registration</div>
+                  <p class="text-small text-muted">CloudApp Inc. submitted registration</p>
+                  <div class="notification-time">2 hours ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-icon">✅</div>
+                <div class="notification-content">
+                  <div class="notification-title">Interview Completed</div>
+                  <p class="text-small text-muted">Amanda K. completed interview with DataFlow</p>
+                  <div class="notification-time">3 hours ago</div>
+                </div>
+              </li>
+              <li class="notification-item">
+                <div class="notification-icon">📝</div>
+                <div class="notification-content">
+                  <div class="notification-title">Job Posting Submitted</div>
+                  <p class="text-small text-muted">WebStart Studios submitted Backend Developer</p>
+                  <div class="notification-time">5 hours ago</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Upcoming Interviews -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Upcoming Interviews</h3>
+            <a href="calendar.html" class="btn btn-sm">View Calendar</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <strong>David L. → TechCorp</strong>
+                  <p class="text-small text-muted">Software Engineer Intern</p>
+                </div>
+                <div style="text-align: right;">
+                  <div class="badge badge-interview">Jan 15</div>
+                  <p class="text-small text-muted">2:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; border-bottom: 1px solid var(--color-border);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <strong>Jessica T. → DataFlow</strong>
+                  <p class="text-small text-muted">Data Analyst</p>
+                </div>
+                <div style="text-align: right;">
+                  <div class="badge badge-interview">Jan 16</div>
+                  <p class="text-small text-muted">10:00 AM</p>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <strong>Chris W. → TechCorp</strong>
+                  <p class="text-small text-muted">Software Engineer Intern</p>
+                </div>
+                <div style="text-align: right;">
+                  <div class="badge badge-interview">Jan 17</div>
+                  <p class="text-small text-muted">3:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Quick Actions</h3>
+        </div>
+        <div class="card-body">
+          <div class="grid-4">
+            <a href="enterprises.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">🏢</div>
+              Manage Enterprises
+            </a>
+            <a href="pipeline-kanban.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
+              Pipeline Kanban
+            </a>
+            <a href="calendar.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">📅</div>
+              Schedule Interview
+            </a>
+            <a href="students.html" class="btn btn-lg" style="text-align: center; padding: 24px;">
+              <div style="font-size: 24px; margin-bottom: 8px;">👥</div>
+              View Students
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>

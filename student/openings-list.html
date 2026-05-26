@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Openings - Student - Talent Registry</title>
+  <link rel="stylesheet" href="../assets/wireframe.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">📋 Talent Registry</div>
+      <div class="sidebar-role">Student</div>
+
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="openings-list.html" class="active">Browse Openings</a></li>
+          <li><a href="my-applications.html">My Applications</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="chat.html">Messages</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+
+        <div class="sidebar-section">Account</div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Settings</a></li>
+          <li><a href="../shared/login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>Browse Openings</h1>
+        <span class="text-muted">24 openings match your profile</span>
+      </div>
+
+      <!-- Filter Panel -->
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label>Domain</label>
+            <select class="form-select">
+              <option>All Domains</option>
+              <option>Software Engineering</option>
+              <option>Data Science</option>
+              <option>Product Management</option>
+              <option>Design</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Type</label>
+            <select class="form-select">
+              <option>All Types</option>
+              <option>Full-time</option>
+              <option>Internship</option>
+              <option>Part-time</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Company</label>
+            <select class="form-select">
+              <option>All Companies</option>
+              <option>TechCorp Inc.</option>
+              <option>DataFlow Systems</option>
+              <option>WebStart Studios</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Location</label>
+            <select class="form-select">
+              <option>All Locations</option>
+              <option>Remote</option>
+              <option>San Francisco, CA</option>
+              <option>New York, NY</option>
+              <option>Austin, TX</option>
+            </select>
+          </div>
+          <div class="filter-group" style="display: flex; align-items: flex-end;">
+            <button class="btn">Clear Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eligibility Legend -->
+      <div class="wireframe-note">
+        🔓 Green checkmark = You meet all eligibility requirements<br>
+        🔒 Lock icon = Missing requirements (hover to see details)
+      </div>
+
+      <!-- Openings Grid -->
+      <div class="grid-2" style="margin-top: 20px;">
+        <!-- Opening 1 - Eligible -->
+        <div class="opening-card">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="opening-company">TechCorp Inc.</div>
+            <div class="eligibility-check eligible">✓ Eligible</div>
+          </div>
+          <h3 class="opening-title">Software Engineer Intern</h3>
+          <div class="opening-meta">
+            <span>📍 San Francisco, CA</span>
+            <span>💼 Internship</span>
+            <span>💵 $45/hr</span>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom: 12px;">
+            Join our engineering team to build scalable web applications. Work with React, Node.js, and PostgreSQL.
+          </p>
+          <div class="tag-list" style="margin-bottom: 16px;">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <div class="btn-group">
+            <a href="opening-detail.html" class="btn btn-primary">View & Apply</a>
+            <button class="btn">Save</button>
+          </div>
+        </div>
+
+        <!-- Opening 2 - Eligible -->
+        <div class="opening-card">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="opening-company">DataFlow Systems</div>
+            <div class="eligibility-check eligible">✓ Eligible</div>
+          </div>
+          <h3 class="opening-title">Data Analyst</h3>
+          <div class="opening-meta">
+            <span>📍 Remote</span>
+            <span>💼 Full-time</span>
+            <span>💵 $75k-95k</span>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom: 12px;">
+            Analyze large datasets to drive business decisions. Experience with Python, SQL, and data visualization required.
+          </p>
+          <div class="tag-list" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+          </div>
+          <div class="btn-group">
+            <a href="opening-detail.html" class="btn btn-primary">View & Apply</a>
+            <button class="btn">Save</button>
+          </div>
+        </div>
+
+        <!-- Opening 3 - Not Eligible -->
+        <div class="opening-card locked">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="opening-company">Enterprise Solutions</div>
+            <div class="eligibility-check ineligible">🔒 Not Eligible</div>
+          </div>
+          <h3 class="opening-title">Senior Backend Developer</h3>
+          <div class="opening-meta">
+            <span>📍 New York, NY</span>
+            <span>💼 Full-time</span>
+            <span>💵 $120k-150k</span>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom: 12px;">
+            Lead backend development for enterprise applications. Requires 3+ years of experience.
+          </p>
+          <div class="tag-list" style="margin-bottom: 16px;">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Kubernetes</span>
+          </div>
+          <div class="alert alert-warning" style="margin-bottom: 12px; padding: 8px 12px; font-size: 12px;">
+            <strong>Missing requirements:</strong> 3+ years experience required
+          </div>
+          <div class="btn-group">
+            <a href="opening-detail.html" class="btn" disabled>View Details</a>
+          </div>
+        </div>
+
+        <!-- Opening 4 - Eligible -->
+        <div class="opening-card">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="opening-company">WebStart Studios</div>
+            <div class="eligibility-check eligible">✓ Eligible</div>
+          </div>
+          <h3 class="opening-title">Frontend Developer</h3>
+          <div class="opening-meta">
+            <span>📍 Austin, TX</span>
+            <span>💼 Full-time</span>
+            <span>💵 $80k-100k</span>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom: 12px;">
+            Build beautiful, responsive web interfaces. Strong React and CSS skills required.
+          </p>
+          <div class="tag-list" style="margin-bottom: 16px;">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">CSS</span>
+          </div>
+          <div class="btn-group">
+            <a href="opening-detail.html" class="btn btn-primary">View & Apply</a>
+            <button class="btn">Save</button>
+          </div>
+        </div>
+
+        <!-- Opening 5 - Eligible -->
+        <div class="opening-card">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="opening-company">AI Innovations</div>
+            <div class="eligibility-check eligible">✓ Eligible</div>
+          </div>
+          <h3 class="opening-title">Machine Learning Intern</h3>
+          <div class="opening-meta">
+            <span>📍 Remote</span>
+            <span>💼 Internship</span>
+            <span>💵 $40/hr</span>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom: 12px;">
+            Work on cutting-edge ML models for natural language processing applications.
+          </p>
+          <div class="tag-list" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">NLP</span>
+          </div>
+          <div class="btn-group">
+            <a href="opening-detail.html" class="btn btn-primary">View & Apply</a>
+            <button class="btn">Save</button>
+          </div>
+        </div>
+
+        <!-- Opening 6 - Not Eligible -->
+        <div class="opening-card locked">
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="opening-company">FinTech Corp</div>
+            <div class="eligibility-check ineligible">🔒 Not Eligible</div>
+          </div>
+          <h3 class="opening-title">DevOps Engineer</h3>
+          <div class="opening-meta">
+            <span>📍 Chicago, IL</span>
+            <span>💼 Full-time</span>
+            <span>💵 $110k-130k</span>
+          </div>
+          <p class="text-small text-muted" style="margin-bottom: 12px;">
+            Manage cloud infrastructure and CI/CD pipelines for financial applications.
+          </p>
+          <div class="tag-list" style="margin-bottom: 16px;">
+            <span class="tag">AWS</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Jenkins</span>
+          </div>
+          <div class="alert alert-warning" style="margin-bottom: 12px; padding: 8px 12px; font-size: 12px;">
+            <strong>Missing requirements:</strong> AWS certification required
+          </div>
+          <div class="btn-group">
+            <a href="opening-detail.html" class="btn" disabled>View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div style="display: flex; justify-content: center; gap: 8px; margin-top: 32px;">
+        <button class="btn" disabled>Previous</button>
+        <button class="btn btn-primary">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn">Next</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Wireframe Navigation -->
+  <div style="position: fixed; bottom: 20px; right: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
+    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
+  </div>
+</body>
+</html>
