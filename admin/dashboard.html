@@ -10,21 +10,53 @@
   <div class="app-container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="sidebar-logo">📋 Talent Registry</div>
-      <div class="sidebar-role" style="background: rgba(244,67,54,0.3);">System Admin</div>
+      <div class="sidebar-brand">
+        <div class="sidebar-logo"><img src="../assets/zencube-logo.svg" alt="ZenCube"></div>
+        <div class="sidebar-product">Talent Registry</div>
+      </div>
 
       <nav>
         <ul class="sidebar-nav">
-          <li><a href="dashboard.html" class="active">Dashboard</a></li>
-          <li><a href="config.html">Configuration</a></li>
-          <li><a href="feature-flags.html">Feature Flags</a></li>
-          <li><a href="success-stories.html">Success Stories</a></li>
-        </ul>
-
-        <div class="sidebar-section">Account</div>
-        <ul class="sidebar-nav">
-          <li><a href="#">Settings</a></li>
-          <li><a href="../shared/login.html">Logout</a></li>
+          <li>
+            <a href="dashboard.html" class="active">
+              <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor" aria-hidden="true">
+                <path d="M26.395 11.641l-1.32 1.74a8.39 8.39 0 0 1 1.364 4.119l1 .04 1.089.044 7.471.294-7.646-1.846a10.48 10.48 0 0 0-1.959-4.391"/>
+                <path d="M9.6 24.361l1.322-1.74a8.4 8.4 0 0 1-1.364-4.117l-1-.04-1.087-.044L0 18.127l7.648 1.844A10.47 10.47 0 0 0 9.6 24.361"/>
+                <path d="M18.463 8.562l.04 1a8.41 8.41 0 0 1 4.117 1.362l1.742-1.32a10.51 10.51 0 0 0-4.393-1.956L18.125 0l.294 7.473z"/>
+                <path d="M8.56 17.539l1-.04A8.466 8.466 0 0 1 17.5 9.563l.04-1 .044-1.089L17.875 0l-1.844 7.648a10.564 10.564 0 0 0-8.383 8.383L0 17.877l7.473-.294z"/>
+                <path d="M17.536 27.44l-.04-1a8.4 8.4 0 0 1-4.117-1.364l-1.742 1.322a10.51 10.51 0 0 0 4.393 1.956l1.844 7.648-.294-7.473z"/>
+                <path d="M27.44 18.465l-1 .04a8.466 8.466 0 0 1-7.936 7.934l-.04 1-.044 1.089-.294 7.473 1.844-7.648a10.564 10.564 0 0 0 8.385-8.383l7.646-1.844-7.471.294z"/>
+                <path d="M9.985 8.62 6.467 6.468l2.152 3.518a14.63 14.63 0 0 1 1.366-1.366"/>
+                <path d="m26.016 27.383 3.518 2.152-2.152-3.518a14.64 14.64 0 0 1-1.367 1.367"/>
+                <path d="M17.297 21.321 18.747 20.221l.838-.636.634-.836 1.1-1.45 3.375-4.453 1.3-1.706 3.544-4.672-4.672 3.544-1.706 1.3-4.457 3.371-1.45 1.1-.836.634-.636.838-1.1 1.45-3.375 4.451-1.3 1.708-3.542 4.67 4.67-3.542 1.708-1.3zm1.91-5.974 4.454-3.375 1.538-1.167-1.168 1.538-3.374 4.452-1.047 1.378a1.62 1.62 0 0 0-1.61-1.791 1.6 1.6 0 0 0-.167.008zm-1.207 1.869a.785.785 0 0 1 .555 1.339.785.785 0 0 1-1.339-.555.79.79 0 0 1 .229-.557.78.78 0 0 1 .555-.229"/>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="config.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6m6.7 3a6.7 6.7 0 0 0-.07-.85l1.55-1.2-1.5-2.6-1.83.62a6.6 6.6 0 0 0-1.47-.85L13.07 4h-3l-.31 1.93a6.6 6.6 0 0 0-1.47.85l-1.83-.62-1.5 2.6 1.55 1.2A6.7 6.7 0 0 0 3.3 10c0 .29.02.57.07.85L1.82 12.05l1.5 2.6 1.83-.62c.43.34.93.63 1.47.85L6.93 16.8h3l.31-1.92c.54-.22 1.04-.51 1.47-.85l1.83.62 1.5-2.6-1.55-1.2c.05-.28.07-.56.07-.85"/>
+              </svg>
+              Configuration
+            </a>
+          </li>
+          <li>
+            <a href="feature-flags.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M6 5a5 5 0 0 0 0 10h8a5 5 0 0 0 0-10zm8 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5"/>
+              </svg>
+              Feature Flags
+            </a>
+          </li>
+          <li>
+            <a href="success-stories.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="m10 1.5 2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.77 4.8 17.5l.99-5.8-4.21-4.1 5.82-.85z"/>
+              </svg>
+              Success Stories
+            </a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -32,27 +64,43 @@
     <!-- Main Content -->
     <main class="main-content">
       <div class="page-header">
-        <h1>System Admin Dashboard</h1>
-        <span class="text-muted">Platform health and metrics</span>
+        <div>
+          <div class="text-muted" style="font-size: 15px;">System Admin</div>
+          <h1>System Admin Dashboard</h1>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#9a9a9a" stroke-width="1.6">
+              <circle cx="8" cy="8" r="6"/>
+              <path d="M12.5 12.5 L16 16" stroke-linecap="round"/>
+            </svg>
+            <input type="text" placeholder="Search system, users, settings">
+          </div>
+          <div class="avatar">SA</div>
+        </div>
       </div>
 
       <!-- System Stats -->
       <div class="stat-grid">
-        <div class="stat-card">
+        <div class="stat-card accent-grey">
           <div class="stat-value">248</div>
           <div class="stat-label">Total Students</div>
+          <a href="#" class="stat-card-more">View More</a>
         </div>
-        <div class="stat-card">
+        <div class="stat-card accent-blue">
           <div class="stat-value">35</div>
           <div class="stat-label">Enterprises</div>
+          <a href="#" class="stat-card-more">View More</a>
         </div>
-        <div class="stat-card">
+        <div class="stat-card accent-teal">
           <div class="stat-value">156</div>
           <div class="stat-label">Applications</div>
+          <a href="#" class="stat-card-more">View More</a>
         </div>
-        <div class="stat-card">
+        <div class="stat-card accent-gold">
           <div class="stat-value">12</div>
           <div class="stat-label">Placements</div>
+          <a href="#" class="stat-card-more">View More</a>
         </div>
       </div>
 
@@ -64,28 +112,28 @@
           </div>
           <div class="card-body">
             <div style="display: grid; gap: 12px;">
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                 <div>
                   <strong>API Server</strong>
                   <p class="text-small text-muted">Response time: 45ms</p>
                 </div>
                 <span class="badge badge-selected">Healthy</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                 <div>
                   <strong>Database</strong>
                   <p class="text-small text-muted">Connections: 12/100</p>
                 </div>
                 <span class="badge badge-selected">Healthy</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                 <div>
                   <strong>ZenCube Integration</strong>
                   <p class="text-small text-muted">Last sync: 2 hours ago</p>
                 </div>
                 <span class="badge badge-selected">Connected</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #e8f5e9; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                 <div>
                   <strong>Email Service</strong>
                   <p class="text-small text-muted">Sent today: 45</p>
@@ -96,61 +144,31 @@
           </div>
         </div>
 
-        <!-- Quick Actions -->
+        <!-- Platform Metrics (Last 30 Days) -->
         <div class="card">
           <div class="card-header">
-            <h3>Quick Actions</h3>
+            <h3>Platform Metrics (Last 30 Days)</h3>
           </div>
           <div class="card-body">
             <div style="display: grid; gap: 12px;">
-              <a href="config.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
-                <span>⚙️ System Configuration</span>
-                <span>→</span>
-              </a>
-              <a href="feature-flags.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
-                <span>🚩 Feature Flags</span>
-                <span>→</span>
-              </a>
-              <a href="success-stories.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
-                <span>🎉 Success Stories</span>
-                <span>→</span>
-              </a>
-              <a href="../hr/audit-log.html" class="btn" style="display: flex; justify-content: space-between; padding: 16px;">
-                <span>📋 View Audit Log</span>
-                <span>→</span>
-              </a>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                <strong>New Applications</strong>
+                <span style="font-size: 18px; font-weight: 700; color: var(--stage-applied);">342</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                <strong>Interviews Scheduled</strong>
+                <span style="font-size: 18px; font-weight: 700; color: var(--stage-interview);">89</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                <strong>Placements</strong>
+                <span style="font-size: 18px; font-weight: 700; color: var(--stage-selected);">12</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                <strong>New Enterprises</strong>
+                <span style="font-size: 18px; font-weight: 700; color: var(--color-heading);">8</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Platform Metrics -->
-      <div class="card">
-        <div class="card-header">
-          <h3>Platform Metrics (Last 30 Days)</h3>
-        </div>
-        <div class="card-body">
-          <div class="grid-4">
-            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
-              <div style="font-size: 32px; font-weight: 700; color: var(--stage-applied);">342</div>
-              <div class="text-small text-muted">New Applications</div>
-            </div>
-            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
-              <div style="font-size: 32px; font-weight: 700; color: var(--stage-interview);">89</div>
-              <div class="text-small text-muted">Interviews Scheduled</div>
-            </div>
-            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
-              <div style="font-size: 32px; font-weight: 700; color: var(--stage-selected);">12</div>
-              <div class="text-small text-muted">Placements</div>
-            </div>
-            <div style="text-align: center; padding: 20px; background: var(--color-bg); border-radius: 8px;">
-              <div style="font-size: 32px; font-weight: 700; color: var(--color-heading);">8</div>
-              <div class="text-small text-muted">New Enterprises</div>
-            </div>
-          </div>
-
-          <div class="wireframe-note" style="margin-top: 20px;">
-            Charts and graphs would be displayed here showing trends over time (applications, placements, user growth).
+            <p style="color: #C28422; font-size: 13px; margin-top: 16px; margin-bottom: 0;">Charts and graphs would be displayed here showing trends over time (applications, placements, user growth).</p>
           </div>
         </div>
       </div>

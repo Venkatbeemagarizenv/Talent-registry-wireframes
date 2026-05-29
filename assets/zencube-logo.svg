@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="32" viewBox="0 0 220 32">
+  <!-- ZenCube mark: bowtie outline + X cross-lines, warm-grey strokes -->
+  <g stroke="#989186" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M3 5 L3 27 L27 16 Z"/>
+    <path d="M51 5 L51 27 L27 16 Z"/>
+    <path d="M3 5 L51 27"/>
+    <path d="M3 27 L51 5"/>
+  </g>
+  <!-- Wordmark: ZEN in navy, CUBE in warm grey -->
+  <text x="62" y="25" font-family="'Noto Sans', Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="0.5"><tspan fill="#1E566F">ZEN</tspan><tspan fill="#989186">CUBE</tspan></text>
+</svg>

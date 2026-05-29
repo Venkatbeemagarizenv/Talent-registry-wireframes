@@ -10,24 +10,79 @@
   <div class="app-container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="sidebar-logo">📋 Talent Registry</div>
-      <div class="sidebar-role">Student</div>
+      <div class="sidebar-brand">
+        <div class="sidebar-logo"><img src="../assets/zencube-logo.svg" alt="ZenCube"></div>
+        <div class="sidebar-product">Talent Registry</div>
+      </div>
 
       <nav>
         <ul class="sidebar-nav">
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="profile.html">My Profile</a></li>
-          <li><a href="openings-list.html">Browse Openings</a></li>
-          <li><a href="my-applications.html" class="active">My Applications</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="chat.html">Messages</a></li>
-          <li><a href="notifications.html">Notifications</a></li>
-        </ul>
-
-        <div class="sidebar-section">Account</div>
-        <ul class="sidebar-nav">
-          <li><a href="#">Settings</a></li>
-          <li><a href="../shared/login.html">Logout</a></li>
+          <li>
+            <a href="dashboard.html">
+              <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor" aria-hidden="true">
+                <path d="M26.395 11.641l-1.32 1.74a8.39 8.39 0 0 1 1.364 4.119l1 .04 1.089.044 7.471.294-7.646-1.846a10.48 10.48 0 0 0-1.959-4.391"/>
+                <path d="M9.6 24.361l1.322-1.74a8.4 8.4 0 0 1-1.364-4.117l-1-.04-1.087-.044L0 18.127l7.648 1.844A10.47 10.47 0 0 0 9.6 24.361"/>
+                <path d="M18.463 8.562l.04 1a8.41 8.41 0 0 1 4.117 1.362l1.742-1.32a10.51 10.51 0 0 0-4.393-1.956L18.125 0l.294 7.473z"/>
+                <path d="M8.56 17.539l1-.04A8.466 8.466 0 0 1 17.5 9.563l.04-1 .044-1.089L17.875 0l-1.844 7.648a10.564 10.564 0 0 0-8.383 8.383L0 17.877l7.473-.294z"/>
+                <path d="M17.536 27.44l-.04-1a8.4 8.4 0 0 1-4.117-1.364l-1.742 1.322a10.51 10.51 0 0 0 4.393 1.956l1.844 7.648-.294-7.473z"/>
+                <path d="M27.44 18.465l-1 .04a8.466 8.466 0 0 1-7.936 7.934l-.04 1-.044 1.089-.294 7.473 1.844-7.648a10.564 10.564 0 0 0 8.385-8.383l7.646-1.844-7.471.294z"/>
+                <path d="M9.985 8.62 6.467 6.468l2.152 3.518a14.63 14.63 0 0 1 1.366-1.366"/>
+                <path d="m26.016 27.383 3.518 2.152-2.152-3.518a14.64 14.64 0 0 1-1.367 1.367"/>
+                <path d="M17.297 21.321 18.747 20.221l.838-.636.634-.836 1.1-1.45 3.375-4.453 1.3-1.706 3.544-4.672-4.672 3.544-1.706 1.3-4.457 3.371-1.45 1.1-.836.634-.636.838-1.1 1.45-3.375 4.451-1.3 1.708-3.542 4.67 4.67-3.542 1.708-1.3zm1.91-5.974 4.454-3.375 1.538-1.167-1.168 1.538-3.374 4.452-1.047 1.378a1.62 1.62 0 0 0-1.61-1.791 1.6 1.6 0 0 0-.167.008zm-1.207 1.869a.785.785 0 0 1 .555 1.339.785.785 0 0 1-1.339-.555.79.79 0 0 1 .229-.557.78.78 0 0 1 .555-.229"/>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <circle cx="10" cy="6.5" r="3.5"/>
+                <path d="M10 12c-3.5 0-7 1.75-7 5v1h14v-1c0-3.25-3.5-5-7-5"/>
+              </svg>
+              My Profile
+            </a>
+          </li>
+          <li>
+            <a href="openings-list.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9 2a6.5 6.5 0 1 0 4.27 11.4l3.66 3.66 1.41-1.41-3.66-3.66A6.5 6.5 0 0 0 9 2m0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9"/>
+              </svg>
+              Browse Openings
+            </a>
+          </li>
+          <li>
+            <a href="my-applications.html" class="active">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M5 2v16h12V6.5L12.5 2zm7 1.5L15.5 7H12zM7 9h8v1.5H7zm0 3h8v1.5H7zm0 3h5v1.5H7z"/>
+              </svg>
+              My Applications
+            </a>
+          </li>
+          <li>
+            <a href="calendar.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M6 1v3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V1h-2v3H8V1zM4 8h12v9H4z"/>
+              </svg>
+              Calendar
+            </a>
+          </li>
+          <li>
+            <a href="chat.html">
+              <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.66 28.384" fill="currentColor" aria-hidden="true">
+                <path d="M3.324 0V5.68h.909V.968H22.71V15.821h-.952v.967l.952-.042h.95V0Z"/>
+                <path d="M19.386 6.59H0V23.335h.951l3.265.084 5.042 4 1.2.968.289-1.557.62-3.408 8.061-.084h.909V6.59Z"/>
+              </svg>
+              Messages
+            </a>
+          </li>
+          <li>
+            <a href="notifications.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 2a4.5 4.5 0 0 0-4.5 4.5V10L4 13h12l-1.5-3V6.5A4.5 4.5 0 0 0 10 2m-2 12a2 2 0 1 0 4 0z"/>
+              </svg>
+              Notifications
+            </a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -81,6 +136,7 @@
             Applied
             <span class="count">2</span>
           </div>
+          <p style="padding: 0 16px; font-size: 11px; color: #9a9a9a; margin: 4px 0 8px;">Submitted, waiting for HR review.</p>
           <div class="kanban-body">
             <div class="kanban-card">
               <div class="kanban-card-title">Frontend Developer</div>
@@ -107,6 +163,7 @@
             HR Reviewed
             <span class="count">1</span>
           </div>
+          <p style="padding: 0 16px; font-size: 11px; color: #9a9a9a; margin: 4px 0 8px;">HR is evaluating your fit.</p>
           <div class="kanban-body">
             <div class="kanban-card">
               <div class="kanban-card-title">Data Analyst</div>
@@ -128,6 +185,7 @@
             Forwarded
             <span class="count">1</span>
           </div>
+          <p style="padding: 0 16px; font-size: 11px; color: #9a9a9a; margin: 4px 0 8px;">Forwarded to the hiring company.</p>
           <div class="kanban-body">
             <div class="kanban-card">
               <div class="kanban-card-title">ML Engineer Intern</div>
@@ -149,13 +207,14 @@
             Interview
             <span class="count">1</span>
           </div>
+          <p style="padding: 0 16px; font-size: 11px; color: #9a9a9a; margin: 4px 0 8px;">An interview has been scheduled.</p>
           <div class="kanban-body">
             <div class="kanban-card" style="border-left: 3px solid var(--stage-interview);">
               <div class="kanban-card-title">Software Engineer Intern</div>
               <div class="kanban-card-meta">TechCorp Inc.</div>
               <div class="kanban-card-meta">Applied Jan 5, 2025</div>
               <div style="margin-top: 8px; padding: 8px; background: #e0f2f1; border-radius: 4px; font-size: 12px;">
-                📅 Interview: Jan 15, 2025 at 2:00 PM
+                Interview: Jan 15, 2025 at 2:00 PM
               </div>
               <div style="margin-top: 12px;">
                 <a href="application-detail.html" class="btn btn-sm btn-primary">View Details</a>
@@ -170,9 +229,9 @@
             Selected
             <span class="count">0</span>
           </div>
+          <p style="padding: 0 16px; font-size: 11px; color: #9a9a9a; margin: 4px 0 8px;">Selected for this position.</p>
           <div class="kanban-body">
             <div class="empty-state" style="padding: 40px 20px;">
-              <div class="empty-state-icon">🎉</div>
               <p class="text-small text-muted">Offers will appear here</p>
             </div>
           </div>
@@ -184,6 +243,7 @@
             Closed
             <span class="count">1</span>
           </div>
+          <p style="padding: 0 16px; font-size: 11px; color: #9a9a9a; margin: 4px 0 8px;">Closed (rejected, withdrawn, or filled).</p>
           <div class="kanban-body">
             <div class="kanban-card" style="opacity: 0.7;">
               <div class="kanban-card-title">Backend Developer</div>
@@ -199,40 +259,7 @@
           </div>
         </div>
       </div>
-
-      <!-- Legend -->
-      <div class="card" style="margin-top: 24px;">
-        <div class="card-body">
-          <h4 style="margin-bottom: 12px;">Understanding Your Application Status</h4>
-          <div class="grid-3">
-            <div>
-              <span class="badge badge-applied" style="margin-bottom: 8px;">Applied</span>
-              <p class="text-small text-muted">Your application has been submitted and is waiting for HR review.</p>
-            </div>
-            <div>
-              <span class="badge badge-hr-reviewed" style="margin-bottom: 8px;">HR Reviewed</span>
-              <p class="text-small text-muted">HR has reviewed your application and is evaluating your fit.</p>
-            </div>
-            <div>
-              <span class="badge badge-forwarded" style="margin-bottom: 8px;">Forwarded</span>
-              <p class="text-small text-muted">Your application has been forwarded to the hiring company.</p>
-            </div>
-            <div>
-              <span class="badge badge-interview" style="margin-bottom: 8px;">Interview</span>
-              <p class="text-small text-muted">An interview has been scheduled. Check your calendar!</p>
-            </div>
-            <div>
-              <span class="badge badge-selected" style="margin-bottom: 8px;">Selected</span>
-              <p class="text-small text-muted">Congratulations! You've been selected for this position.</p>
-            </div>
-            <div>
-              <span class="badge badge-rejected" style="margin-bottom: 8px;">Closed</span>
-              <p class="text-small text-muted">This application has been closed (rejected, withdrawn, or position filled).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+</main>
   </div>
 
   <!-- Wireframe Navigation -->

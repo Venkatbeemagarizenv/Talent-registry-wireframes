@@ -3,140 +3,538 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enterprise Signup - Talent Registry</title>
-  <link rel="stylesheet" href="../assets/wireframe.css">
+  <title>Create Enterprise Account - ZenCube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      color: #373737;
+      overflow: hidden;
+    }
+
+    .login-split {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* ---------- Left brand panel ---------- */
+    .login-brand {
+      flex: 1;
+      background: linear-gradient(120deg, #0a1626 0%, #0e2742 55%, #123356 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 60px;
+      color: #ffffff;
+    }
+
+    .brand-logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .brand-divider {
+      width: 1px;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .login-brand h1 {
+      font-size: 56px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: #5d8ec4;
+      line-height: 1.1;
+    }
+
+    .brand-product {
+      font-size: 42px;
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .login-brand p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #d4dce6;
+      margin-top: 14px;
+    }
+
+    /* ---------- Right form panel ---------- */
+    .login-form-side {
+      flex: 1;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 32px;
+      height: 100vh;
+    }
+
+    .login-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 760px;
+      max-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Static header */
+    .card-head {
+      padding: 40px 56px 20px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1E566F;
+      margin-bottom: 8px;
+    }
+
+    .card-subtitle {
+      font-size: 13px;
+      color: #8d8d8d;
+      line-height: 1.5;
+    }
+
+    /* Scrollable field area */
+    .card-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 4px 56px 20px;
+    }
+
+    .form-note {
+      font-size: 13px;
+      color: #C28422;
+      margin-top: 16px;
+      text-align: left;
+    }
+
+    .req {
+      color: #DC6249;
+    }
+
+    .section-heading {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1E566F;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading:first-of-type {
+      margin-top: 0;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      color: #2b2b2b;
+      margin-bottom: 10px;
+    }
+
+    .field-input,
+    .field-select {
+      width: 100%;
+      padding: 13px 16px;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 15px;
+      color: #373737;
+      border: 1px solid #c9c9c9;
+      background: #ffffff;
+    }
+
+    .field-input:focus,
+    .field-select:focus {
+      outline: none;
+      border-color: #23517F;
+    }
+
+    /* Custom dropdown arrow with equal left/right padding */
+    .field-select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 44px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1l5 5 5-5' stroke='%23373737' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .field-hint {
+      display: block;
+      font-size: 12px;
+      color: #8d8d8d;
+      margin-top: 8px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .checkbox-row input {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      border: 1px solid #c9c9c9;
+      border-radius: 0;
+      background: #ffffff;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .checkbox-row input:checked {
+      background: #23517F;
+      border-color: #23517F;
+    }
+
+    .checkbox-row input:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .checkbox-row label {
+      font-size: 15px;
+      color: #373737;
+      cursor: pointer;
+    }
+
+    .checkbox-row a {
+      color: #2b5b96;
+    }
+
+    /* Static footer */
+    .card-foot {
+      flex-shrink: 0;
+      padding: 20px 56px 28px;
+      border-top: 1px solid #ececec;
+    }
+
+    .btn-wrap {
+      position: relative;
+    }
+
+    .btn-tooltip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      background: #ffffff;
+      color: #373737;
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: center;
+      padding: 12px 14px;
+      border-radius: 4px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .btn-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: #ffffff;
+    }
+
+    .btn-wrap.disabled:hover .btn-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .btn-signin {
+      width: 100%;
+      padding: 15px;
+      background: #2b5b96;
+      color: #ffffff;
+      border: none;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-signin:hover:not(:disabled) {
+      background: #1f4675;
+    }
+
+    .btn-signin:disabled {
+      background: #b6c2d2;
+      cursor: not-allowed;
+    }
+
+    .card-footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #6b6b6b;
+    }
+
+    .card-footer a {
+      color: #2b5b96;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .card-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      body {
+        overflow: auto;
+      }
+
+      .login-split {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .login-brand {
+        padding: 56px 40px;
+        flex: none;
+        text-align: center;
+      }
+
+      .brand-logo-row {
+        flex-wrap: wrap;
+      }
+
+      .login-brand h1 {
+        font-size: 40px;
+      }
+
+      .login-form-side {
+        padding: 40px 20px;
+        height: auto;
+      }
+
+      .login-card {
+        max-height: none;
+      }
+
+      .card-scroll {
+        overflow-y: visible;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="auth-container">
-    <div class="auth-card" style="max-width: 520px;">
-      <div class="auth-logo">
-        <div style="font-size: 32px; margin-bottom: 4px;">📋</div>
-        Talent Registry
+  <div class="login-split">
+    <!-- Left brand panel -->
+    <section class="login-brand">
+      <div class="brand-logo-row">
+        <h1>ZENCUBE</h1>
+        <span class="brand-divider"></span>
+        <span class="brand-product">Talent Registry</span>
       </div>
+      <p>A navigation system for human effort</p>
+    </section>
 
-      <h2 style="text-align: center; margin-bottom: 8px;">Create Enterprise Account</h2>
-      <p style="text-align: center; color: var(--color-muted); margin-bottom: 24px;">
-        Register your company to access top talent from our partner institutions.
-      </p>
-
-      <div class="wireframe-note">
-        Enterprise registration requires HR approval before activation.
-        Use a company domain email (not gmail, yahoo, etc.)
-      </div>
-
-      <form style="margin-top: 24px;">
-        <!-- Company Information -->
-        <h4 style="margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--color-border);">Company Information</h4>
-
-        <div class="form-group">
-          <label class="form-label">Company Name *</label>
-          <input type="text" class="form-input" placeholder="Acme Corporation">
+    <!-- Right form panel -->
+    <section class="login-form-side">
+      <form class="login-card" id="signupForm" novalidate>
+        <!-- Static header -->
+        <div class="card-head">
+          <h2 class="card-title">Create Enterprise Account</h2>
+          <p class="card-subtitle">Register your company to access top talent from our partner institutions.</p>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Industry *</label>
-            <select class="form-select">
-              <option value="">Select industry...</option>
-              <option>Technology</option>
-              <option>Finance</option>
-              <option>Healthcare</option>
-              <option>Manufacturing</option>
-              <option>Consulting</option>
-              <option>Other</option>
-            </select>
+        <!-- Scrollable fields -->
+        <div class="card-scroll">
+          <!-- Company Information -->
+          <h3 class="section-heading">Company Information</h3>
+
+          <div class="field">
+            <label class="field-label">Company Name <span class="req">*</span></label>
+            <input type="text" class="field-input" placeholder="Acme Corporation" required>
           </div>
-          <div class="form-group">
-            <label class="form-label">Company Size *</label>
-            <select class="form-select">
-              <option value="">Select size...</option>
-              <option>1-50 employees</option>
-              <option>51-200 employees</option>
-              <option>201-500 employees</option>
-              <option>501-1000 employees</option>
-              <option>1000+ employees</option>
-            </select>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Industry <span class="req">*</span></label>
+              <select class="field-select" required>
+                <option value="">Select industry...</option>
+                <option>Technology</option>
+                <option>Finance</option>
+                <option>Healthcare</option>
+                <option>Manufacturing</option>
+                <option>Consulting</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Company Size <span class="req">*</span></label>
+              <select class="field-select" required>
+                <option value="">Select size...</option>
+                <option>1-50 employees</option>
+                <option>51-200 employees</option>
+                <option>201-500 employees</option>
+                <option>501-1000 employees</option>
+                <option>1000+ employees</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Company Website</label>
+            <input type="url" class="field-input" placeholder="https://www.company.com">
+          </div>
+
+          <!-- Hiring Manager Details -->
+          <h3 class="section-heading">Hiring Manager Details</h3>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">First Name <span class="req">*</span></label>
+              <input type="text" class="field-input" placeholder="John" required>
+            </div>
+            <div class="field">
+              <label class="field-label">Last Name <span class="req">*</span></label>
+              <input type="text" class="field-input" placeholder="Smith" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Job Title <span class="req">*</span></label>
+            <input type="text" class="field-input" placeholder="HR Manager" required>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Work Email <span class="req">*</span></label>
+            <input type="email" class="field-input" placeholder="john.smith@company.com" required>
+            <span class="field-hint">Must be a company domain email (not personal email) because Enterprise registration requires HR approval before activation.</span>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Phone Number</label>
+            <input type="tel" class="field-input" placeholder="+1 (555) 123-4567">
+          </div>
+
+          <!-- Account Setup -->
+          <h3 class="section-heading">Account Setup</h3>
+
+          <div class="field">
+            <label class="field-label">Password <span class="req">*</span></label>
+            <input type="password" class="field-input" id="password" placeholder="Create a strong password" minlength="8" required>
+            <span class="field-hint">Minimum 8 characters with at least one number and special character</span>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Confirm Password <span class="req">*</span></label>
+            <input type="password" class="field-input" id="confirmPassword" placeholder="Confirm your password" required>
+          </div>
+
+          <!-- Terms -->
+          <div class="checkbox-row" style="margin-top: 24px;">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> <span class="req">*</span></label>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="approval">
+            <label for="approval">I understand that this account requires HR approval before activation</label>
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label">Company Website</label>
-          <input type="url" class="form-input" placeholder="https://www.company.com">
-        </div>
-
-        <!-- Contact Person -->
-        <h4 style="margin-top: 24px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--color-border);">Hiring Manager Details</h4>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">First Name *</label>
-            <input type="text" class="form-input" placeholder="John">
+        <!-- Static footer -->
+        <div class="card-foot">
+          <div class="btn-wrap disabled" id="btnWrap">
+            <span class="btn-tooltip">This can be enabled once all the valid input fields are successfull.</span>
+            <button type="submit" class="btn-signin" id="createBtn" disabled>Create Account</button>
           </div>
-          <div class="form-group">
-            <label class="form-label">Last Name *</label>
-            <input type="text" class="form-input" placeholder="Smith">
-          </div>
+          <p class="card-footer">
+            Already have an account? <a href="../shared/login.html">Sign in</a>
+          </p>
         </div>
-
-        <div class="form-group">
-          <label class="form-label">Job Title *</label>
-          <input type="text" class="form-input" placeholder="HR Manager">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Work Email *</label>
-          <input type="email" class="form-input" placeholder="john.smith@company.com">
-          <div class="form-hint">Must be a company domain email (not personal email)</div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Phone Number</label>
-          <input type="tel" class="form-input" placeholder="+1 (555) 123-4567">
-        </div>
-
-        <!-- Account Setup -->
-        <h4 style="margin-top: 24px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--color-border);">Account Setup</h4>
-
-        <div class="form-group">
-          <label class="form-label">Password *</label>
-          <input type="password" class="form-input" placeholder="Create a strong password">
-          <div class="form-hint">Minimum 8 characters with at least one number and special character</div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Confirm Password *</label>
-          <input type="password" class="form-input" placeholder="Confirm your password">
-        </div>
-
-        <!-- Terms -->
-        <div class="form-group" style="margin-top: 24px;">
-          <label class="form-checkbox">
-            <input type="checkbox" required>
-            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *</span>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <label class="form-checkbox">
-            <input type="checkbox">
-            <span>I understand that this account requires HR approval before activation</span>
-          </label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 16px;">
-          Create Account
-        </button>
       </form>
-
-      <p style="text-align: center; margin-top: 24px; font-size: 13px;">
-        Already have an account? <a href="../shared/login.html" style="font-weight: 600;">Sign in</a>
-      </p>
-    </div>
+    </section>
   </div>
 
-  <!-- Wireframe Navigation -->
-  <div style="position: fixed; bottom: 20px; left: 20px; background: var(--color-heading); color: white; padding: 12px 16px; border-radius: 8px; font-size: 12px;">
-    <a href="../index.html" style="color: white;">← Back to Wireframe Hub</a>
-  </div>
+  <script>
+    const form = document.getElementById('signupForm');
+    const createBtn = document.getElementById('createBtn');
+    const btnWrap = document.getElementById('btnWrap');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+
+    function validateForm() {
+      const passwordsMatch = password.value !== '' && password.value === confirmPassword.value;
+      const isValid = form.checkValidity() && passwordsMatch;
+      createBtn.disabled = !isValid;
+      btnWrap.classList.toggle('disabled', !isValid);
+    }
+
+    form.addEventListener('input', validateForm);
+    form.addEventListener('change', validateForm);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+    });
+
+    validateForm();
+  </script>
 </body>
 </html>

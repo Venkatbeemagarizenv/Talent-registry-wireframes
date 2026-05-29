@@ -10,25 +10,95 @@
   <div class="app-container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="sidebar-logo">📋 Talent Registry</div>
-      <div class="sidebar-role" style="background: rgba(156,39,176,0.3);">HR Admin</div>
+      <div class="sidebar-brand">
+        <div class="sidebar-logo"><img src="../assets/zencube-logo.svg" alt="ZenCube"></div>
+        <div class="sidebar-product">Talent Registry</div>
+      </div>
 
       <nav>
         <ul class="sidebar-nav">
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="enterprises.html">Enterprises</a></li>
-          <li><a href="job-approvals.html">Job Approvals</a></li>
-          <li><a href="students.html">Students</a></li>
-          <li><a href="pipeline-kanban.html">Pipeline</a></li>
-          <li><a href="calendar.html" class="active">Calendar</a></li>
-          <li><a href="chat.html">Messages</a></li>
-          <li><a href="audit-log.html">Audit Log</a></li>
-        </ul>
-
-        <div class="sidebar-section">Account</div>
-        <ul class="sidebar-nav">
-          <li><a href="#">Settings</a></li>
-          <li><a href="../shared/login.html">Logout</a></li>
+          <li>
+            <a href="dashboard.html">
+              <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor" aria-hidden="true">
+                <path d="M26.395 11.641l-1.32 1.74a8.39 8.39 0 0 1 1.364 4.119l1 .04 1.089.044 7.471.294-7.646-1.846a10.48 10.48 0 0 0-1.959-4.391"/>
+                <path d="M9.6 24.361l1.322-1.74a8.4 8.4 0 0 1-1.364-4.117l-1-.04-1.087-.044L0 18.127l7.648 1.844A10.47 10.47 0 0 0 9.6 24.361"/>
+                <path d="M18.463 8.562l.04 1a8.41 8.41 0 0 1 4.117 1.362l1.742-1.32a10.51 10.51 0 0 0-4.393-1.956L18.125 0l.294 7.473z"/>
+                <path d="M8.56 17.539l1-.04A8.466 8.466 0 0 1 17.5 9.563l.04-1 .044-1.089L17.875 0l-1.844 7.648a10.564 10.564 0 0 0-8.383 8.383L0 17.877l7.473-.294z"/>
+                <path d="M17.536 27.44l-.04-1a8.4 8.4 0 0 1-4.117-1.364l-1.742 1.322a10.51 10.51 0 0 0 4.393 1.956l1.844 7.648-.294-7.473z"/>
+                <path d="M27.44 18.465l-1 .04a8.466 8.466 0 0 1-7.936 7.934l-.04 1-.044 1.089-.294 7.473 1.844-7.648a10.564 10.564 0 0 0 8.385-8.383l7.646-1.844-7.471.294z"/>
+                <path d="M9.985 8.62 6.467 6.468l2.152 3.518a14.63 14.63 0 0 1 1.366-1.366"/>
+                <path d="m26.016 27.383 3.518 2.152-2.152-3.518a14.64 14.64 0 0 1-1.367 1.367"/>
+                <path d="M17.297 21.321 18.747 20.221l.838-.636.634-.836 1.1-1.45 3.375-4.453 1.3-1.706 3.544-4.672-4.672 3.544-1.706 1.3-4.457 3.371-1.45 1.1-.836.634-.636.838-1.1 1.45-3.375 4.451-1.3 1.708-3.542 4.67 4.67-3.542 1.708-1.3zm1.91-5.974 4.454-3.375 1.538-1.167-1.168 1.538-3.374 4.452-1.047 1.378a1.62 1.62 0 0 0-1.61-1.791 1.6 1.6 0 0 0-.167.008zm-1.207 1.869a.785.785 0 0 1 .555 1.339.785.785 0 0 1-1.339-.555.79.79 0 0 1 .229-.557.78.78 0 0 1 .555-.229"/>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="enterprises.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M3 18V5l7-3 7 3v13zM6 8v2h2V8zm6 0v2h2V8zM6 12v2h2v-2zm6 0v2h2v-2z"/>
+              </svg>
+              Enterprises
+            </a>
+          </li>
+          <li>
+            <a href="job-approvals.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M5 2v16h10V2zm2 2h6v2H7zm6.5 4.5L9 13 6.5 10.5 8 9l1 1 3-3z"/>
+              </svg>
+              Job Approvals
+            </a>
+          </li>
+          <li>
+            <a href="pipeline-kanban.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <rect x="2" y="3" width="4" height="14"/>
+                <rect x="8" y="3" width="4" height="9"/>
+                <rect x="14" y="3" width="4" height="11"/>
+              </svg>
+              Pipeline
+            </a>
+          </li>
+          <li>
+            <a href="students.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <circle cx="7" cy="6" r="2.5"/>
+                <circle cx="14" cy="7" r="2"/>
+                <path d="M2 17c0-2.76 2.24-5 5-5s5 2.24 5 5v1H2zm11 1v-1c0-1.45-.43-2.8-1.16-3.93C12.43 13.4 13.18 13 14 13c2.21 0 4 1.79 4 4v1z"/>
+              </svg>
+              Students
+            </a>
+          </li>
+          <li>
+            <a href="calendar.html" class="active">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M6 1v3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V1h-2v3H8V1zM4 8h12v9H4z"/>
+              </svg>
+              Calendar
+            </a>
+          </li>
+          <li>
+            <a href="chat.html">
+              <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.66 28.384" fill="currentColor" aria-hidden="true">
+                <path d="M3.324 0V5.68h.909V.968H22.71V15.821h-.952v.967l.952-.042h.95V0Z"/>
+                <path d="M19.386 6.59H0V23.335h.951l3.265.084 5.042 4 1.2.968.289-1.557.62-3.408 8.061-.084h.909V6.59Z"/>
+              </svg>
+              Messages
+            </a>
+          </li>
+          <li>
+            <a href="audit-log.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <rect x="3" y="4" width="2" height="2"/>
+                <rect x="7" y="4" width="10" height="2"/>
+                <rect x="3" y="9" width="2" height="2"/>
+                <rect x="7" y="9" width="10" height="2"/>
+                <rect x="3" y="14" width="2" height="2"/>
+                <rect x="7" y="14" width="10" height="2"/>
+              </svg>
+              Audit Log
+            </a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -138,7 +208,7 @@
                   <span class="badge badge-interview">Jan 15</span>
                 </div>
                 <p class="text-small text-muted">Software Engineer Intern</p>
-                <p class="text-small">🕐 2:00 PM - 2:45 PM PST</p>
+                <p class="text-small">2:00 PM - 2:45 PM PST</p>
                 <div class="btn-group" style="margin-top: 12px;">
                   <button class="btn btn-sm">Reschedule</button>
                   <button class="btn btn-sm btn-danger">Cancel</button>
@@ -152,7 +222,7 @@
                   <span class="badge badge-interview">Jan 16</span>
                 </div>
                 <p class="text-small text-muted">Data Analyst</p>
-                <p class="text-small">🕐 10:00 AM - 10:45 AM PST</p>
+                <p class="text-small">10:00 AM - 10:45 AM PST</p>
                 <div class="btn-group" style="margin-top: 12px;">
                   <button class="btn btn-sm">Reschedule</button>
                   <button class="btn btn-sm btn-danger">Cancel</button>
@@ -166,7 +236,7 @@
                   <span class="badge badge-interview">Jan 17</span>
                 </div>
                 <p class="text-small text-muted">Software Engineer Intern</p>
-                <p class="text-small">🕐 3:00 PM - 3:45 PM PST</p>
+                <p class="text-small">3:00 PM - 3:45 PM PST</p>
                 <div class="btn-group" style="margin-top: 12px;">
                   <button class="btn btn-sm">Reschedule</button>
                   <button class="btn btn-sm btn-danger">Cancel</button>
@@ -180,7 +250,7 @@
                   <span class="badge badge-interview">Jan 20</span>
                 </div>
                 <p class="text-small text-muted">Data Analyst</p>
-                <p class="text-small">🕐 11:00 AM - 11:45 AM PST</p>
+                <p class="text-small">11:00 AM - 11:45 AM PST</p>
                 <div class="btn-group" style="margin-top: 12px;">
                   <button class="btn btn-sm">Reschedule</button>
                   <button class="btn btn-sm btn-danger">Cancel</button>
@@ -214,7 +284,7 @@
 
   <!-- Schedule Interview Modal -->
   <div id="scheduleModal" class="modal-overlay" style="display: none;">
-    <div class="modal" style="max-width: 550px;">
+    <div class="modal">
       <div class="modal-header">
         <h3>Schedule Interview</h3>
         <button class="modal-close" onclick="document.getElementById('scheduleModal').style.display='none'">&times;</button>

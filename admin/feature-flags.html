@@ -10,21 +10,53 @@
   <div class="app-container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="sidebar-logo">📋 Talent Registry</div>
-      <div class="sidebar-role" style="background: rgba(244,67,54,0.3);">System Admin</div>
+      <div class="sidebar-brand">
+        <div class="sidebar-logo"><img src="../assets/zencube-logo.svg" alt="ZenCube"></div>
+        <div class="sidebar-product">Talent Registry</div>
+      </div>
 
       <nav>
         <ul class="sidebar-nav">
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="config.html">Configuration</a></li>
-          <li><a href="feature-flags.html" class="active">Feature Flags</a></li>
-          <li><a href="success-stories.html">Success Stories</a></li>
-        </ul>
-
-        <div class="sidebar-section">Account</div>
-        <ul class="sidebar-nav">
-          <li><a href="#">Settings</a></li>
-          <li><a href="../shared/login.html">Logout</a></li>
+          <li>
+            <a href="dashboard.html">
+              <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor" aria-hidden="true">
+                <path d="M26.395 11.641l-1.32 1.74a8.39 8.39 0 0 1 1.364 4.119l1 .04 1.089.044 7.471.294-7.646-1.846a10.48 10.48 0 0 0-1.959-4.391"/>
+                <path d="M9.6 24.361l1.322-1.74a8.4 8.4 0 0 1-1.364-4.117l-1-.04-1.087-.044L0 18.127l7.648 1.844A10.47 10.47 0 0 0 9.6 24.361"/>
+                <path d="M18.463 8.562l.04 1a8.41 8.41 0 0 1 4.117 1.362l1.742-1.32a10.51 10.51 0 0 0-4.393-1.956L18.125 0l.294 7.473z"/>
+                <path d="M8.56 17.539l1-.04A8.466 8.466 0 0 1 17.5 9.563l.04-1 .044-1.089L17.875 0l-1.844 7.648a10.564 10.564 0 0 0-8.383 8.383L0 17.877l7.473-.294z"/>
+                <path d="M17.536 27.44l-.04-1a8.4 8.4 0 0 1-4.117-1.364l-1.742 1.322a10.51 10.51 0 0 0 4.393 1.956l1.844 7.648-.294-7.473z"/>
+                <path d="M27.44 18.465l-1 .04a8.466 8.466 0 0 1-7.936 7.934l-.04 1-.044 1.089-.294 7.473 1.844-7.648a10.564 10.564 0 0 0 8.385-8.383l7.646-1.844-7.471.294z"/>
+                <path d="M9.985 8.62 6.467 6.468l2.152 3.518a14.63 14.63 0 0 1 1.366-1.366"/>
+                <path d="m26.016 27.383 3.518 2.152-2.152-3.518a14.64 14.64 0 0 1-1.367 1.367"/>
+                <path d="M17.297 21.321 18.747 20.221l.838-.636.634-.836 1.1-1.45 3.375-4.453 1.3-1.706 3.544-4.672-4.672 3.544-1.706 1.3-4.457 3.371-1.45 1.1-.836.634-.636.838-1.1 1.45-3.375 4.451-1.3 1.708-3.542 4.67 4.67-3.542 1.708-1.3zm1.91-5.974 4.454-3.375 1.538-1.167-1.168 1.538-3.374 4.452-1.047 1.378a1.62 1.62 0 0 0-1.61-1.791 1.6 1.6 0 0 0-.167.008zm-1.207 1.869a.785.785 0 0 1 .555 1.339.785.785 0 0 1-1.339-.555.79.79 0 0 1 .229-.557.78.78 0 0 1 .555-.229"/>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="config.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6m6.7 3a6.7 6.7 0 0 0-.07-.85l1.55-1.2-1.5-2.6-1.83.62a6.6 6.6 0 0 0-1.47-.85L13.07 4h-3l-.31 1.93a6.6 6.6 0 0 0-1.47.85l-1.83-.62-1.5 2.6 1.55 1.2A6.7 6.7 0 0 0 3.3 10c0 .29.02.57.07.85L1.82 12.05l1.5 2.6 1.83-.62c.43.34.93.63 1.47.85L6.93 16.8h3l.31-1.92c.54-.22 1.04-.51 1.47-.85l1.83.62 1.5-2.6-1.55-1.2c.05-.28.07-.56.07-.85"/>
+              </svg>
+              Configuration
+            </a>
+          </li>
+          <li>
+            <a href="feature-flags.html" class="active">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M6 5a5 5 0 0 0 0 10h8a5 5 0 0 0 0-10zm8 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5"/>
+              </svg>
+              Feature Flags
+            </a>
+          </li>
+          <li>
+            <a href="success-stories.html">
+              <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="m10 1.5 2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.77 4.8 17.5l.99-5.8-4.21-4.1 5.82-.85z"/>
+              </svg>
+              Success Stories
+            </a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -36,9 +68,7 @@
         <button class="btn btn-primary">+ Add Feature Flag</button>
       </div>
 
-      <div class="wireframe-note">
-        Feature flags control the rollout of new features. You can enable/disable features, set rollout percentages, and restrict to specific user roles.
-      </div>
+      <p style="color: #C28422; font-size: 14px; margin-bottom: 16px;">Feature flags control the rollout of new features. You can enable/disable features, set rollout percentages, and restrict to specific user roles.</p>
 
       <!-- Feature Flags List -->
       <div style="display: grid; gap: 16px; margin-top: 20px;">

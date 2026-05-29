@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Jobs - Enterprise - Talent Registry</title>
+  <title>Watchlist - Enterprise - Talent Registry</title>
   <link rel="stylesheet" href="../assets/wireframe.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li>
-            <a href="my-jobs.html" class="active">
+            <a href="my-jobs.html">
               <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M7 3v2H3v12h14V5h-4V3zm2 1.5h2V5H9zM3 9.5h14v1H3z"/>
               </svg>
@@ -58,7 +58,7 @@
             </a>
           </li>
           <li>
-            <a href="watchlist.html">
+            <a href="watchlist.html" class="active">
               <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M5 2 L15 2 L15 18 L10 14 L5 18 Z"/>
               </svg>
@@ -91,159 +91,181 @@
     <!-- Main Content -->
     <main class="main-content">
       <div class="page-header">
-        <h1>My Job Postings</h1>
+        <h1>Candidate Watchlist</h1>
         <div style="display: flex; align-items: center; gap: 16px;">
-          <a href="post-job.html" class="btn btn-primary">+ Post New Job</a>
+          <a href="talent-search.html" class="btn btn-primary">+ Find More Talent</a>
           <div class="avatar">TC</div>
         </div>
       </div>
 
-      <!-- Filter Tabs -->
-      <div style="display: flex; gap: 8px; margin-bottom: 20px;">
-        <button class="btn btn-primary">All (5)</button>
-        <button class="btn">Active (2)</button>
-        <button class="btn">Pending (1)</button>
-        <button class="btn">Closed (2)</button>
+      <!-- Bookmark Flow Info (top) -->
+      <p style="color: #C28422; font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+        <strong>Bookmark Flow: Two-Stage Process</strong><br>
+        <strong>Stage 1 (Bookmark):</strong> Save candidates to your watchlist for later review.<br>
+        <strong>Stage 2 (Request Contact):</strong> Send a formal interest request to HR, who will coordinate outreach.
+      </p>
+
+      <!-- Watchlist Tabs -->
+      <div class="btn-group" style="margin-bottom: 20px;">
+        <button class="btn btn-primary">All Bookmarked (8)</button>
+        <button class="btn">Pending Requests (2)</button>
+        <button class="btn">HR Approved (1)</button>
+        <button class="btn">Declined (1)</button>
       </div>
 
-      <!-- Jobs List -->
+      <!-- Watchlist Table -->
       <div class="card">
         <div class="card-body" style="padding: 0;">
           <div class="table-container">
             <table class="table">
               <thead>
                 <tr>
-                  <th>Position</th>
-                  <th>Type</th>
-                  <th>Applications</th>
+                  <th>Candidate</th>
+                  <th>Skills</th>
+                  <th>Projects</th>
                   <th>Status</th>
-                  <th>Posted</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
+                <!-- Bookmarked -->
                 <tr>
                   <td>
-                    <strong>Software Engineer Intern</strong>
-                    <div class="text-small text-muted">San Francisco, CA • Remote OK</div>
+                    <strong>Alex J.</strong>
+                    <div class="text-small text-muted">Computer Science • Class of 2025</div>
                   </td>
-                  <td>Internship</td>
                   <td>
-                    <strong>12</strong>
-                    <span class="text-small text-muted">(3 new)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">React</span>
                   </td>
-                  <td><span class="badge badge-approved">Active</span></td>
-                  <td>Jan 1, 2025</td>
+                  <td>3 projects (avg: 86)</td>
+                  <td><span class="badge badge-applied">Bookmarked</span></td>
                   <td>
                     <div class="btn-group">
-                      <a href="pipeline.html" class="btn btn-sm">Pipeline</a>
-                      <button class="btn btn-sm">Edit</button>
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm btn-primary">Request Contact</button>
+                      <button class="btn btn-sm">Remove</button>
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>Data Analyst</strong>
-                    <div class="text-small text-muted">Remote</div>
+                    <strong>Sarah M.</strong>
+                    <div class="text-small text-muted">Data Science • Class of 2025</div>
                   </td>
-                  <td>Full-time</td>
                   <td>
-                    <strong>8</strong>
-                    <span class="text-small text-muted">(0 new)</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Python</span>
                   </td>
-                  <td><span class="badge badge-approved">Active</span></td>
-                  <td>Dec 28, 2024</td>
+                  <td>4 projects (avg: 91)</td>
+                  <td><span class="badge badge-applied">Bookmarked</span></td>
                   <td>
                     <div class="btn-group">
-                      <a href="pipeline.html" class="btn btn-sm">Pipeline</a>
-                      <button class="btn btn-sm">Edit</button>
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm btn-primary">Request Contact</button>
+                      <button class="btn btn-sm">Remove</button>
                     </div>
                   </td>
                 </tr>
-                <tr style="background: #fffde7;">
+                <tr>
                   <td>
-                    <strong>Frontend Developer</strong>
-                    <div class="text-small text-muted">Austin, TX</div>
+                    <strong>Mike C.</strong>
+                    <div class="text-small text-muted">Software Engineering • Class of 2026</div>
                   </td>
-                  <td>Full-time</td>
                   <td>
-                    <strong>0</strong>
-                    <span class="text-small text-muted">(pending approval)</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Node.js</span>
                   </td>
-                  <td><span class="badge badge-pending">Pending</span></td>
-                  <td>Jan 5, 2025</td>
+                  <td>2 projects (avg: 78)</td>
+                  <td><span class="badge badge-applied">Bookmarked</span></td>
                   <td>
                     <div class="btn-group">
-                      <button class="btn btn-sm" disabled>Pipeline</button>
-                      <button class="btn btn-sm">Edit</button>
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm btn-primary">Request Contact</button>
+                      <button class="btn btn-sm">Remove</button>
                     </div>
                   </td>
                 </tr>
-                <tr style="opacity: 0.7;">
+                <!-- Pending HR Review -->
+                <tr>
                   <td>
-                    <strong>Backend Developer</strong>
-                    <div class="text-small text-muted">New York, NY</div>
+                    <strong>Emily R.</strong>
+                    <div class="text-small text-muted">Computer Science • Class of 2025</div>
                   </td>
-                  <td>Full-time</td>
                   <td>
-                    <strong>15</strong>
-                    <span class="text-small text-muted">(1 hired)</span>
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
                   </td>
-                  <td><span class="badge badge-selected">Filled</span></td>
-                  <td>Nov 15, 2024</td>
+                  <td>5 projects (avg: 88)</td>
+                  <td><span class="badge badge-pending">Pending HR Review</span></td>
                   <td>
                     <div class="btn-group">
-                      <a href="pipeline.html" class="btn btn-sm">View</a>
-                      <button class="btn btn-sm">Repost</button>
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm" disabled>Awaiting HR</button>
                     </div>
                   </td>
                 </tr>
-                <tr style="opacity: 0.7;">
+                <tr>
                   <td>
-                    <strong>DevOps Engineer</strong>
-                    <div class="text-small text-muted">Remote</div>
+                    <strong>David L.</strong>
+                    <div class="text-small text-muted">Machine Learning • Class of 2025</div>
                   </td>
-                  <td>Full-time</td>
                   <td>
-                    <strong>6</strong>
-                    <span class="text-small text-muted">(closed)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">TensorFlow</span>
                   </td>
-                  <td><span class="badge badge-rejected">Closed</span></td>
-                  <td>Oct 1, 2024</td>
+                  <td>3 projects (avg: 94)</td>
+                  <td><span class="badge badge-pending">Pending HR Review</span></td>
                   <td>
                     <div class="btn-group">
-                      <a href="pipeline.html" class="btn btn-sm">View</a>
-                      <button class="btn btn-sm">Repost</button>
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm" disabled>Awaiting HR</button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- HR Approved -->
+                <tr>
+                  <td>
+                    <strong>Jessica T.</strong>
+                    <div class="text-small text-muted">Full Stack • Class of 2026</div>
+                  </td>
+                  <td>
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                  </td>
+                  <td>2 projects (avg: 82)</td>
+                  <td><span class="badge badge-approved">HR Approved</span></td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <a href="pipeline.html" class="btn btn-sm btn-primary">View in Pipeline</a>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Declined -->
+                <tr>
+                  <td>
+                    <strong>Tom B.</strong>
+                    <div class="text-small text-muted">Software Engineering • Class of 2025</div>
+                  </td>
+                  <td>
+                    <span class="tag">C++</span>
+                    <span class="tag">Linux</span>
+                  </td>
+                  <td>1 project (avg: 72)</td>
+                  <td>
+                    <span class="badge badge-rejected">Declined</span>
+                    <div class="text-small text-muted" style="margin-top: 4px;">Reason: Skills mismatch</div>
+                  </td>
+                  <td>
+                    <div class="btn-group">
+                      <a href="talent-detail.html" class="btn btn-sm">View</a>
+                      <button class="btn btn-sm">Remove</button>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job Stats Summary -->
-      <div class="grid-3" style="margin-top: 24px;">
-        <div class="card">
-          <div class="card-body" style="text-align: center;">
-            <div class="stat-value">35</div>
-            <div class="stat-label">Total Applications</div>
-            <p class="text-small text-muted" style="margin-top: 8px;">Across all job postings</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body" style="text-align: center;">
-            <div class="stat-value">5</div>
-            <div class="stat-label">Interviews Scheduled</div>
-            <p class="text-small text-muted" style="margin-top: 8px;">Upcoming this month</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body" style="text-align: center;">
-            <div class="stat-value">1</div>
-            <div class="stat-label">Hires Made</div>
-            <p class="text-small text-muted" style="margin-top: 8px;">Via Talent Registry</p>
           </div>
         </div>
       </div>
